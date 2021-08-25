@@ -1,5 +1,10 @@
+@mixin shell-gutter($rem) {
+	padding-left: $rem;
+	padding-right: $rem;
+}
+
 @mixin clearfix {
-	content: '';
+	content: "";
 	line-height: 0;
 	display: table;
 	clear: both;
@@ -17,7 +22,8 @@
 	$max: breakpoint-max($name, $breakpoints);
 
 	@if $max == 767px {
-		@media (max-width: $max), screen and (max-width: $responsive-ios) and (orientation: landscape) {
+		@media (max-width: $max),
+			screen and (max-width: $responsive-ios) and (orientation: landscape) {
 			@content;
 		}
 	} @else {

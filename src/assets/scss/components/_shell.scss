@@ -3,11 +3,17 @@
 \* ------------------------------------------------------------ */
 
 .shell {
-	max-width: calc( #{$shell-max-width} + #{$shell-gutter} * 2 );
-	padding-left: $shell-gutter;
-	padding-right: $shell-gutter;
+	max-width: calc(#{$shell-max-width} + #{$shell-gutter} * 2);
 	margin: auto;
 	width: 100%;
+
+	@include breakpoint-up(small-desktop) {
+		@include shell-gutter(8rem);
+	}
+
+	@include breakpoint-down(small-desktop) {
+		@include shell-gutter(2rem);
+	}
 }
 
 /* Shell Fluid */

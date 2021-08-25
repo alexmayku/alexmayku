@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------ *\
+	List Features
+\* ------------------------------------------------------------ */
+
+.list-features {
+	list-style: none;
+
+	li {
+	}
+
+	li + li {
+		margin-top: 2.3rem;
+	}
+
+	img {
+		display: block;
+	}
+
+	i {
+		display: inline-block;
+		margin-right: 1.1rem;
+		vertical-align: middle;
+	}
+}

@@ -1,0 +1,121 @@
+/* ------------------------------------------------------------ *\
+	Hero
+\* ------------------------------------------------------------ */
+
+.hero {
+	position: relative;
+	min-height: calc(100vh - 4rem);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	margin-bottom: 16rem;
+
+	@include breakpoint-down(tablet) {
+		margin-bottom: 6rem;
+	}
+
+	h1 {
+		margin-bottom: 2.4rem;
+	}
+
+	p {
+		font-size: 2.4rem;
+		line-height: 1.33;
+		letter-spacing: -0.004em;
+		margin-bottom: 3.5rem;
+
+		@include breakpoint-down(tablet) {
+			font-size: 2.2rem;
+		}
+	}
+
+	// loop
+
+	.hero__background {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	.video {
+		//test
+		height: 100vh;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+		overflow: hidden;
+	}
+
+	.video video {
+		//test
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.hero__inner {
+		// padding-top: 19.4rem; CHECK WITH MANAGER
+		// top: 50%;
+		// transform: translateY(-50%);
+		position: absolute;
+		bottom: 6.5rem;
+		left: 0;
+	}
+
+	.hero__content {
+		position: relative;
+		max-width: 67.5rem;
+		width: 100%;
+	}
+
+	.hero__countdown {
+		margin-bottom: 2.1rem;
+	}
+
+	.hero__notice {
+		color: $c-yellow;
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+	}
+
+	.hero__notice span {
+		display: inline-block;
+		margin-left: 0.7rem;
+	}
+
+	.hero__btn {
+		position: absolute;
+		right: 8rem;
+		bottom: 6.5rem;
+		animation: bounce 2s infinite;
+	}
+}
+
+@keyframes bounce {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-30px);
+	}
+	60% {
+		transform: translateY(-15px);
+	}
+}
+
+//
+// <div class="video">
+// 	<video playsinline autoplay muted  poster="assets/images/temp/Home_Poster.jpg" id="bgvid">
+// 		<source src="assets/images/temp/Home_Video.mp4" type="video/mp4">
+// 	</video>
+// </div>

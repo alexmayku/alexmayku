@@ -1,0 +1,36 @@
+/* ------------------------------------------------------------ *\
+	Tabs
+\* ------------------------------------------------------------ */
+
+.tabs {
+	.tabs__head {
+		margin-bottom: 3.2rem;
+	}
+
+	.tabs__nav ul {
+		list-style: none;
+	}
+
+	.tabs__nav li {
+		display: inline-block;
+		font-size: 1.8rem;
+		color: $c-yellow;
+		border: 0.1rem solid transparent;
+		border-radius: 10rem;
+		padding: 1.4rem 2.3rem;
+		transition: color 0.2s;
+
+		&:hover {
+			color: $c-white;
+		}
+	}
+
+	.tabs__nav li.is-current {
+		color: $c-white;
+		border-color: $c-yellow;
+	}
+
+	.tabs__nav a {
+		text-decoration: none;
+	}
+}

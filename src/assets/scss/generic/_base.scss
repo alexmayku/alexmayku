@@ -8,12 +8,12 @@ html {
 
 body {
 	min-width: 320px;
-	background: #fff;
-	font-family: $ff-sans-serif;
-	font-weight: $font-weight-base;
+	background: $c-black-2;
+	font-family: $ff-avantgarde;
+	font-weight: 300;
 	font-size: $font-size-base;
 	line-height: $line-height-base;
-	color: #000;
+	color: $c-white;
 }
 
 a {
@@ -29,7 +29,6 @@ a {
 	}
 }
 
-
 .h1,
 h1,
 .h2,
@@ -42,27 +41,51 @@ h4,
 h5,
 .h6,
 h6 {
+	font-weight: 300;
 	margin-bottom: calc(#{$line-height-base}em / 2);
 }
 
 .h1,
-h1 {}
+h1 {
+	font-size: 8rem;
+
+	@include breakpoint-down(tablet) {
+		font-size: 5rem;
+	}
+}
 
 .h2,
-h2 {}
+h2 {
+	font-size: 4.8rem;
+
+	@include breakpoint-down(tablet) {
+		font-size: 4.2rem;
+	}
+}
 
 .h3,
-h3 {}
+h3 {
+	font-size: 4rem;
+
+	@include breakpoint-down(tablet) {
+		font-size: 3.4rem;
+	}
+}
 
 .h4,
-h4 {}
+h4 {
+	font-size: 2.4rem;
+}
 
 .h5,
-h5 {}
+h5 {
+	font-size: 2rem;
+}
 
 .h6,
-h6 {}
-
+h6 {
+	font-size: 1.8rem;
+}
 
 p,
 ul,

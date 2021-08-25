@@ -3,4 +3,9 @@
 \* ------------------------------------------------------------ */
 
 .logo {
+	display: inline-block;
+
+	@include breakpoint-down(tablet) {
+		max-width: 18rem;
+	}
 }

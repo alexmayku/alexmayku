@@ -2,10 +2,28 @@
   Helpers
 \* ------------------------------------------------------------ */
 
+/*  Paddings   */
+
+.py-1 {
+	padding: 15.8rem 0 16rem;
+
+	@include breakpoint-down(tablet) {
+		padding: 12rem 0;
+	}
+}
+
+.py-2 {
+	padding: 15.1rem 0 16.1rem;
+
+	@include breakpoint-down(tablet) {
+		padding: 12rem 0;
+	}
+}
+
 /*  Clear  */
 
 .clear:after {
-	content: '';
+	content: "";
 	line-height: 0;
 	display: table;
 	clear: both;
@@ -20,7 +38,7 @@
 	padding: 0;
 	margin: -1px;
 	overflow: hidden;
-	clip: rect(0,0,0,0);
+	clip: rect(0, 0, 0, 0);
 	border: 0;
 }
 
@@ -85,7 +103,7 @@
 	}
 }
 
-@include breakpoint-between(mobile,tablet) {
+@include breakpoint-between(mobile, tablet) {
 	.hidden-sm {
 		display: none !important;
 	}
@@ -100,7 +118,7 @@
 	}
 }
 
-@include breakpoint-between(tablet,small-desktop) {
+@include breakpoint-between(tablet, small-desktop) {
 	.hidden-md {
 		display: none !important;
 	}

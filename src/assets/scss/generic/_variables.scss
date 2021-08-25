@@ -1,21 +1,30 @@
 //Variables
-$font-size-base             : 1.6rem;
-$font-weight-base           : 400;
-$line-height-base           : 1.2;
+$font-size-base: 1.8rem;
+$font-weight-base: 500;
+$line-height-base: 1.2;
 
-$ff-sans-serif              : "Helvetica Neue", Helvetica, Arial, sans-serif;
-$ff-serif                   : Georgia, "Times New Roman", Times, serif;
+$ff-avantgarde: "ITCAvantGardeGothicW01-Book", Helvetica, Arial, sans-serif;
+$ff-avantgarde-md: "ITCAvantGardeGothicW01-Md", Helvetica, Arial, sans-serif;
+$ff-digital: "Digital Numbers", Helvetica, Arial, sans-serif;
+$ff-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ff-serif: Georgia, "Times New Roman", Times, serif;
 
-$t-duration                 : 0.4s;
+$t-duration: 0.4s;
 
-$shell-max-width            : 114rem;
-$shell-gutter               : 1.5rem;
+$shell-max-width: 114rem;
+$shell-gutter: 8rem;
 
-$c-black                    : #000;
-$c-white                    : #fff;
-$c-base                     : #055590;
+$c-black: #000;
+$c-black-2: #101314;
+$c-white: #fff;
+$c-base: #055590;
+$c-gray: #898989;
 
-$responsive-ios             : 812px;
+$c-yellow: #fdd32f;
+$c-yellow-dark: #e5ba1c;
+$c-yellow-3: #e9bd1f;
+
+$responsive-ios: 812px;
 
 $breakpoints: (
 	mobile-small: 374px,

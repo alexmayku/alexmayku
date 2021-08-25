@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+	Bar
+\* ------------------------------------------------------------ */
+
+.bar {
+	background-color: $c-yellow;
+	padding: 1.4rem 0 1.2rem;
+	min-width: 100%;
+	width: 100%;
+	overflow: hidden;
+
+	&:hover .bar__list li {
+		animation-play-state: paused;
+	}
+
+	.bar__list li {
+		display: inline-block;
+		animation: scrolling-left 15s linear infinite;
+		animation-delay: 1s;
+	}
+}
+
+@keyframes scrolling-left {
+	0% {
+		transform: translateX(0%);
+	}
+
+	50% {
+		transform: translateX(-200%);
+	}
+}

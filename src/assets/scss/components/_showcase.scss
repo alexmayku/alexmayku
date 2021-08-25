@@ -1,0 +1,19 @@
+/* ------------------------------------------------------------ *\
+	ShowCase
+\* ------------------------------------------------------------ */
+
+.showcase {
+	.showcase__image {
+		position: relative;
+		padding-bottom: 52%;
+	}
+
+	.showcase__image img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

@@ -23,3 +23,21 @@
 		flex: 0 0 calc(100% / 3);
 	}
 }
+
+/*  Grid Dropdown */
+
+.grid--dropdown {
+	margin: 0 -2rem;
+
+	@include breakpoint-down(tablet) {
+		margin: 0 -1rem;
+	}
+
+	.grid__col {
+		padding: 0 2rem;
+
+		@include breakpoint-down(tablet) {
+			padding: 0 1rem;
+		}
+	}
+}

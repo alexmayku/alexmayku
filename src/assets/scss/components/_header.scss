@@ -3,4 +3,37 @@
 \* ------------------------------------------------------------ */
 
 .header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 10;
+
+	.header__inner {
+		padding: 2.5rem 0 0;
+
+		@include breakpoint-down(tablet) {
+			padding: 1.5rem 0 0;
+		}
+	}
+
+	.header__shell {
+		display: flex;
+		align-items: center;
+	}
+
+	.header__aside {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+	}
+
+	.header__socials {
+		margin: 0 3.2rem;
+
+		@include breakpoint-down(small-desktop) {
+			margin: 0 1.5rem;
+		}
+	}
 }

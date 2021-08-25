@@ -1,0 +1,30 @@
+/* ------------------------------------------------------------ *\
+	Socials
+\* ------------------------------------------------------------ */
+
+.socials {
+	list-style: none;
+	margin-bottom: 0;
+
+	li {
+		display: inline-block;
+		opacity: 0.4;
+		transition: opacity 0.2s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	li + li {
+		margin-left: 0.3rem;
+	}
+
+	a {
+		display: inline-block;
+	}
+
+	img {
+		//l8r
+	}
+}

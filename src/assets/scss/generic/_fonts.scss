@@ -1,3 +1,48 @@
 /* ------------------------------------------------------------ *\
     Fonts
 \* ------------------------------------------------------------ */
+
+@font-face {
+	font-family: "ITCAvantGardeGothicW01-Book";
+	src: url("../fonts/ITCAvantGardeGothicW01-Book.woff2") format("woff2"),
+		url("../fonts/ITCAvantGardeGothicW01-Book.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "ITCAvantGardeGothicW01-Book";
+	src: url("..//fonts/ITCAvantGardeGothicW01-Book.woff2") format("woff2"),
+		url("../fonts/ITCAvantGardeGothicW01-Book.woff") format("woff");
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "ITCAvantGardeGothicW01-Md";
+	src: url("../fonts/ITCAvantGardeGothicW01-Md.woff2") format("woff2"),
+		url("../fonts/ITCAvantGardeGothicW01-Md.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "ITCAvantGardeGothicW01-Md";
+	src: url("../fonts/ITCAvantGardeGothicW01-Md.woff2") format("woff2"),
+		url("../fonts/ITCAvantGardeGothicW01-Md.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Digital Numbers";
+	src: url("../fonts/DigitalNumbers-Regular.woff2") format("woff2"),
+		url("../fonts/DigitalNumbers-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}

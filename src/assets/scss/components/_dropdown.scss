@@ -1,0 +1,66 @@
+/* ------------------------------------------------------------ *\
+	Dropdown
+\* ------------------------------------------------------------ */
+
+.dropdown {
+	padding-top: 4rem;
+	position: fixed;
+	top: 9.9rem;
+	left: 0;
+	width: 100vw;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 0.5s;
+
+	@include breakpoint-down(tablet) {
+		padding-top: 1.6rem;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 3rem;
+		right: 41rem;
+		width: 0;
+		height: 0;
+		border-left: 17px solid transparent;
+		border-right: 17px solid transparent;
+		border-bottom: 10px solid $c-white;
+
+		@include breakpoint-down(small-desktop) {
+			right: 31rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			top: 0.6rem;
+			right: 30rem;
+		}
+	}
+
+	h5 {
+		color: $c-black;
+		margin-bottom: 1.8rem;
+	}
+
+	h6 {
+		font-size: 1.4rem;
+	}
+
+	.dropdown__inner {
+		padding: 3.8rem 8rem 3.7rem;
+		background-color: $c-white;
+
+		@include breakpoint-down(small-desktop) {
+			padding: 3rem 2rem;
+		}
+	}
+}
+
+// @include breakpoint-up(mobile) {
+// 			&:hover > .dropdown {
+// 				opacity: 1;
+// 				visibility: visible;
+// 				pointer-events: auto;
+// 			}
+// 		}

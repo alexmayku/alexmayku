@@ -1,0 +1,47 @@
+/* ------------------------------------------------------------ *\
+	COuntdown
+\* ------------------------------------------------------------ */
+
+.countdown {
+	font-family: $ff-digital;
+	list-style: none;
+
+	li {
+		display: inline-block;
+		font-size: 0.8rem;
+		text-align: center;
+		position: relative;
+	}
+
+	li + li {
+		margin-left: 0.5rem;
+
+		&:before {
+			content: ":";
+			font-size: 2.4rem;
+			color: $c-yellow;
+			position: absolute;
+			left: -2rem;
+		}
+	}
+
+	span {
+		display: block;
+		font-size: 2.4rem;
+		color: $c-yellow;
+		letter-spacing: 0.2em;
+		margin-bottom: 0.6rem;
+	}
+}
+
+/* Countdown Alt */
+
+.countdown--alt {
+	span {
+		margin-bottom: 0;
+
+		@include breakpoint-down(tablet) {
+			font-size: 2rem;
+		}
+	}
+}

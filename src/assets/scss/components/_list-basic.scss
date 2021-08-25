@@ -1,0 +1,31 @@
+/* ------------------------------------------------------------ *\
+	List Basic
+\* ------------------------------------------------------------ */
+
+.list-basic {
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+
+	li {
+		font-size: 1.2rem;
+		color: $c-black;
+		letter-spacing: 0.192em;
+		min-width: 30rem;
+
+		&:before {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 0.3rem;
+			height: 0.3rem;
+			border-radius: 50%;
+			background-color: $c-white;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		padding-left: 0.8rem;
+	}
+}

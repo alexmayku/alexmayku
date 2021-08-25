@@ -1,0 +1,44 @@
+.bottom-bar {
+	background-color: $c-white;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	padding: 0.8rem 0;
+
+	ul {
+		margin-bottom: 0;
+	}
+
+	span {
+		font-family: $ff-digital;
+		color: $c-black;
+		font-size: 2.4rem;
+
+		@include breakpoint-down(tablet) {
+			font-size: 1.8rem;
+			text-align: center;
+		}
+	}
+
+	.bar__inner {
+		max-width: 93.4rem;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include breakpoint-down(tablet) {
+			max-width: none;
+			padding: 0 1rem;
+		}
+	}
+
+	.bar__inner > * {
+		@include breakpoint-down(tablet) {
+			flex: 1 1;
+		}
+	}
+}

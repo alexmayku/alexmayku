@@ -1,0 +1,130 @@
+/* ------------------------------------------------------------ *\
+	Form Email
+\* ------------------------------------------------------------ */
+
+.form-email {
+	position: relative;
+
+	.hbspt-form label {
+		display: none;
+	}
+
+	.bigform .hbspt-form label {
+		display: block;
+	}
+
+	input[type="email"] {
+		border: 0.1rem solid #daddde;
+		color: $c-black;
+		width: 100%;
+		padding: 1.3rem 2rem;
+		border-radius: 10rem;
+		background-color: $c-white;
+		font-size: 2rem;
+		line-height: 1;
+		transition: border-color 0.2s ease;
+	}
+
+	input[type="email"]:active,
+	input[type="email"]:focus,
+	input[type="email"]:hover {
+		border: 0.1rem solid #fdd32f;
+	}
+
+	form {
+		max-width: 40.7rem;
+		width: 100%;
+		position: relative;
+	}
+
+	input[type="submit"] {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		vertical-align: middle;
+		box-shadow: none;
+		appearance: none;
+		background: #fdd32f;
+		padding: 1.3rem 2rem 1.4rem;
+		min-width: 13.4rem;
+		font-size: 2rem;
+		font-weight: 500;
+		cursor: pointer;
+		color: #000;
+		text-decoration: none;
+		border-radius: 10rem;
+		border: none;
+		transition-duration: 0.2s;
+	}
+
+	.no-list.hs-error-msgs.inputs-list li {
+		list-style-image: url("../images/svg/icon--arrow--yellow.svg");
+	}
+
+	.hs-error-msgs {
+		list-style: none;
+		margin-top: 0.5rem;
+	}
+
+	.hs_error_rollup {
+		margin-top: 0.5rem;
+	}
+
+	.hs-error-msg,
+	.hs-main-font-element {
+		display: block !important;
+		color: $c-white;
+		opacity: 0.6;
+	}
+}
+
+/* Form Email Black   */
+
+.form-email--black {
+	input[type="submit"] {
+		color: $c-yellow;
+		background-color: $c-black;
+	}
+
+	form {
+		margin: 0 auto;
+	}
+}
+
+/* Form Email White  */
+
+.form-email--white {
+	input[type="email"] {
+		color: rgba($c-white, 0.5);
+		background-color: $c-black;
+		font-size: 2rem;
+		max-width: 27.7rem;
+		position: relative;
+		z-index: 100;
+	}
+
+	input[type="submit"] {
+		color: $c-black;
+		background-color: $c-white;
+		min-width: 18rem;
+		padding: 1.4rem 2rem 1.4rem 6.5rem;
+	}
+}
+
+/* Form email sticky */
+
+.form-email--sticky {
+	form {
+		min-width: 40.7rem;
+
+		@include breakpoint-down(tablet) {
+			min-width: 30rem;
+		}
+	}
+
+	.hs-error-msg,
+	.hs-main-font-element {
+		color: $c-black;
+	}
+}
