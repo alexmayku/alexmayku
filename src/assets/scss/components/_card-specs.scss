@@ -1,0 +1,37 @@
+/* ------------------------------------------------------------ *\
+	Card Specs
+\* ------------------------------------------------------------ */
+
+.card-specs {
+	position: relative;
+	min-height: 72rem;
+
+	& + & {
+		margin-top: 4rem;
+	}
+
+	.card__background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
+
+	.card__content {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		padding: 0 8rem;
+		max-width: 72rem;
+		width: 100%;
+	}
+
+	.card__content h2 {
+		margin-bottom: 2.4rem;
+	}
+}

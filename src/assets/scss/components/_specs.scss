@@ -1,0 +1,9 @@
+/* ------------------------------------------------------------ *\
+	Specs
+\* ------------------------------------------------------------ */
+
+.specs {
+	border: 0.1rem solid $c-yellow;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+}

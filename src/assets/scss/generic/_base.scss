@@ -4,6 +4,10 @@
 
 html {
 	font-size: 62.5%;
+
+	&.has-scroll-smooth {
+		overflow: hidden;
+	}
 }
 
 body {

@@ -24,9 +24,19 @@
 	}
 }
 
-/*  Grid Dropdown */
+/* Grid Testimonial  */
 
-.grid--dropdown {
+.grid--testimonial {
+	margin: 0 -2rem;
+
+	.grid__col {
+		padding: 0 2rem;
+	}
+}
+
+/*  Grid Default */
+
+.grid--default {
 	margin: 0 -2rem;
 
 	@include breakpoint-down(tablet) {
@@ -39,5 +49,15 @@
 		@include breakpoint-down(tablet) {
 			padding: 0 1rem;
 		}
+	}
+}
+
+/* Grid About */
+
+.grid--about {
+	margin: 0 -2rem;
+
+	.grid__col {
+		padding: 0 2rem;
 	}
 }

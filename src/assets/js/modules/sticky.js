@@ -15,4 +15,3 @@ $window.on('scroll', function() {
 }).on("resize", function() {
 	winHeight = $(this).height();
 })
-

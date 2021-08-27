@@ -9,7 +9,7 @@
 		color: $c-black;
 		text-align: center;
 		padding: 6.8rem 3rem 10rem;
-		clip-path: polygon(97.1% 0, 100% 16%, 100% 100%, 0 100%, 0 0);
+		clip-path: polygon(95% 0, 100% 14.2%, 100% 100%, 0 100%, 0 0);
 
 		@include breakpoint-down(tablet) {
 			clip-path: polygon(90% 0, 100% 16%, 100% 100%, 0 100%, 0 0);

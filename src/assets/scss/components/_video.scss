@@ -4,11 +4,11 @@
 
 .video {
 	.video--desktop {
+		max-width: 100%;
 	}
 
 	.video__inner {
 		position: relative;
-		// padding-bottom: 26.9%;
 		min-height: 64rem;
 	}
 
@@ -65,5 +65,13 @@
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
+	}
+}
+
+/* Video Makers */
+
+.video--makers {
+	.video__banner h2 {
+		max-width: 78rem;
 	}
 }

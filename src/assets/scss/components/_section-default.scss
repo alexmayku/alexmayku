@@ -4,7 +4,7 @@
 
 .section-default {
 	.section__head {
-		max-width: 112rem;
+		max-width: 110rem;
 		width: 100%;
 		margin-bottom: 5.2rem;
 
@@ -20,9 +20,16 @@
 
 	.section__head h1 {
 		text-transform: capitalize;
+		margin-bottom: 0;
+		letter-spacing: -0.02em;
 	}
 
-	.section__body {
+	.section__head p {
+		max-width: 66.5rem;
+		width: 100%;
+		font-size: 2.4rem;
+		line-height: 1.33;
+		letter-spacing: 0.005em;
 	}
 
 	.section__foot {
@@ -39,5 +46,102 @@
 		@include breakpoint-down(tablet) {
 			margin-bottom: 3rem;
 		}
+	}
+}
+
+/* Section-default--about  */
+
+.section-default--about {
+	.section__head {
+		max-width: 85rem;
+		margin-bottom: 8.3rem;
+	}
+
+	.section__head h4 {
+		margin-bottom: 1.5rem;
+	}
+
+	.section__head h1 {
+		margin-bottom: 2.5rem;
+	}
+
+	.section__foot {
+		margin-top: 16.1rem;
+	}
+}
+
+/* Section Default about -2  */
+
+.section-default--about-2 {
+	.section__head h1 {
+		margin-bottom: 0;
+		max-width: 85rem;
+		letter-spacing: 0.004em;
+	}
+
+	.sectiion__head {
+		margin-bottom: 6.9rem;
+	}
+	.section__body a {
+		margin-top: 4.2rem;
+	}
+}
+
+/* Section Default Multiplier -2  */
+
+.section-default--multiplier {
+	.section__head h1 {
+		max-width: 85rem;
+	}
+}
+
+/* Section Default White  */
+
+.section-default--white {
+	background-color: $c-black-2;
+	transition: background-color 1s, color 0.5s;
+
+	&.is-intersecting {
+		background-color: $c-white;
+	}
+
+	&.is-intersecting .section__head h1 {
+		color: $c-black;
+	}
+}
+
+/* Section default specs*/
+
+.section-default--specs {
+	.section__head {
+		margin-bottom: 6.1rem;
+	}
+}
+
+/* SEction Default Reveal*/
+
+.section-default--reveal {
+	.section__head {
+		margin-bottom: 0;
+	}
+
+	.section__head h1 {
+		margin-bottom: 2.6rem;
+		max-width: 90rem;
+		letter-spacing: -0.008em;
+	}
+
+	.section__head p {
+		max-width: 82rem;
+		width: 100%;
+		line-height: 1.33;
+	}
+}
+
+/* Section Default Maker */
+
+.section-default--maker {
+	.section__foot {
+		margin-top: 15.7rem;
 	}
 }

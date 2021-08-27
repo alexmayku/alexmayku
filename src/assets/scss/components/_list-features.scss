@@ -6,6 +6,9 @@
 	list-style: none;
 
 	li {
+		display: flex;
+		align-items: flex-start;
+		gap: 1.7rem;
 	}
 
 	li + li {
@@ -17,8 +20,17 @@
 	}
 
 	i {
+		flex-shrink: 0;
+		padding-top: 0.2rem;
 		display: inline-block;
-		margin-right: 1.1rem;
 		vertical-align: middle;
+	}
+}
+
+/* List features alt */
+
+.list-features--alt {
+	li {
+		font-size: 2.4rem;
 	}
 }

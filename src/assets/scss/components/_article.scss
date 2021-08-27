@@ -6,6 +6,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
 	align-content: center;
+	gap: 4rem;
 
 	& + & {
 		margin-top: 8rem;
@@ -17,6 +18,10 @@
 
 	.article__content {
 		margin: auto 0;
+	}
+
+	.article__subtitle {
+		color: $c-yellow;
 	}
 
 	.article__title {
@@ -65,6 +70,7 @@
 
 	.article__image {
 		max-height: 62rem;
+		min-height: 62rem;
 		padding-bottom: 52%;
 		position: relative;
 	}
@@ -90,6 +96,30 @@
 	.article__content {
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
-		margin: auto 0 auto 4.1rem;
+	}
+}
+
+/* ARticle alt */
+
+.article--alt {
+	.article__subtitle {
+		margin-bottom: 1.6rem;
+	}
+
+	.article__title {
+		margin-bottom: 2.8rem;
+		color: $c-white;
+	}
+}
+
+/* Article Maker  */
+
+.article--maker {
+	p {
+		margin-bottom: 2.9rem;
+	}
+
+	.article__subtitle {
+		margin-bottom: 2.2rem;
 	}
 }

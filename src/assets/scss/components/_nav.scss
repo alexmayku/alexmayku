@@ -16,6 +16,22 @@
 		@include breakpoint-down(tablet) {
 			font-size: 1.4rem;
 		}
+
+		&:after {
+			content: "";
+			display: none;
+			position: absolute;
+			bottom: -1rem;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 0.2rem;
+			width: 3.2rem;
+			background-color: $c-yellow;
+		}
+	}
+
+	li.is-current:after {
+		display: block;
 	}
 
 	li:hover > a {
