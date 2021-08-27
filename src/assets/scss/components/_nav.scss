@@ -44,6 +44,10 @@
 			height: 0.2rem;
 			width: 3.2rem;
 			background-color: $c-yellow;
+
+			@include breakpoint-down(mobile-medium) {
+				bottom: -0.6rem;
+			}
 		}
 	}
 

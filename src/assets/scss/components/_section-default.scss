@@ -63,6 +63,10 @@
 	.section__head {
 		max-width: 85rem;
 		margin-bottom: 8.3rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 3.9rem;
+		}
 	}
 
 	.section__head h4 {
@@ -73,8 +77,18 @@
 		margin-bottom: 2.5rem;
 	}
 
+	.section__head p {
+		@include breakpoint-down(mobile-medium) {
+			font-size: 1.8rem;
+		}
+	}
+
 	.section__foot {
 		margin-top: 16.1rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-top: 12rem;
+		}
 	}
 }
 
@@ -85,6 +99,12 @@
 		margin-bottom: 0;
 		max-width: 85rem;
 		letter-spacing: 0.004em;
+	}
+
+	.section__head h4 {
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 2rem;
+		}
 	}
 
 	.sectiion__head {
@@ -109,8 +129,17 @@
 	background-color: $c-black-2;
 	transition: background-color 1s, color 0.5s;
 
+	.section__head {
+		max-width: 120rem;
+		margin-bottom: 9rem;
+	}
+
 	&.is-intersecting {
 		background-color: $c-white;
+	}
+
+	&.is-intersecting h4 {
+		color: $c-orange;
 	}
 
 	&.is-intersecting .section__head h1 {
@@ -133,16 +162,31 @@
 		margin-bottom: 0;
 	}
 
+	.section__head h4 {
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 2rem;
+		}
+	}
+
 	.section__head h1 {
 		margin-bottom: 2.6rem;
 		max-width: 90rem;
 		letter-spacing: -0.008em;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 1.7rem;
+		}
 	}
 
 	.section__head p {
 		max-width: 82rem;
 		width: 100%;
 		line-height: 1.33;
+
+		@include breakpoint-down(mobile-medium) {
+			max-width: 100%;
+			font-size: 1.8rem;
+		}
 	}
 }
 

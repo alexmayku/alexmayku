@@ -24,7 +24,14 @@
 /* showcase-alt */
 
 .showcase--alt {
+	@include breakpoint-down(mobile-medium) {
+		margin-top: 0;
+	}
 	.showcase__image {
 		padding-bottom: 40.286%;
+
+		@include breakpoint-down(mobile) {
+			padding-bottom: 74.286%;
+		}
 	}
 }

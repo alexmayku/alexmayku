@@ -139,6 +139,20 @@
 .hero--machine {
 	margin-bottom: 16.3rem;
 
+	@include breakpoint-down(mobile-medium) {
+		margin-bottom: 11.6rem;
+	}
+
+	h1 {
+		@include breakpoint-down(mobile-medium) {
+			font-size: 4.8rem;
+		}
+	}
+
+	.hero__content {
+		max-width: 86rem;
+	}
+
 	.hero__background video {
 		position: absolute;
 		top: 0;

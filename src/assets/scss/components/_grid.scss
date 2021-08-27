@@ -87,7 +87,77 @@
 .grid--about {
 	margin: 0 -2rem;
 
+	@include breakpoint-down(mobile) {
+		margin: -3rem -2rem;
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		margin: -3rem 0;
+	}
+
 	.grid__col {
 		padding: 0 2rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 3rem 2rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 3rem 0;
+		}
+	}
+
+	.grid__col--1of3 {
+		@include breakpoint-down(mobile) {
+			max-width: 50%;
+			flex: 0 0 50%;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+	}
+}
+
+/* Grid The Makers */
+
+.grid--themakers {
+	@include breakpoint-down(small-desktop) {
+		margin: 0 -0.5rem;
+	}
+
+	@include breakpoint-down(tablet) {
+		margin: -2rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		margin: -2rem 0;
+	}
+
+	.grid__col {
+		@include breakpoint-down(small-desktop) {
+			padding: 0 0.5rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			padding: 2rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 2rem 0;
+		}
+	}
+
+	.grid__col--1of3 {
+		@include breakpoint-down(tablet) {
+			max-width: 50%;
+			flex: 0 0 50%;
+		}
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
 	}
 }

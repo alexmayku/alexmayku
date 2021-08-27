@@ -157,6 +157,10 @@
 	.article__title {
 		margin-bottom: 2.8rem;
 		color: $c-white;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: 3.2rem;
+		}
 	}
 }
 

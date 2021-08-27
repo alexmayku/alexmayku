@@ -23,7 +23,6 @@ const bottomBar = document.querySelector('.js-bottom-bar');
 const footer = document.querySelector('.js-footer');
 const main = document.querySelector('.js-main');
 const hero = document.querySelector('.js-hero');
-const heroHeight = hero.getBoundingClientRect().height;
 const footerHeight = footer.getBoundingClientRect().height * 3;
 
 console.log(footerHeight)

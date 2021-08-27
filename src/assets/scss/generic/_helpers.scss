@@ -16,6 +16,10 @@
 	@include breakpoint-down(tablet) {
 		padding: 12rem 0;
 	}
+
+	@include breakpoint-down(mobile-medium) {
+		padding-bottom: 9.7rem; //check
+	}
 }
 
 .py-2 {
@@ -34,12 +38,28 @@
 	padding-top: 15.5rem;
 }
 
+.pt-2 {
+	padding-top: 8.4rem;
+
+	@include breakpoint-down(mobile-medium) {
+		padding-top: 4.1rem;
+	}
+}
+
 .pb-1 {
 	padding-bottom: 15.1rem;
+
+	@include breakpoint-down(mobile-medium) {
+		padding-bottom: 11.9rem;
+	}
 }
 
 .pb-2 {
 	padding-bottom: 16rem;
+
+	@include breakpoint-down(mobile-medium) {
+		padding-bottom: 11.9rem;
+	}
 }
 
 /*  Clear  */
