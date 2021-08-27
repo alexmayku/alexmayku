@@ -10,6 +10,10 @@
 	.video__inner {
 		position: relative;
 		min-height: 64rem;
+
+		@include breakpoint-down(mobile) {
+			min-height: 20rem;
+		}
 	}
 
 	.video__inner.has-overlay {
@@ -46,15 +50,33 @@
 		transform: translate(-50%, -50%);
 		z-index: 11;
 		text-align: center;
+
+		@include breakpoint-down(mobile-medium) {
+			width: 100%;
+		}
 	}
 
 	.video__banner h2 {
 		max-width: 35rem;
+		width: 100%;
+		margin: 0 auto;
+
+		@include breakpoint-down(mobile) {
+			font-size: 2.4rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			max-width: 22rem;
+		}
 	}
 
 	.video__banner img {
 		display: inline-block;
 		margin-bottom: 3rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 1.6rem;
+		}
 	}
 
 	video {

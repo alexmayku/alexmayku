@@ -29,8 +29,23 @@
 .grid--testimonial {
 	margin: 0 -2rem;
 
+	@include breakpoint-down(mobile) {
+		margin: -3.2rem 0;
+	}
+
+	.grid__col--1of2 {
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
+		}
+	}
+
 	.grid__col {
 		padding: 0 2rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 3.2rem 0;
+		}
 	}
 }
 
@@ -43,11 +58,26 @@
 		margin: 0 -1rem;
 	}
 
+	@include breakpoint-down(mobile) {
+		margin: -2rem 0;
+	}
+
 	.grid__col {
 		padding: 0 2rem;
 
 		@include breakpoint-down(tablet) {
 			padding: 0 1rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 2rem 0;
+		}
+	}
+
+	.grid__col--1of3 {
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+			flex: 0 0 100%;
 		}
 	}
 }

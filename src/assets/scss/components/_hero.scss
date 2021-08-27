@@ -12,8 +12,20 @@
 		margin-bottom: 6rem;
 	}
 
+	@include breakpoint-down(mobile-medium) {
+		margin-bottom: 11.7rem;
+	}
+
 	h1 {
 		margin-bottom: 2.4rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: 6.4rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 3.4rem;
+		}
 	}
 
 	p {
@@ -23,11 +35,14 @@
 		margin-bottom: 3.5rem;
 
 		@include breakpoint-down(tablet) {
-			font-size: 2.2rem;
+			font-size: 2rem;
+			line-height: 1.4;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 2.4rem;
 		}
 	}
-
-	// loop
 
 	.hero__background {
 		position: absolute;
@@ -39,7 +54,6 @@
 	}
 
 	.video {
-		//test
 		height: 100vh;
 		width: 100%;
 		position: absolute;
@@ -63,12 +77,26 @@
 		position: absolute;
 		bottom: 6.5rem;
 		left: 0;
+
+		@include breakpoint-down(mobile-medium) {
+			bottom: 6.4rem;
+		}
 	}
 
 	.hero__content {
 		position: relative;
 		max-width: 67.5rem;
 		width: 100%;
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+		}
+	}
+
+	.hero__content h1 span {
+		@include breakpoint-down(mobile-medium) {
+			display: none;
+		}
 	}
 
 	.hero__countdown {
@@ -79,11 +107,19 @@
 		color: $c-yellow;
 		font-size: 1.6rem;
 		margin-bottom: 2rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 3rem;
+		}
 	}
 
 	.hero__notice span {
 		display: inline-block;
 		margin-left: 0.7rem;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
+		}
 	}
 
 	.hero__btn {
@@ -91,6 +127,10 @@
 		right: 8rem;
 		bottom: 6.5rem;
 		animation: bounce 2s infinite;
+
+		@include breakpoint-down(small-desktop) {
+			right: 2rem;
+		}
 	}
 }
 

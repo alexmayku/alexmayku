@@ -35,6 +35,10 @@
 		max-width: 40.7rem;
 		width: 100%;
 		position: relative;
+
+		@include breakpoint-down(mobile) {
+			max-width: 100%;
+		}
 	}
 
 	input[type="submit"] {
@@ -56,6 +60,13 @@
 		border-radius: 10rem;
 		border: none;
 		transition-duration: 0.2s;
+
+		@include breakpoint-down(mobile) {
+			position: static;
+			display: block;
+			width: 100%;
+			margin-top: 1rem;
+		}
 	}
 
 	.no-list.hs-error-msgs.inputs-list li {
@@ -102,6 +113,14 @@
 		max-width: 27.7rem;
 		position: relative;
 		z-index: 100;
+
+		@include breakpoint-down(mobile) {
+			color: initial;
+			background-color: $c-white;
+			display: block;
+			width: 100%;
+			max-width: 100%;
+		}
 	}
 
 	input[type="submit"] {
@@ -109,6 +128,12 @@
 		background-color: $c-white;
 		min-width: 18rem;
 		padding: 1.4rem 2rem 1.4rem 6.5rem;
+
+		@include breakpoint-down(mobile) {
+			background-color: $c-yellow;
+			color: $c-black;
+			padding: 1.3rem 2rem 1.4rem;
+		}
 	}
 }
 

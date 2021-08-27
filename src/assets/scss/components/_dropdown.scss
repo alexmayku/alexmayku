@@ -11,10 +11,15 @@
 	opacity: 0;
 	visibility: hidden;
 	pointer-events: none;
+	z-index: 101;
 	transition: opacity 0.5s;
 
 	@include breakpoint-down(tablet) {
 		padding-top: 1.6rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		top: 14.8rem;
 	}
 
 	&:before {
@@ -35,6 +40,10 @@
 		@include breakpoint-down(tablet) {
 			top: 0.6rem;
 			right: 30rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			right: 5rem;
 		}
 	}
 

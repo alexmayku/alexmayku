@@ -9,14 +9,49 @@
 	width: 100%;
 	overflow: hidden;
 
+	@include breakpoint-down(mobile-medium) {
+		padding: 0.7rem 0 0.8rem;
+	}
+
 	&:hover .bar__list li {
 		animation-play-state: paused;
+	}
+
+	.bar__list {
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
 	}
 
 	.bar__list li {
 		display: inline-block;
 		animation: scrolling-left 15s linear infinite;
 		animation-delay: 1s;
+	}
+
+	.bar__mobile {
+		display: none;
+
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
+	}
+
+	.bar__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.bar__link {
+		color: $c-black;
+		font-size: 1.6rem;
+		text-decoration: none;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: 1rem;
+			letter-spacing: 0.2em;
+		}
 	}
 }
 

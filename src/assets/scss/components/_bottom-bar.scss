@@ -6,6 +6,12 @@
 	z-index: 999;
 	width: 100%;
 	padding: 0.8rem 0;
+	transform: translateY(10vh);
+	transition: transform 0.6s;
+
+	&.is-intersecting {
+		transform: translateY(0);
+	}
 
 	ul {
 		margin-bottom: 0;
@@ -20,6 +26,10 @@
 			font-size: 1.8rem;
 			text-align: center;
 		}
+
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
 	}
 
 	.bar__inner {
@@ -33,6 +43,16 @@
 		@include breakpoint-down(tablet) {
 			max-width: none;
 			padding: 0 1rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 0 2rem;
+		}
+	}
+
+	.bar__inner .countdown {
+		@include breakpoint-down(mobile) {
+			display: none;
 		}
 	}
 

@@ -5,7 +5,7 @@
 .footer {
 	border-top: 0.1rem solid $c-white;
 	.footer__content {
-		padding: 8rem 4.5rem 8rem 5.1rem;
+		padding: 8rem 4.5rem 4.9rem 5.1rem;
 		display: grid;
 		grid-template-columns: 1fr 2fr 1fr;
 		gap: 3rem;
@@ -17,6 +17,7 @@
 
 		@include breakpoint-down(mobile-medium) {
 			grid-template-columns: 1fr;
+			padding: 4rem 0;
 		}
 	}
 
@@ -24,6 +25,17 @@
 		border-bottom: 0.1rem solid $c-gray;
 		padding-bottom: 2.1rem;
 		min-height: 4.7rem;
+
+		@include breakpoint-down(mobile-medium) {
+			min-height: 0;
+			padding-bottom: 1.5rem;
+		}
+	}
+
+	.footer__head h6 {
+		@include breakpoint-down(mobile-medium) {
+			font-size: 2rem;
+		}
 	}
 
 	.footer__body {
@@ -32,13 +44,19 @@
 
 	.footer__body p {
 		margin-bottom: 3.1rem;
-	}
 
-	.footer__nav ul {
+		@include breakpoint-down(mobile-medium) {
+			font-size: 1.4rem;
+			margin-bottom: 1.8rem;
+		}
 	}
 
 	.footer__nav li {
 		transition: color 0.2s;
+
+		@include breakpoint-down(mobile) {
+			font-size: 1.4rem;
+		}
 	}
 
 	.footer__nav li:hover {
@@ -47,6 +65,10 @@
 
 	.footer__nav li + li {
 		margin-top: 0.7rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-top: 0.6rem;
+		}
 	}
 
 	.footer__nav a {
@@ -70,6 +92,11 @@
 		margin-top: 3.3rem;
 		font-size: 1.8rem;
 		line-height: 1.56;
+
+		@include breakpoint-down(mobile-medium) {
+			margin-top: 1.8rem;
+			font-size: 1.4rem;
+		}
 	}
 
 	.footer__actions {

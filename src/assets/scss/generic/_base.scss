@@ -54,7 +54,11 @@ h1 {
 	font-size: 8rem;
 
 	@include breakpoint-down(tablet) {
-		font-size: 5rem;
+		font-size: 6.4rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		font-size: 4rem;
 	}
 }
 

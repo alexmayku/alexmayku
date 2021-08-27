@@ -23,6 +23,10 @@
 		&:hover {
 			color: $c-white;
 		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 1.4rem 1.1rem;
+		}
 	}
 
 	.tabs__nav li.is-current {

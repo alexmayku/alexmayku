@@ -8,4 +8,8 @@
 	@include breakpoint-down(tablet) {
 		max-width: 18rem;
 	}
+
+	@include breakpoint-down(mobile-medium) {
+		max-width: 17rem;
+	}
 }

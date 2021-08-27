@@ -8,7 +8,7 @@
 	left: 0;
 	right: 0;
 	width: 100%;
-	z-index: 10;
+	z-index: 101;
 
 	.header__inner {
 		padding: 2.5rem 0 0;
@@ -16,17 +16,39 @@
 		@include breakpoint-down(tablet) {
 			padding: 1.5rem 0 0;
 		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 2rem 0;
+		}
 	}
 
 	.header__shell {
 		display: flex;
 		align-items: center;
+		flex-flow: row wrap;
+
+		@include breakpoint-down(mobile) {
+			justify-content: space-between;
+		}
 	}
 
 	.header__aside {
 		margin-left: auto;
 		display: flex;
 		align-items: center;
+
+		@include breakpoint-down(mobile) {
+			justify-self: center;
+			width: 100vw;
+			padding: 1.5rem 0;
+			border-top: 0.1rem solid $c-gray;
+			border-bottom: 0.1rem solid $c-gray;
+			margin: 1.5rem -2rem 0 -2rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 1.5rem 0 1.2rem;
+		}
 	}
 
 	.header__socials {

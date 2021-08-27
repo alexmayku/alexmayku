@@ -14,10 +14,12 @@
 
 	blockquote {
 		font-size: 4rem;
-		max-width: 50rem;
-
 		width: 100%;
 		margin-bottom: 2rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: 3.2rem;
+		}
 	}
 
 	cite {
@@ -37,6 +39,10 @@
 		height: 8rem;
 		border-radius: 50%;
 		margin-right: 2.3rem;
+
+		@include breakpoint-down(mobile-medium) {
+			flex-shrink: 0;
+		}
 	}
 
 	.testimonial img {
@@ -56,5 +62,25 @@
 		max-width: 55rem;
 		font-size: 2.4rem;
 		margin-bottom: 3.2rem;
+	}
+}
+
+/* testimonial small */
+
+.testimonial--small {
+	blockquote i {
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 1.3rem;
+		}
+	}
+
+	blockquote {
+		font-size: 2rem;
+		margin-bottom: 1.4rem;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: 1.6rem;
+			margin-bottom: 2.6rem;
+		}
 	}
 }

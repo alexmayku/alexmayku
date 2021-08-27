@@ -3,6 +3,9 @@
 \* ------------------------------------------------------------ */
 
 .showcase {
+	@include breakpoint-down(mobile-medium) {
+		margin-top: 7.9rem;
+	}
 	.showcase__image {
 		position: relative;
 		padding-bottom: 46.12%;

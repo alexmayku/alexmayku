@@ -11,6 +11,11 @@
 	transition: color 0.2s;
 	line-height: 1;
 
+	@include breakpoint-down(mobile-medium) {
+		font-size: 2rem;
+		font-family: $ff-avantgarde;
+	}
+
 	&:hover {
 		color: $c-yellow;
 	}

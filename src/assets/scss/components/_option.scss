@@ -22,6 +22,10 @@
 		align-items: center;
 	}
 
+	@include breakpoint-down(mobile) {
+		max-width: 100%;
+	}
+
 	&:hover {
 		background-color: $c-yellow;
 	}

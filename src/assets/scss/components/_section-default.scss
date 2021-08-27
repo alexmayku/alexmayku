@@ -11,6 +11,10 @@
 		@include breakpoint-down(tablet) {
 			margin-bottom: 3rem;
 		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 4.5rem;
+		}
 	}
 
 	.section__head h4 {
@@ -45,6 +49,10 @@
 
 		@include breakpoint-down(tablet) {
 			margin-bottom: 3rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 4.5rem;
 		}
 	}
 }

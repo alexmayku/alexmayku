@@ -5,7 +5,7 @@
 	<div class="wrapper">
 		<include src="header.html"></include>
 		
-		<div class="main">
+		<div class="main js-main">
 			<div class="bottom-bar js-bottom-bar">
 				<div class="bar__inner">
 					<ul class="countdown countdown--alt" data-countdown="2021/09/22">
@@ -55,10 +55,10 @@
 				</div><!-- /.bar__inner -->
 			</div><!-- /.bottom-bar -->
 				
-			<div class="hero">
-				<div class="hero__background" style="background-image: url(assets/images/temp/Home_Poster.jpg">
-					
-				</div><!-- /.hero__background -->
+			<div class="hero js-hero">
+				<div class="hero__background hidden-xs" style="background-image: url(assets/images/temp/Home_Poster.jpg"></div><!-- /.hero__background -->
+
+				<div class="hero__background visible-xs-block" style="background-image: url(assets/images/temp/Home_Poster_Mob.jpg"></div><!-- /.hero__background -->
 
 				<div class="hero__inner">
 					<div class="shell shell--fluid">
@@ -91,14 +91,14 @@
 								</ul><!-- /.countdown -->
 							</div><!-- /.hero__countdown -->
 
-							<h1>Get ready for the Mayku Multiplier</h1>
+							<h1>Meet the <span>Mayku</span> Multiplier</h1>
 
 							<p>
-								Get ready to create ultra precise, long lasting molds and model parts with the world’s first desktop pressure forming machine.
+								Get ready to create ultra precise, long lasting molds and production parts with our easy to use desktop pressure forming machine.
 							</p>	
 							
 							<div class="hero__notice">
-								<ul class="list-icons">
+								<ul class="list-icons hidden-xs">
 									<li>
 										<img src="assets/images/svg/icon--yellow-1.svg" alt="">
 									</li>
@@ -116,7 +116,7 @@
 									</li>
 								</ul><!-- /.list-icons -->
 
-								<span>Discounted pre-orders open from5th October</span>
+								<span>Discounted pre-orders open from 5th October</span>
 							</div><!-- /.hero__notice -->
 
 							<div class="hero__form form-email">
@@ -147,7 +147,7 @@
 					</div><!-- /.shell shell-/-fluid -->
 				</div><!-- /.hero__inner -->
 
-				<a href="#" class="hero__btn js-scrolldown-btn">
+				<a href="#" class="hero__btn js-scrolldown-btn hidden-xs">
 					<img src="assets/images/svg/icon--arrowdown.svg" alt="">
 				</a>
 			</div><!-- /.hero -->
@@ -157,10 +157,12 @@
 					<div class="video__inner has-overlay ">
 						<div class="video__banner">
 							<a href="#" class="js-init-video">
-								<img src="assets/images/svg/icon--play.svg" alt="">
+								<img src="assets/images/svg/icon--play.svg" alt="" class="hidden-xs">
+
+								<img src="assets/images/svg/icon--play-m.svg" alt="" class="visible-xs-inline">
 							</a>
 
-							<h2>Check out the product film</h2>
+							<h2>See the Multiplier in action</h2>
 						</div><!-- /.video__banner -->
 
 						<video class="js-video" poster="assets/images/temp/image--revolution.jpg" src="assets/images/temp/TeaseVideo.mp4" preload="metaload" playsinline controls>
@@ -176,7 +178,7 @@
 						<div class="section__head">
 							<h4>About The Multiplier</h4>
 
-							<h1>More power. More precision. More possibilities. </h1>
+							<h1>More power. More precision. More possibilities.</h1>
 						</div><!-- /.section__head -->
 
 						<div class="section__body">							
@@ -187,15 +189,15 @@
 											<nav class="tabs__nav">
 												<ul>
 													<li class="is-current">
-														<a href="#tabSpeed">Speed</a>
+														<a href="#tabSpeed">High detail</a>
 													</li>
 
 													<li>
-														<a href="#tabPrecision">Precision</a>
+														<a href="#tabPrecision">Large scale</a>
 													</li>
 
 													<li>
-														<a href="#tabControl">Control</a>
+														<a href="#tabControl">Easy to use</a>
 													</li>
 												</ul>
 											</nav><!-- /.tabs__nav -->
@@ -203,34 +205,8 @@
 										
 										<div class="tabs__body">
 											<div class="tab is-current" id="tabSpeed">
-												<h2>A pro workflow for rapid production</h2>
-
-												<ul class="list-features">
-													<li>
-														<i class="ico-arrow-right">
-															<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-														</i>
-
-														Manufacture small to medium sized projects without outsourcing 
-													</li>
-													
-													<li>
-														<i class="ico-arrow-right">
-															<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-														</i>
-
-														Reduce lead times by taking manufacturing in house
-													</li>
-													
-													<li>
-														<i class="ico-arrow-right">
-															<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-														</i>
-
-														Multiply custom molds and shapes in minutes 
-													</li>
-												</ul><!-- /.list-features -->
-
+												<h2>Capture textures finer than a human hair</h2>
+												
 												<a href="machine.html" class="btn btn--yellow btn--medium">
 													About the machine
 												</a>
@@ -271,34 +247,8 @@
 											</div><!-- /.tab -->
 
 											<div class="tab" id="tabControl">
-												<h2>Lorem ipsum dolor sit amet.</h2>
-
-												<ul class="list-features">
-													<li>
-														<i class="ico-arrow-right">
-															<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-														</i>
-
-														Lorem ipsum.
-													</li>
-													
-													<li>
-														<i class="ico-arrow-right">
-															<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-														</i>
-
-														Lorem ipsum dolor.
-													</li>
-													
-													<li>
-														<i class="ico-arrow-right">
-															<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-														</i>
-
-														Lorem ipsum dolor sit amet, consectetur adipisicing.
-													</li>
-												</ul><!-- /.list-features -->
-
+												<h2>Lorem ipsum dolor sit amet.</h2>												
+												
 												<a href="#" class="btn btn--yellow btn--medium">
 													About the machine
 												</a>
@@ -308,7 +258,7 @@
 								</div><!-- /.article__tabs -->
 
 								<div class="article__image">
-									<img src="assets/images/temp/makerimage--evkahome.jpg" alt="">
+									<img src="assets/images/temp/about-the-multiplier.jpg" alt="">
 								</div><!-- /.article__image -->
 							</div><!-- /.article -->
 						</div><!-- /.section__body -->
@@ -322,16 +272,15 @@
 												<img src="assets/images/svg/icon--quote.svg" alt="">
 											</i>
 
-											It’s a total creativity
-											game changer.
+											An unlimited number of molds, of almost any design with a range of materials. Triple win.
 										</blockquote>
 
 										<div class="testimonial__author">
 											<div class="testimonial__image">
-												<img src="assets/images/temp/makerphoto--evkahome.png" alt="">
+												<img src="assets/images/temp/makerphoto--philkhoury.png" alt="">
 											</div><!-- /.testimial__image -->
 
-											<cite>Ewa Leffman<br>Founder @ Evka Home</cite>
+											<cite>Philip Khoury<br>Pastry Chef and Chocolatier @ Harrods</cite>
 										</div><!-- /.testimonial__author -->
 									</div><!-- /.testimonial -->
 								</div><!-- /.grid__col grid__col-/-1of2 -->
@@ -343,16 +292,15 @@
 												<img src="assets/images/svg/icon--quote.svg" alt="">
 											</i>
 
-											It’s a total creativity
-											game changer.
+											As good as injection molding but quicker and more cost effective.
 										</blockquote>
 
 										<div class="testimonial__author">
 											<div class="testimonial__image">
-												<img src="assets/images/temp/makerphoto--evkahome.png" alt="">
+												<img src="assets/images/temp/makerphoto--betadesign.png" alt="">
 											</div><!-- /.testimial__image -->
 
-											<cite>Ewa Leffman<br>Founder @ Evka Home</cite>
+											<cite>Harry Mitchell<br>Creative Director and Co-Founder @ Beta Design Office</cite>
 										</div><!-- /.testimonial__author -->
 									</div><!-- /.testimonial -->
 								</div><!-- /.grid__col grid__col-/-1of2 -->
@@ -374,11 +322,11 @@
 						<div class="section__body">
 							<div class="article article--inverted">
 								<div class="article__content">
-									<h2 class="article__title">Evka Home</h2>
+									<h2 class="article__title">Nona Living</h2>
 
 									<div class="article__entry">
 										<p>
-											Masters of unique, conversation starting homeware, Evka Home produce their extensive product range completely in house.
+											Fiona began her creative career in visual merchandising, quickly expanding onwards into prop making, sculpture and art installations. With a client list including Anthropologie, Saatchi and Saatchi, Selfridges and Jo Malone, Fiona was inspired to create more and Nona Living was born during lockdown. Fiona’s mission? To create homewares accessories inspired by a passion for exploring materials and texture.
 										</p>
 									</div><!-- /.article__entry -->
 
@@ -387,43 +335,42 @@
 											<img src="assets/images/svg/icon--instagram.svg" alt="">
 										</i>
 
-										<span>@evkahome</span>
+										<span>@nona_living</span>
 									</a>
 
-									<div class="testimonial article__testimonial">
+									<div class="testimonial testimonial--small article__testimonial">
 										<blockquote>
 											<i class="ico-quote">
 												<img src="assets/images/svg/icon--quote.svg" alt="">
 											</i>
 
-											It’s a total creativity
-											game changer.
+											I love how Mayku gives makers the opportunity to be so creative, to explore so many different shapes & textures which are truly unique to their brand, and their personal experimentation. The Multiplier allows makers to constantly innovate and be one step ahead.
 										</blockquote>
 
 										<div class="testimonial__author">
 											<div class="testimonial__image">
-												<img src="assets/images/temp/makerphoto--evkahome.png" alt="">
+												<img src="assets/images/temp/makerphoto--fionacoupe.png" alt="">
 											</div><!-- /.testimial__image -->
 
-											<cite>Ewa Leffman<br>Founder @ Evka Home</cite>
+											<cite>Fiona Coupe<br>Freelance Prop Designer and Maker at Nona Living</cite>
 										</div><!-- /.testimonial__author -->
 									</div><!-- /.testimonial -->
 
-									<a href="maker-1.html" class="btn btn--yellow btn--medium">For chocolatiers</a>
+									<a href="maker-1.html" class="btn btn--yellow btn--medium">For homewares makers</a>
 								</div><!-- /.article__content -->
 
 								<div class="article__image">
-									<img src="assets/images/temp/makerimage--evkahome.jpg" alt="">
+									<img src="assets/images/temp/about--fionacoupe.jpg" alt="">
 								</div><!-- /.article__image -->
 							</div><!-- /.article -->
 
 							<div class="article ">
 								<div class="article__content">
-									<h2 class="article__title">Evka Home</h2>
+									<h2 class="article__title">Philip Khoury</h2>
 
 									<div class="article__entry">
 										<p>
-											Masters of unique, conversation starting homeware, Evka Home produce their extensive product range completely in house.
+											Pastry Chef and Chocolatier, Philip Khoury makes up part of the culinary team at prestigious department store, Harrods in London. He’s mastered the classics and is now innovating with new technologies in the kitchen. Philip’s current mission is to create world-class plant based desserts and confectionery.
 										</p>
 									</div><!-- /.article__entry -->
 
@@ -432,43 +379,42 @@
 											<img src="assets/images/svg/icon--instagram.svg" alt="">
 										</i>
 
-										<span>@evkahome</span>
+										<span>@philipkhoury</span>
 									</a>
 
-									<div class="testimonial article__testimonial">
+									<div class="testimonial testimonial--small article__testimonial">
 										<blockquote>
 											<i class="ico-quote">
 												<img src="assets/images/svg/icon--quote.svg" alt="">
 											</i>
 
-											It’s a total creativity
-											game changer.
+											The Multiplier is cheaper than the setup cost of 1 custom mold with most manufacturers. But it produces an unlimited number of molds, of almost any design with a range of sturdy materials. Triple win.
 										</blockquote>
 
 										<div class="testimonial__author">
 											<div class="testimonial__image">
-												<img src="assets/images/temp/makerphoto--evkahome.png" alt="">
+												<img src="assets/images/temp/makerphoto--philkhoury.png" alt="">
 											</div><!-- /.testimial__image -->
 
-											<cite>Ewa Leffman<br>Founder @ Evka Home</cite>
+											<cite>Philip Khoury<br>Pastry Chef and Chocolatier @ Harrods</cite>
 										</div><!-- /.testimonial__author -->
 									</div><!-- /.testimonial -->
 
-									<a href="maker-2.html" class="btn btn--yellow btn--medium">For homeware makers</a>
+									<a href="maker-2.html" class="btn btn--yellow btn--medium">For chocolatiers</a>
 								</div><!-- /.article__content -->
 
 								<div class="article__image">
-									<img src="assets/images/temp/makerimage--evkahome.jpg" alt="">
+									<img src="assets/images/temp/philip--chocolate.jpg" alt="">
 								</div><!-- /.article__image -->
 							</div><!-- /.article -->
 
 							<div class="article article--inverted">
 								<div class="article__content">
-									<h2 class="article__title">Evka Home</h2>
+									<h2 class="article__title">Beta Design Office</h2>
 
 									<div class="article__entry">
 										<p>
-											Masters of unique, conversation starting homeware, Evka Home produce their extensive product range completely in house.
+											London based design consultancy, Beta Design Office have 15 years of experience in product design. Their client list includes Nike, fussy, Design Museum and Joseph Joseph. Their multi-disciplinary design team combines desktop technologies including 3D printing and vacuum forming to prototype professional products. Beta’s mission? To create a better world through brilliant product design.
 										</p>
 									</div><!-- /.article__entry -->
 
@@ -477,33 +423,32 @@
 											<img src="assets/images/svg/icon--instagram.svg" alt="">
 										</i>
 
-										<span>@evkahome</span>
+										<span>@betadesignoffice</span>
 									</a>
 
-									<div class="testimonial article__testimonial">
+									<div class="testimonial testimonial--small article__testimonial">
 										<blockquote>
 											<i class="ico-quote">
 												<img src="assets/images/svg/icon--quote.svg" alt="">
 											</i>
 
-											It’s a total creativity
-											game changer.
+											The level of detail it can replicate is amazing - as good as injection molding but quicker and more cost effective.
 										</blockquote>
 
 										<div class="testimonial__author">
 											<div class="testimonial__image">
-												<img src="assets/images/temp/makerphoto--evkahome.png" alt="">
+												<img src="assets/images/temp/makerphoto--betadesign.png" alt="">
 											</div><!-- /.testimial__image -->
 
-											<cite>Ewa Leffman<br>Founder @ Evka Home</cite>
+											<cite>Harry Mitchell<br>Creative Director and Co-Founder @ Beta Design Office</cite>
 										</div><!-- /.testimonial__author -->
 									</div><!-- /.testimonial -->
 
-									<a href="maker-3.html" class="btn btn--yellow btn--medium">For designers & agencies</a>
+									<a href="maker-3.html" class="btn btn--yellow btn--medium">For designers</a>
 								</div><!-- /.article__content -->
 
 								<div class="article__image">
-									<img src="assets/images/temp/makerimage--evkahome.jpg" alt="">
+									<img src="assets/images/temp/betadesign--office.jpg" alt="">
 								</div><!-- /.article__image -->
 							</div><!-- /.article -->
 						</div><!-- /.section__body -->
@@ -515,7 +460,7 @@
 
 			<div class="showcase">				
 				<div class="showcase__image">
-					<img src="assets/images/temp/image--machineplinth.jpg" alt="">
+					<img src="assets/images/temp/multiplier--showcase-alt.jpg" alt="">
 				</div><!-- /.showcase__image -->
 			</div><!-- /.showcase -->
 		</div><!-- /.main -->

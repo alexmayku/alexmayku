@@ -3,8 +3,21 @@
 \* ------------------------------------------------------------ */
 
 .nav {
+	@include breakpoint-down(mobile) {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
 	ul {
 		list-style: none;
+
+		@include breakpoint-down(mobile) {
+			padding: 0 2rem;
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	li {
@@ -15,6 +28,10 @@
 
 		@include breakpoint-down(tablet) {
 			font-size: 1.4rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: 1.2rem;
 		}
 
 		&:after {
@@ -47,6 +64,10 @@
 
 		@include breakpoint-down(tablet) {
 			margin-left: 1rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin-left: 0;
 		}
 	}
 
