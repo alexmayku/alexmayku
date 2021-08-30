@@ -150,6 +150,12 @@
 /* ARticle alt */
 
 .article--alt {
+	& + & {
+		@include breakpoint-down(mobile-medium) {
+			margin-top: 5.5rem;
+		}
+	}
+
 	.article__subtitle {
 		margin-bottom: 1.6rem;
 	}

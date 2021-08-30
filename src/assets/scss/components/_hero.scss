@@ -173,6 +173,16 @@
 /* Hero makers */
 
 .hero--makers {
+	@include breakpoint-down(mobile) {
+		min-height: 100vh;
+	}
+
+	h2 {
+		@include breakpoint-down(mobile) {
+			font-size: 3rem;
+		}
+	}
+
 	.hero__background {
 		&:after {
 			content: "";
@@ -185,9 +195,20 @@
 		}
 	}
 	.hero__content {
+		@include breakpoint-down(mobile) {
+			position: relative;
+			top: auto;
+			left: auto;
+			right: auto;
+			bottom: auto;
+			padding-top: 50rem;
+		}
 	}
 
 	.hero__content p {
+		@include breakpoint-down(mobile) {
+			font-size: 1.8rem;
+		}
 	}
 }
 

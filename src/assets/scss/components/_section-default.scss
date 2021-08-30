@@ -193,7 +193,19 @@
 /* Section Default Maker */
 
 .section-default--maker {
+	@include breakpoint-down(mobile-medium) {
+		padding-top: 7rem;
+	}
+
 	.section__foot {
 		margin-top: 15.7rem;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 8rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin-top: 3rem;
+		}
 	}
 }

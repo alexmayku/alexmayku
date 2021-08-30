@@ -7,6 +7,10 @@
 	min-height: 72rem;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
+	@include breakpoint-down(mobile) {
+		min-height: 46.8rem;
+	}
+
 	&:nth-child(even) .card__content {
 		left: 0;
 	}
@@ -17,6 +21,10 @@
 			rgba(0, 0, 0, 1) 0%,
 			rgba(0, 0, 0, 0) 100%
 		);
+
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
 	}
 
 	& + & {
@@ -33,6 +41,10 @@
 		background-position: center center;
 		background-repeat: no-repeat;
 
+		@include breakpoint-down(mobile) {
+			height: 50%;
+		}
+
 		&:before {
 			content: "";
 			position: absolute;
@@ -45,6 +57,10 @@
 				rgba(0, 0, 0, 1) 0%,
 				rgba(0, 0, 0, 0) 100%
 			);
+
+			@include breakpoint-down(mobile) {
+				display: none;
+			}
 		}
 	}
 
@@ -60,9 +76,26 @@
 		@include breakpoint-down(small-desktop) {
 			max-width: 59rem;
 		}
+
+		@include breakpoint-down(mobile) {
+			position: absolute;
+			background-color: $c-black;
+			width: 100%;
+			max-width: 100%;
+			top: 50%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transform: translateY(0);
+			padding: 4rem 2rem;
+		}
 	}
 
 	.card__content h2 {
 		margin-bottom: 2.4rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: 3.2rem;
+		}
 	}
 }

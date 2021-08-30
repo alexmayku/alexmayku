@@ -20,36 +20,36 @@ const bottomBar = document.querySelector('.js-bottom-bar');
 // })
 
 
-const footer = document.querySelector('.js-footer');
-const main = document.querySelector('.js-main');
-const hero = document.querySelector('.js-hero');
-const footerHeight = footer.getBoundingClientRect().height * 3;
+// const footer = document.querySelector('.js-footer');
+// const main = document.querySelector('.js-main');
+// const hero = document.querySelector('.js-hero');
+// const footerHeight = footer.getBoundingClientRect().height * 3;
 
-console.log(footerHeight)
+// console.log(footerHeight)
 
-const addSticky = () => {
-	if (main === null) {
-		return;
-	}	
-	const stickyBar = function(entries) {
-		const [entry] = entries;
+// const addSticky = () => {
+// 	if (main === null) {
+// 		return;
+// 	}	
+// 	const stickyBar = function(entries) {
+// 		const [entry] = entries;
 
-		if (! entry.isIntersecting) {
-			console.log('no')
-			bottomBar.classList.remove('is-intersecting');
-		} else {
-			bottomBar.classList.add('is-intersecting');
+// 		if (! entry.isIntersecting) {
+// 			console.log('no')
+// 			bottomBar.classList.remove('is-intersecting');
+// 		} else {
+// 			bottomBar.classList.add('is-intersecting');
 
-		};
-	};
+// 		};
+// 	};
 
-	const mainObserver = new IntersectionObserver(stickyBar, {
-		root: null,
-		threshold: 0,
-		rootMargin: `-${footerHeight}px 0px 0px 0px`
-	});
+// 	const mainObserver = new IntersectionObserver(stickyBar, {
+// 		root: null,
+// 		threshold: 0,
+// 		rootMargin: `-${footerHeight}px 0px 0px 0px`
+// 	});
 
-	mainObserver.observe(main);
-};
+// 	mainObserver.observe(main);
+// };
 
-addSticky();
+// addSticky();

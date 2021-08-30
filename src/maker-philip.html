@@ -6,7 +6,7 @@
 		<include src="header.html"></include>	
 		
 		<div class="main" id="main">				
-			<div class="bottom-bar bottom-bar--alt js-bottom-bar" data-scroll data-scroll-sticky data-scroll-target="#main">
+			<div class="bottom-bar bottom-bar--alt js-bottom-bar hidden" data-scroll data-scroll-sticky data-scroll-target="#main">
 				<div class="bar__inner">
 					<ul class="countdown countdown--alt" data-countdown="2021/09/22">
 						<li>
@@ -68,7 +68,7 @@
 							</p>	
 							
 							<div class="hero__notice">
-								<ul class="list-icons">
+								<ul class="list-icons hidden-xs">
 									<li>
 										<img src="assets/images/svg/icon--yellow-1.svg" alt="">
 									</li>
@@ -117,17 +117,19 @@
 					</div><!-- /.shell shell-/-fluid -->
 				</div><!-- /.hero__inner -->
 
-				<a href="#video-1" class="hero__btn" data-scroll-to>
+				<a href="#video-1" class="hero__btn hidden-xs" data-scroll-to>
 					<img src="assets/images/svg/icon--arrowdown.svg" alt="">
 				</a>
 			</div><!-- /.hero -->
 
-			<div class="video video--desktop video--makers js-video-container pb-2" id="video-1">
+			<div class="video video--desktop video--makers js-video-container" id="video-1">
 				<div class="shell shell--fluid">
 					<div class="video__inner has-overlay ">
 						<div class="video__banner">
 							<a href="#" class="js-init-video">
-								<img src="assets/images/svg/icon--play.svg" alt="">
+								<img src="assets/images/svg/icon--play-makers.svg" alt="" class="hidden-xs">
+
+								<img src="assets/images/svg/icon--play-m.svg" alt="" class="visible-xs-inline">
 							</a>
 
 							<h2>Watch how Philip uses the Mayku Multiplier</h2>

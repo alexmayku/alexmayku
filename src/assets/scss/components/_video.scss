@@ -3,9 +3,7 @@
 \* ------------------------------------------------------------ */
 
 .video {
-	.video--desktop {
-		max-width: 100%;
-	}
+	max-width: 100%;
 
 	.video__inner {
 		position: relative;
@@ -95,5 +93,6 @@
 .video--makers {
 	.video__banner h2 {
 		max-width: 78rem;
+		font-size: 3.2rem;
 	}
 }
