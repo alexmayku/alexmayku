@@ -1,0 +1,102 @@
+/* ------------------------------------------------------------ *\
+	Form Sign Up
+\* ------------------------------------------------------------ */
+
+.form-sign-up {
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: -7rem;
+		right: -5.4rem;
+		width: 6.1rem;
+		height: 10rem;
+		background-color: $c-black-2;
+		border-left: 0.1rem solid $c-yellow;
+		transform: rotateZ(322deg);
+	}
+
+	input,
+	select {
+		width: 100%;
+		padding: 1rem 2rem;
+		border-radius: 10rem;
+		font-size: 2rem;
+		line-height: 1;
+		margin-top: 1.5rem;
+		color: $c-black;
+	}
+
+	fieldset {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	fieldset.form-columns-1:first-child {
+		margin-top: 4.7rem;
+	}
+
+	.hs-form fieldset {
+		max-width: 100%;
+	}
+
+	.hs-form .form-columns-2 {
+		display: flex;
+		align-items: flex-end;
+		margin-bottom: 4.7rem;
+	}
+
+	.hs-form .form-columns-2 input {
+		margin-right: 2rem;
+	}
+
+	.hs-form fieldset.form-columns-1 .hs-input {
+		background-color: transparent;
+		border: 0.1rem solid $c-white;
+		color: rgba($c-white, 0.6);
+		display: block;
+		width: 100%;
+	}
+
+	.hs_submit .actions input {
+		display: inline-block;
+		border: none;
+		width: 30rem;
+		background-color: $c-yellow;
+		color: $c-black;
+		padding: 1.6rem 3.2rem;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: $c-yellow-3;
+		}
+	}
+
+	.hs-form-field {
+		position: relative;
+	}
+
+	.no-list.hs-error-msgs.inputs-list li {
+		list-style-image: url("../images/svg/icon--arrow--yellow.svg");
+	}
+
+	.hs_error_rollup {
+		margin-top: 0.5rem;
+	}
+
+	.hs-error-msgs {
+		position: absolute;
+		bottom: 0rem;
+		left: 0;
+		margin: 0.5rem 0 0 3rem;
+		list-style: none;
+	}
+
+	.hs-error-msg,
+	.hs-main-font-element {
+		display: block !important;
+		color: $c-white;
+		opacity: 0.6;
+	}
+}

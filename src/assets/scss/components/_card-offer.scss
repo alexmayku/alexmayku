@@ -1,0 +1,94 @@
+/* ------------------------------------------------------------ *\
+	Card Offer
+\* ------------------------------------------------------------ */
+
+.card-offer {
+	padding: 6.1rem 7.9rem 5.4rem 4.7rem;
+	border-bottom-left-radius: 2rem;
+	border: 0.1rem solid $c-yellow;
+	position: relative;
+
+	@include breakpoint-down(small-desktop) {
+		padding: 6.1rem 2rem 4.7rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 4rem 3rem;
+	}
+
+	& + & {
+		margin-top: 4.7rem;
+	}
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: -3rem;
+		right: -2.4rem;
+		width: 6.1rem;
+		height: 10rem;
+		background-color: $c-black-2;
+		border-left: 0.1rem solid $c-yellow;
+		transform: rotateZ(322deg);
+	}
+
+	.card__head h4 {
+		color: $c-yellow;
+	}
+
+	.card__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		@include breakpoint-down(mobile) {
+			flex-direction: column;
+		}
+	}
+
+	.card__content {
+		color: $c-white;
+		max-width: 67.3rem;
+		width: 100%;
+		padding-top: 1.5rem;
+	}
+
+	.card__content h2 {
+		margin-bottom: 1.9rem;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: 3rem;
+		}
+	}
+
+	.card__price {
+		text-align: right;
+
+		@include breakpoint-down(mobile) {
+			margin-left: auto;
+		}
+	}
+
+	.card__price span {
+		margin-bottom: 0.1rem;
+	}
+
+	.card__price h2 {
+		margin-bottom: 0.6rem;
+	}
+
+	.card__foot {
+		padding-bottom: 0.7rem;
+		margin-top: 3.3rem;
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 0;
+		}
+	}
+
+	.card__form {
+		@include breakpoint-down(mobile) {
+			text-align: center;
+		}
+	}
+}

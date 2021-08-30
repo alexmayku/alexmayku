@@ -34,6 +34,10 @@
 	padding: 15.5rem 0 8.5rem;
 }
 
+.py-4 {
+	padding: 16rem 0;
+}
+
 .pt-1 {
 	padding-top: 15.5rem;
 }
@@ -60,6 +64,10 @@
 	@include breakpoint-down(mobile-medium) {
 		padding-bottom: 11.9rem;
 	}
+}
+
+.pb-3 {
+	padding-bottom: 11.6rem;
 }
 
 /*  Clear  */

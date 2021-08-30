@@ -209,3 +209,60 @@
 		}
 	}
 }
+
+/* Section Default Pre ORder  */
+
+.section-default--pre-order {
+	.section__head {
+		margin-bottom: 5.7rem;
+	}
+}
+
+/* Section Default Sign Up */
+
+.section-default--sign-up {
+	padding: 22.4rem 0;
+
+	.section__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8rem;
+	}
+
+	.section__head {
+		margin-bottom: 4.5rem;
+	}
+
+	.section__head h1 {
+		margin-bottom: 2.5rem;
+	}
+
+	.section__body {
+		border-top: 0.1rem solid rgba($c-white, 0.6);
+		border-bottom: 0.1rem solid rgba($c-white, 0.6);
+		padding: 3.7rem 0 4.5rem;
+	}
+
+	.section__body h4 {
+		color: $c-yellow-3;
+	}
+
+	.section__body h3 {
+		font-size: 3.6rem;
+		margin-bottom: 3.3rem;
+	}
+
+	.section__price {
+		max-width: 44.9rem;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.section__form {
+		padding: 4rem 3rem;
+		border: 0.1rem solid $c-yellow;
+		border-bottom-left-radius: 2rem;
+	}
+}
