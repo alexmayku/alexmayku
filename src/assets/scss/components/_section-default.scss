@@ -227,6 +227,14 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 8rem;
+
+		@include breakpoint-down(small-desktop) {
+			gap: 3rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.section__head {
@@ -258,11 +266,20 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@include breakpoint-down(mobile-medium) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
 	}
 
 	.section__form {
-		padding: 4rem 3rem;
+		padding: 4rem 1.5rem;
 		border: 0.1rem solid $c-yellow;
 		border-bottom-left-radius: 2rem;
+
+		@include breakpoint-down(mobile-medium) {
+			padding: 2rem 0.5rem;
+		}
 	}
 }
