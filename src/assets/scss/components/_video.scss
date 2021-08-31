@@ -94,5 +94,9 @@
 	.video__banner h2 {
 		max-width: 78rem;
 		font-size: 3.2rem;
+
+		@include breakpoint-down(mobile) {
+			font-size: 2.4rem;
+		}
 	}
 }

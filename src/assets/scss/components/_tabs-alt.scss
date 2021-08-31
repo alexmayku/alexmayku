@@ -1,0 +1,40 @@
+/* ------------------------------------------------------------ *\
+	Tabs Alt
+\* ------------------------------------------------------------ */
+
+.tabs-alt {
+	.tabs__nav ul {
+		list-style: none;
+		display: flex;
+	}
+
+	.tabs__nav li {
+		color: $c-yellow;
+		width: 50%;
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.tabs__nav li.is-current {
+		border-top: 0.1rem solid $c-yellow;
+		border-right: 0.1rem solid $c-yellow;
+		border-left: 0.1rem solid $c-yellow;
+		color: $c-white;
+	}
+
+	.tabs__nav a {
+		display: block;
+		text-decoration: none;
+		padding: 1.4rem 0;
+	}
+
+	.tabs__body {
+		border: 0.1rem solid $c-yellow;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+
+		@include breakpoint-down(mobile) {
+			display: block;
+		}
+	}
+}

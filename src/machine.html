@@ -4,8 +4,81 @@
 <body>
 	<div class="wrapper" data-scroll-container>
 		<include src="header.html"></include>	
+
+		<nav class="nav-sticky js-nav-sticky" data-scroll data-scroll-sticky data-scroll-target="#main">
+			<ul>
+				<li>
+					<a href="#sectionAbout" data-scroll-to>About</a>
+				</li>
+				
+				<li>
+					<a href="#sectionHowItWorks" data-scroll-to>How it works</a>
+				</li>
+				
+				<li>
+					<a href="#sectionBenefits" data-scroll-to>Benefits</a>
+				</li>
+				
+				<li>
+					<a href="#sectionSpecs" data-scroll-to>Tech Specs</a>
+				</li>
+				
+				<li>
+					<a href="#sectionComparison" data-scroll-to>In comparison</a>
+				</li>
+			</ul>
+		</nav><!-- /.nav-sticky -->
+
+		<div class="bottom-bar js-bottom-bar" data-scroll data-scroll-sticky data-scroll-target="#main">
+			<div class="bar__inner">
+				<ul class="countdown countdown--alt" data-countdown="2021/09/22">
+					<li>
+						<span class="countdown__days"></span>
+					</li>
+					
+					<li>
+						<span class="countdown__hours"></span>
+					</li>
+					
+					<li>
+						<span class="countdown__minutes"></span>
+					</li>
+					
+					<li>
+						<span class="countdown__seconds"></span>				
+					</li>
+				</ul><!-- /.countdown -->
+
+				<span>To pre-order</span>
+
+				<div class="form-email form-email--sticky">
+					<!--[if lte IE 8]>
+				      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+				      <![endif]-->
+				      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+				      <script>
+				        hbspt.forms.create({
+				        region: "na1",
+				        portalId: "9286585",
+				        formId: "7b274279-d853-46a6-b01d-ac21a82f2a77",
+				        onFormSubmit: function($form) {
+				        window.rrSpace = (
+				           rrSettingsConversion = {
+				           debug: "false",
+				            parameters: {
+				              email: $form[0].elements.email.value
+				            }
+				        }
+				      );
+				  (function (f, r, n, d, b, y) { b = f.createElement(r), y = f.getElementsByTagName(r)[0]; b.async = 1; b.src = n; b.id = 'RR_DIVID'; y.parentNode.insertBefore(b, y); })(document, 'script', '//mayku.referralrock.com/webpixel/beta/universalv03.js');
+				   } 
+				      });
+				      </script>
+				</div><!-- /.form-email -->
+			</div><!-- /.bar__inner -->
+		</div><!-- /.bottom-bar -->
 		
-		<div class="main" id="main">			
+		<div class="main js-main" id="main" data-scroll-section-inview>	
 			<div class="hero hero--machine js-hero">
 				<div class="hero__background">
 					 <video playsinline autoplay muted loop poster="assets/images/temp/Home_Poster.jpg" id="bgvid">
@@ -24,950 +97,923 @@
 				</div><!-- /.hero__inner -->
 			</div><!-- /.hero -->
 
-			<div class="bottom-bar bottom-bar--alt js-bottom-bar" data-scroll data-scroll-sticky data-scroll-target="#main">
-				<div class="bar__inner">
-					<ul class="countdown countdown--alt" data-countdown="2021/09/22">
-						<li>
-							<span class="countdown__days"></span>
-						</li>
-						
-						<li>
-							<span class="countdown__hours"></span>
-						</li>
-						
-						<li>
-							<span class="countdown__minutes"></span>
-						</li>
-						
-						<li>
-							<span class="countdown__seconds"></span>				
-						</li>
-					</ul><!-- /.countdown -->
+			<div class="js-sticky-watch">
+				<section class="section-default section-default--about pb-1"  id="sectionAbout"> 
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>What it is</h4>
 
-					<span>To pre-order</span>
+							<h1>A Desktop Pressure Forming Machine</h1>
 
-					<div class="form-email form-email--sticky" >
-						<!--[if lte IE 8]>
-					      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-					      <![endif]-->
-					      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-					      <script>
-					        hbspt.forms.create({
-					        region: "na1",
-					        portalId: "9286585",
-					        formId: "7b274279-d853-46a6-b01d-ac21a82f2a77",
-					        onFormSubmit: function($form) {
-					        window.rrSpace = (
-					           rrSettingsConversion = {
-					           debug: "false",
-					            parameters: {
-					              email: $form[0].elements.email.value
-					            }
-					        }
-					      );
-					  (function (f, r, n, d, b, y) { b = f.createElement(r), y = f.getElementsByTagName(r)[0]; b.async = 1; b.src = n; b.id = 'RR_DIVID'; y.parentNode.insertBefore(b, y); })(document, 'script', '//mayku.referralrock.com/webpixel/beta/universalv03.js');
-					   } 
-					      });
-					      </script>
-					</div><!-- /.form-email -->
-				</div><!-- /.bar__inner -->
-			</div><!-- /.bottom-bar -->
+							<p>
+								Work with materials from 0.25mm - 8mm to create injection mold quality quality molds and production parts in minutes.
+							</p>
+						</div><!-- /.section__head -->
 
-			<section class="section-default section-default--about pb-1"  > 
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>What it is</h4>
+						<div class="section__body">
+							<div class="gallery" id="gallery-grid"> 
+								<div class="gallery__inner">
+									<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
 
-						<h1>A Desktop Pressure Forming Machine</h1>
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
 
-						<p>
-							Work with materials from 0.25mm - 8mm to create injection mold quality quality molds and production parts in minutes.
-						</p>
-					</div><!-- /.section__head -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-6.jpg)"></div><!-- /.gallery__image -->
 
-					<div class="section__body">
-						<div class="gallery" id="gallery-grid"> 
-							<div class="gallery__inner">
-								<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-6.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+									</div>
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+									<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-8.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-								</div>
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-9.jpg)"></div><!-- /.gallery__image -->
 
-								<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-8.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-9.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+									</div><!-- /.gallery__row -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+									<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-								</div><!-- /.gallery__row -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
 
-								<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+									</div><!-- /.gallery__row -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
+									<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->				
+									</div><!-- /.gallery__row -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
+									<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-20.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-21.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->					
+									</div><!-- /.gallery__row -->
 
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-								</div><!-- /.gallery__row -->
+									<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->				
+									</div><!-- /.gallery__row -->
+								</div><!-- /.gallery__inner -->
+							</div><!-- /.gallery -->
+						</div><!-- /.section__body -->
 
-								<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->				
-								</div><!-- /.gallery__row -->
+						<div class="section__foot">
+							<div class="grid grid--testimonial">
+								<div class="grid__col grid__col--1of2">
+									<div class="testimonial testimonial--medium">
+										<blockquote>
+											<i class="ico-quote">
+												<img src="assets/images/svg/icon--quote.svg" alt="">
+											</i>
 
-								<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-20.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-21.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->					
-								</div><!-- /.gallery__row -->
+											Having the scope to make molds for more intricate and larger pieces is so exciting
+										</blockquote>
 
-								<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->				
-								</div><!-- /.gallery__row -->
-							</div><!-- /.gallery__inner -->
-						</div><!-- /.gallery -->
-					</div><!-- /.section__body -->
+										<div class="testimonial__author">
+											<div class="testimonial__image">
+												<img src="assets/images/temp/makerphoto--fionacoupe.png" alt="">
+											</div><!-- /.testimial__image -->
 
-					<div class="section__foot">
-						<div class="grid grid--testimonial">
-							<div class="grid__col grid__col--1of2">
-								<div class="testimonial testimonial--medium">
-									<blockquote>
-										<i class="ico-quote">
-											<img src="assets/images/svg/icon--quote.svg" alt="">
-										</i>
+											<cite>Fiona Coupe<br>Freelance Prop Designer and Maker at Nona Living</cite>
+										</div><!-- /.testimonial__author -->
+									</div><!-- /.testimonial -->
+								</div><!-- /.grid__col grid__col-/-1of2 -->
 
-										Having the scope to make molds for more intricate and larger pieces is so exciting
-									</blockquote>
+								<div class="grid__col grid__col--1of2">
+									<div class="testimonial testimonial--medium">
+										<blockquote>
+											<i class="ico-quote">
+												<img src="assets/images/svg/icon--quote.svg" alt="">
+											</i>
 
-									<div class="testimonial__author">
-										<div class="testimonial__image">
+											The touch point details are very cool - technical innovation with a timeless aesthetic is always a win.
+										</blockquote>
+
+										<div class="testimonial__author">
+											<div class="testimonial__image">
+												<img src="assets/images/temp/makerphoto--betadesign.png" alt="">
+											</div><!-- /.testimial__image -->
+
+											<cite>Harry Mitchell<br>Creative Director and Co-Founder @ Beta Design Office</cite>
+										</div><!-- /.testimonial__author -->
+									</div><!-- /.testimonial -->
+								</div><!-- /.grid__col grid__col-/-1of2 -->
+							</div><!-- /.grid grid-/-testimonial -->
+						</div><!-- /.section__foot -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default -->
+
+				<section class="section-default section-default--about-2 pb-2" id="sectionHowItWorks">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>How It Works</h4>
+
+							<h1>What is Pressure Forming?</h1>
+						</div><!-- /.section__head -->
+
+						<div class="section__body">
+							<div class="grid grid--about">
+								<div class="grid__col grid__col--1of3">
+									<div class="about">
+										<div class="about__image">
+											<img src="assets/images/svg/about--image.svg" alt="">
+										</div><!-- /.about__image -->
+
+										<div class="about__entry">
+											<p>
+												Pressure forming is an industrial grade manufacturing process, used to make molds and parts.
+											</p>
+										</div><!-- /.about__entry -->
+									</div><!-- /.about -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<div class="about">
+										<div class="about__image">
+											<img src="assets/images/svg/about--image.svg" alt="">
+										</div><!-- /.about__image -->
+
+										<div class="about__entry">
+											<p>
+												Pressure forming can capture detail finer than a human hair and perfectly sharp edges, for super precise forms and molds.
+											</p>
+										</div><!-- /.about__entry -->
+									</div><!-- /.about -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<div class="about">
+										<div class="about__image">
+											<img src="assets/images/svg/about--image.svg" alt="">
+										</div><!-- /.about__image -->
+
+										<div class="about__entry">
+											<p>
+												With increased accuracy, pressure forming allows users to reach injection molding levels of detail right from their desktop.
+											</p>
+										</div><!-- /.about__entry -->
+									</div><!-- /.about -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+							</div><!-- /.grid grid-/-about -->
+
+							<a href="#" class="btn btn--yellow btn--medium hidden-xs">More about pressure forming</a>
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default -->	
+
+				<section class="section-default section-default--reveal pb-2">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>Watch</h4>
+
+							<h1>See the Multiplier in action</h1>
+
+							<p>We asked chocolatier Paul A. Young and homewares designer, Fiona Coupe to showcase the possibilities.</p>
+						</div><!-- /.section__head -->
+
+						<div class="section__body pt-2">
+							<div class="video video--desktop js-video-container ">
+								<div class="video__inner has-overlay ">
+									<div class="video__banner">
+										<a href="#" class="js-init-video">
+											<img src="assets/images/svg/icon--play.svg" alt="" class="hidden-xs">
+
+											<img src="assets/images/svg/icon--play-m.svg" alt="" class="visible-xs-inline">
+										</a>
+
+										<h2>Check out the product film</h2>
+									</div><!-- /.video__banner -->
+
+									<video class="js-video" poster="assets/images/temp/image--revolution.jpg" src="assets/images/temp/TeaseVideo.mp4" preload="metaload" playsinline controls>
+										<source src="assets/images/temp/TeaseVideo.mp4" type="video/mp4">
+									</video>
+								</div><!-- /.video__inner -->
+							</div><!-- /.video.video--desktop -->
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default -->				
+
+				<include src="callout.html"></include>
+
+				<div class="section-default section-default--multiplier py-1" id="sectionBenefits">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>Why the Multiplier?</h4>
+
+							<h1>More power. More precision. More possibilities.</h1>
+						</div><!-- /.section__head -->
+
+						<div class="section__body">
+							<div class="article article--alt">
+								<div class="article__content">
+									<h4 class="article__subtitle">Sharp edges</h4>
+
+									<h2 class="article__title">Super precise 90 degree edges for improved accuracy</h2>
+								</div><!-- /.article__content -->
+
+								<div class="article__image">
+									<img src="assets/images/temp/article--img--10.jpg" alt="">
+								</div><!-- /.article__image -->
+							</div><!-- /.article -->
+
+							<div class="article article--alt article--inverted">
+								<div class="article__content">
+									<h4 class="article__subtitle">High detail</h4>
+
+									<h2 class="article__title">Capture textures finer than a human hair</h2>
+								</div><!-- /.article__content -->
+
+								<div class="article__image">
+									<img src="assets/images/temp/article--img--11.jpg" alt="">
+								</div><!-- /.article__image -->
+							</div><!-- /.article -->
+
+							<div class="article article--alt">
+								<div class="article__content">
+									<h4 class="article__subtitle">Large scale</h4>
+
+									<h2 class="article__title">Design within a 400mm wide circular forming area with 160mm height</h2>
+								</div><!-- /.article__content -->
+
+								<div class="article__image">
+									<img src="assets/images/temp/article--img--12.jpg" alt="">
+								</div><!-- /.article__image -->
+							</div><!-- /.article -->
+
+							<div class="article article--alt article--inverted">
+								<div class="article__content">
+									<h4 class="article__subtitle">High detail</h4>
+
+									<h2 class="article__title">Capture textures finer than a human hair</h2>
+								</div><!-- /.article__content -->
+
+								<div class="article__image">
+									<img src="assets/images/temp/article--img--13.jpg" alt="">
+								</div><!-- /.article__image -->
+							</div><!-- /.article -->
+
+							<div class="article article--alt">
+								<div class="article__content">
+									<h4 class="article__subtitle">Compact</h4>
+
+									<h2 class="article__title">Fits on a desk and doesn’t require an external pump</h2>
+								</div><!-- /.article__content -->
+
+								<div class="article__image">
+									<img src="assets/images/temp/article--img--14.jpg" alt="">
+								</div><!-- /.article__image -->
+							</div><!-- /.article -->
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</div><!-- /.section-default -->
+
+				<div class="showcase showcase--alt pb-2">
+					<div class="shell shell--fluid">
+						<div class="showcase__image">
+							<img src="assets/images/temp/rotating-image--placeholder.jpg" alt="">
+						</div><!-- /.showcase__image -->
+					</div><!-- /.shell shell-/-fluid -->
+				</div><!-- /.showcase-alt -->
+
+				<div class="section-default section-default--white py-1 js-section-white" id="sectionSpecs">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>Technical Specs</h4>
+
+							<h1>Mayku’s next steps towards democratising manufacturing</h1>
+						</div><!-- /.section__head -->
+
+						<div class="section__body">						
+							<div class="card-specs">
+								<div class="card__background" style="background-image: url(assets/images/temp/specs--image-1.jpg);"></div><!-- /.card__background -->
+
+								<div class="card__content">
+									<h2>Circular forming bed</h2>
+
+									<ul class="list-features list-features--alt">
+										<li>
+											<i class="ico-arrow-right">
+												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
+											</i>
+
+											400mm diameter
+										</li>
+										
+										<li>
+											<i class="ico-arrow-right">
+												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
+											</i>
+
+											160mm max forming height
+										</li>
+									</ul><!-- /.list-features -->
+								</div><!-- /.card__content -->
+							</div><!-- /.card-specs -->
+
+							<div class="card-specs">
+								<div class="card__background" style="background-image: url(assets/images/temp/specs--image-2.jpg);"></div><!-- /.card__background -->
+
+								<div class="card__content">
+									<h2>A range of sheets</h2>
+
+									<ul class="list-features list-features--alt">
+										<li>
+											<i class="ico-arrow-right">
+												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
+											</i>
+
+											Polycarbonate, PETG, Flex sheets and more
+										</li>
+										
+										<li>
+											<i class="ico-arrow-right">
+												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
+											</i>
+
+											Works with sheets from 0.1mm - 10mm
+										</li>
+									</ul><!-- /.list-features -->
+								</div><!-- /.card__content -->
+							</div><!-- /.card-specs -->
+
+							<div class="card-specs">
+								<div class="card__background" style="background-image: url(assets/images/temp/specs--image-3.jpg);"></div><!-- /.card__background -->
+
+								<div class="card__content">
+									<h2>Unheard of detail</h2>
+
+									<ul class="list-features list-features--alt">
+										<li>
+											<i class="ico-arrow-right">
+												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
+											</i>
+
+											0.0004mm resolution for injection mold quality forms
+										</li>
+									</ul><!-- /.list-features -->
+								</div><!-- /.card__content -->
+							</div><!-- /.card-specs -->
+
+							<div class="card-specs">
+								<div class="card__background" style="background-image: url(assets/images/temp/specs--image-4.jpg);"></div><!-- /.card__background -->
+
+								<div class="card__content">
+									<h2>Brand new technology</h2>
+
+									<ul class="list-features list-features--alt">
+										<li>
+											<i class="ico-arrow-right">
+												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
+											</i>
+
+											High contrast LCD screen and automatic firmware updates
+										</li>
+									</ul><!-- /.list-features -->
+								</div><!-- /.card__content -->
+							</div><!-- /.card-specs -->
+
+							<div class="card-specs">
+								<div class="card__background" style="background-image: url(assets/images/temp/specs--image-5.jpg);"></div><!-- /.card__background -->
+
+								<div class="card__content">
+									<h2>Design pedigree</h2>
+
+									<ul class="list-features list-features--alt">
+										<li>
+											<i class="ico-arrow-right">
+												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
+											</i>
+
+											Designed in collaboration with Teenage Engineering
+										</li>
+									</ul><!-- /.list-features -->
+								</div><!-- /.card__content -->
+							</div><!-- /.card-specs -->
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</div><!-- /.section-default section-default-/-white -->
+
+				<div class="section-default section-default--specs py-1" id="sectionComparison"> 
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>In Comparison</h4>
+
+							<h1>Our most powerful, professional machine</h1>
+						</div><!-- /.section__head -->
+
+						<div class="section__body">
+							<div class="tabs-alt js-tabs-alt">
+								<div class="tabs__head visible-xs-block">
+									<nav class="tabs__nav">
+										<ul>
+											<li class="is-current">
+												<a href="#specMultiplier">Multiplier</a>
+											</li>
+
+											<li>
+												<a href="#specFormbox">FormBox</a>
+											</li>
+										</ul>
+									</nav><!-- /.tabs__nav -->
+								</div><!-- /.tabs__head -->
+								
+								<div class="tabs__body">
+									<div class="tab-alt" id="specFormbox">
+										<div class="spec spec--formbox">
+											<div class="spec__head">									
+												<img src="assets/images/svg/table--image.svg" alt="">
+
+												<img src="assets/images/svg/logo--mayku-formbox.svg" alt="">	
+											</div><!-- /.spec__head -->
+
+											<div class="spec__body">
+												<div class="spec__list">
+													<ul>
+														<li>
+															<div class="spec__description">
+																<h4>Forming bed:</h4>
+
+																<p>130mm x 200mm x  200mm</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Max sheet thickness:</h4>
+
+																<p>2mm (with Heat Shield)</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Min Sheet Thickness:</h4>
+
+																<p>0.5mm</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Detail resolution:</h4>
+
+																<p>0.01mm</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Requires external pump?</h4>
+
+																<p>Yes</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Size & weight:</h4>
+
+																<p>314mm x 273mm x 467mm - 13kg(Boxed)</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>RRP:</h4>
+
+																<p>$699 / £599</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<a href="https://www.mayku.me/pages/what-it-is" class="btn btn--yellow btn--medium" target="_blank">Find our more</a>
+														</li>
+													</ul>
+												</div><!-- /.spec__description -->
+											</div><!-- /.spec__body -->
+										</div><!-- /.spec spec-/-formbox -->
+									</div><!-- /.tab -->
+
+									<div class="tab-alt" id="specMultiplier">
+										<div class="spec spec--multiplier">
+											<div class="spec__head">
+												<img src="assets/images/svg/table--image.svg" alt="">
+
+												<img src="assets/images/svg/logo--mayku-multiplier.svg" alt="">
+											</div><!-- /.spec__head -->
+
+											<div class="spec__body">
+												<div class="spec__list">
+													<ul>
+														<li>
+															<div class="spec__description">
+																<h4>Forming bed:</h4>
+
+																<p>160mm x 400mm x 400mm</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Max sheet thickness:</h4>
+
+																<p>8mm (with Reducing Plate)</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Min Sheet Thickness:</h4>
+
+																<p>0.25mm</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Detail resolution:</h4>
+
+																<p>0.0003mm</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Requires external pump?</h4>
+
+																<p>No</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>Size & weight:</h4>
+
+																<p>685mm x 600mm x 600mm - 70kg (boxed)</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<div class="spec__description">
+																<h4>RRP:</h4>
+
+																<p>$4999 / £3499</p>
+															</div><!-- /.spec__description -->
+														</li>
+
+														<li>
+															<a href="#callout" class="btn btn--yellow btn--medium btn--spec" data-scroll-to>Sign up for early bird pre-orders</a>
+														</li>
+													</ul>
+												</div><!-- /.spec__description -->
+											</div><!-- /.spec__body -->
+										</div><!-- /.spec spec-/-multiplier -->
+									</div><!-- /.tab-alt -->	
+								</div><!-- /.tabs__body -->
+							</div><!-- /.tabs js-tabs -->
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</div><!-- /.section-default -->
+
+				<section class="section-default pb-2">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>The Makers</h4>
+
+							<h1>Words from our Community</h1>
+						</div><!-- /.section__head -->
+
+						<div class="section__body">
+							<div class="grid grid--default grid--themakers">
+								<div class="grid__col grid__col--1of3">
+									<div class="card">
+										<div class="card__image">
+											<img src="assets/images/temp/makerphoto--philkhoury.png" alt="">
+										</div><!-- /.card__image -->
+
+										<h2>Philip Khoury</h2>
+
+										<p>
+											Pastry Chef and Chocolatier at Harrods, London 
+										</p>
+
+										<blockquote>
+											<i class="ico-quote">
+												<img src="assets/images/svg/icon--quote.svg" alt="">
+											</i>
+
+											The Multiplier is more affordable than the setup cost of one custom chocolate mold with most manufacturers.
+										</blockquote>
+
+										<a href="#" class="btn btn--yellow btn--medium">
+											For chocolatiers and chefs
+										</a>
+									</div><!-- /.card -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<div class="card">
+										<div class="card__image">
 											<img src="assets/images/temp/makerphoto--fionacoupe.png" alt="">
-										</div><!-- /.testimial__image -->
+										</div><!-- /.card__image -->
 
-										<cite>Fiona Coupe<br>Freelance Prop Designer and Maker at Nona Living</cite>
-									</div><!-- /.testimonial__author -->
-								</div><!-- /.testimonial -->
-							</div><!-- /.grid__col grid__col-/-1of2 -->
+										<h2>Fiona Coupe</h2>
 
-							<div class="grid__col grid__col--1of2">
-								<div class="testimonial testimonial--medium">
-									<blockquote>
-										<i class="ico-quote">
-											<img src="assets/images/svg/icon--quote.svg" alt="">
-										</i>
+										<p>
+											Freelance Prop Maker and Homewares Designer at Nona Living
+										</p>
 
-										The touch point details are very cool - technical innovation with a timeless aesthetic is always a win.
-									</blockquote>
+										<blockquote>
+											<i class="ico-quote">
+												<img src="assets/images/svg/icon--quote.svg" alt="">
+											</i>
 
-									<div class="testimonial__author">
-										<div class="testimonial__image">
+											Being able to make molds even faster is a huge bonus! Flexible sheets are a bit of a game changer too.
+										</blockquote>
+
+										<a href="#" class="btn btn--yellow btn--medium">
+											For homewares designers
+										</a>
+									</div><!-- /.card -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<div class="card">
+										<div class="card__image">
 											<img src="assets/images/temp/makerphoto--betadesign.png" alt="">
-										</div><!-- /.testimial__image -->
+										</div><!-- /.card__image -->
 
-										<cite>Harry Mitchell<br>Creative Director and Co-Founder @ Beta Design Office</cite>
-									</div><!-- /.testimonial__author -->
-								</div><!-- /.testimonial -->
-							</div><!-- /.grid__col grid__col-/-1of2 -->
-						</div><!-- /.grid grid-/-testimonial -->
-					</div><!-- /.section__foot -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default -->
+										<h2>Beta Design Office</h2>
 
-			<section class="section-default section-default--about-2 pb-2">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>How It Works</h4>
-
-						<h1>What is Pressure Forming?</h1>
-					</div><!-- /.section__head -->
-
-					<div class="section__body">
-						<div class="grid grid--about">
-							<div class="grid__col grid__col--1of3">
-								<div class="about">
-									<div class="about__image">
-										<img src="assets/images/svg/about--image.svg" alt="">
-									</div><!-- /.about__image -->
-
-									<div class="about__entry">
 										<p>
-											Pressure forming is an industrial grade manufacturing process, used to make molds and parts.
+											London based design consultancy working with brands like Nike and Fussy. 
 										</p>
-									</div><!-- /.about__entry -->
-								</div><!-- /.about -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
 
-							<div class="grid__col grid__col--1of3">
-								<div class="about">
-									<div class="about__image">
-										<img src="assets/images/svg/about--image.svg" alt="">
-									</div><!-- /.about__image -->
+										<blockquote>
+											<i class="ico-quote">
+												<img src="assets/images/svg/icon--quote.svg" alt="">
+											</i>
 
-									<div class="about__entry">
-										<p>
-											Pressure forming can capture detail finer than a human hair and perfectly sharp edges, for super precise forms and molds.
-										</p>
-									</div><!-- /.about__entry -->
-								</div><!-- /.about -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
+											The level of detail it can replicate is amazing - as good as injection molding but quicker and more cost effective.
+										</blockquote>
 
-							<div class="grid__col grid__col--1of3">
-								<div class="about">
-									<div class="about__image">
-										<img src="assets/images/svg/about--image.svg" alt="">
-									</div><!-- /.about__image -->
+										<a href="#" class="btn btn--yellow btn--medium">
+											For designers & agencies
+										</a>
+									</div><!-- /.card -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+							</div><!-- /.grid grid-/-default -->
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default -->
 
-									<div class="about__entry">
-										<p>
-											With increased accuracy, pressure forming allows users to reach injection molding levels of detail right from their desktop.
-										</p>
-									</div><!-- /.about__entry -->
-								</div><!-- /.about -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-						</div><!-- /.grid grid-/-about -->
+				<div class="section-default pb-2">
+					<div class="shell shell--fluid">
+						<div class="gallery" id="gallery-grid-2"> 
+					<div class="gallery__inner">
+						<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
 
-						<a href="#" class="btn btn--yellow btn--medium hidden-xs">More about pressure forming</a>
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default -->	
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
 
-			<section class="section-default section-default--reveal pb-2">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>Watch</h4>
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-6.jpg)"></div><!-- /.gallery__image -->
 
-						<h1>See the Multiplier in action</h1>
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
 
-						<p>We asked chocolatier Paul A. Young and homewares designer, Fiona Coupe to showcase the possibilities.</p>
-					</div><!-- /.section__head -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
 
-					<div class="section__body pt-2">
-						<div class="video video--desktop js-video-container ">
-							<div class="video__inner has-overlay ">
-								<div class="video__banner">
-									<a href="#" class="js-init-video">
-										<img src="assets/images/svg/icon--play.svg" alt="" class="hidden-xs">
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
 
-										<img src="assets/images/svg/icon--play-m.svg" alt="" class="visible-xs-inline">
-									</a>
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
 
-									<h2>Check out the product film</h2>
-								</div><!-- /.video__banner -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
 
-								<video class="js-video" poster="assets/images/temp/image--revolution.jpg" src="assets/images/temp/TeaseVideo.mp4" preload="metaload" playsinline controls>
-									<source src="assets/images/temp/TeaseVideo.mp4" type="video/mp4">
-								</video>
-							</div><!-- /.video__inner -->
-						</div><!-- /.video.video--desktop -->
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default -->				
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
 
-			<include src="callout.html"></include>
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+						</div>
 
-			<div class="section-default section-default--multiplier py-1">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>Why the Multiplier?</h4>
+						<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
 
-						<h1>More power. More precision. More possibilities.</h1>
-					</div><!-- /.section__head -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-8.jpg)"></div><!-- /.gallery__image -->
 
-					<div class="section__body">
-						<div class="article article--alt">
-							<div class="article__content">
-								<h4 class="article__subtitle">Sharp edges</h4>
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-9.jpg)"></div><!-- /.gallery__image -->
 
-								<h2 class="article__title">Super precise 90 degree edges for improved accuracy</h2>
-							</div><!-- /.article__content -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
 
-							<div class="article__image">
-								<img src="assets/images/temp/article--img--10.jpg" alt="">
-							</div><!-- /.article__image -->
-						</div><!-- /.article -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
 
-						<div class="article article--alt article--inverted">
-							<div class="article__content">
-								<h4 class="article__subtitle">High detail</h4>
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
 
-								<h2 class="article__title">Capture textures finer than a human hair</h2>
-							</div><!-- /.article__content -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
 
-							<div class="article__image">
-								<img src="assets/images/temp/article--img--11.jpg" alt="">
-							</div><!-- /.article__image -->
-						</div><!-- /.article -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
 
-						<div class="article article--alt">
-							<div class="article__content">
-								<h4 class="article__subtitle">Large scale</h4>
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
 
-								<h2 class="article__title">Design within a 400mm wide circular forming area with 160mm height</h2>
-							</div><!-- /.article__content -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
 
-							<div class="article__image">
-								<img src="assets/images/temp/article--img--12.jpg" alt="">
-							</div><!-- /.article__image -->
-						</div><!-- /.article -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
 
-						<div class="article article--alt article--inverted">
-							<div class="article__content">
-								<h4 class="article__subtitle">High detail</h4>
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
 
-								<h2 class="article__title">Capture textures finer than a human hair</h2>
-							</div><!-- /.article__content -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
 
-							<div class="article__image">
-								<img src="assets/images/temp/article--img--13.jpg" alt="">
-							</div><!-- /.article__image -->
-						</div><!-- /.article -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+						</div><!-- /.gallery__row -->
 
-						<div class="article article--alt">
-							<div class="article__content">
-								<h4 class="article__subtitle">Compact</h4>
+						<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
 
-								<h2 class="article__title">Fits on a desk and doesn’t require an external pump</h2>
-							</div><!-- /.article__content -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
 
-							<div class="article__image">
-								<img src="assets/images/temp/article--img--14.jpg" alt="">
-							</div><!-- /.article__image -->
-						</div><!-- /.article -->
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</div><!-- /.section-default -->
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
 
-			<div class="showcase showcase--alt pb-2">
-				<div class="shell shell--fluid">
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+						</div><!-- /.gallery__row -->
+
+						<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->				
+						</div><!-- /.gallery__row -->
+
+						<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-20.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-21.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->					
+						</div><!-- /.gallery__row -->
+
+						<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
+							
+							<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->				
+						</div><!-- /.gallery__row -->
+					</div><!-- /.gallery__inner -->
+				</div><!-- /.gallery -->
+					</div><!-- /.shell shell-/-fluid -->
+				</div><!-- /.section-default -->
+					
+				<div class="target-scroll" id="callout"></div><!-- /.target-scroll -->
+				<include src="callout.html"></include>
+
+				<div class="showcase">				
 					<div class="showcase__image">
-						<img src="assets/images/temp/rotating-image--placeholder.jpg" alt="">
+						<img src="assets/images/temp/multiplier--showcase-alt.jpg" alt="">
 					</div><!-- /.showcase__image -->
-				</div><!-- /.shell shell-/-fluid -->
-			</div><!-- /.showcase-alt -->
-
-			<div class="section-default section-default--white py-1 js-section-white">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>Technical Specs</h4>
-
-						<h1>Mayku’s next steps towards democratising manufacturing</h1>
-					</div><!-- /.section__head -->
-
-					<div class="section__body">
-						<div class="card-specs">
-							<div class="card__background" style="background-image: url(assets/images/temp/specs--image-1.jpg);"></div><!-- /.card__background -->
-
-							<div class="card__content">
-								<h2>Circular forming bed</h2>
-
-								<ul class="list-features list-features--alt">
-									<li>
-										<i class="ico-arrow-right">
-											<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-										</i>
-
-										400mm diameter
-									</li>
-									
-									<li>
-										<i class="ico-arrow-right">
-											<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-										</i>
-
-										160mm max forming height
-									</li>
-								</ul><!-- /.list-features -->
-							</div><!-- /.card__content -->
-						</div><!-- /.card-specs -->
-
-						<div class="card-specs">
-							<div class="card__background" style="background-image: url(assets/images/temp/specs--image-2.jpg);"></div><!-- /.card__background -->
-
-							<div class="card__content">
-								<h2>A range of sheets</h2>
-
-								<ul class="list-features list-features--alt">
-									<li>
-										<i class="ico-arrow-right">
-											<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-										</i>
-
-										Polycarbonate, PETG, Flex sheets and more
-									</li>
-									
-									<li>
-										<i class="ico-arrow-right">
-											<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-										</i>
-
-										Works with sheets from 0.1mm - 10mm
-									</li>
-								</ul><!-- /.list-features -->
-							</div><!-- /.card__content -->
-						</div><!-- /.card-specs -->
-
-						<div class="card-specs">
-							<div class="card__background" style="background-image: url(assets/images/temp/specs--image-3.jpg);"></div><!-- /.card__background -->
-
-							<div class="card__content">
-								<h2>Unheard of detail</h2>
-
-								<ul class="list-features list-features--alt">
-									<li>
-										<i class="ico-arrow-right">
-											<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-										</i>
-
-										0.0004mm resolution for injection mold quality forms
-									</li>
-								</ul><!-- /.list-features -->
-							</div><!-- /.card__content -->
-						</div><!-- /.card-specs -->
-
-						<div class="card-specs">
-							<div class="card__background" style="background-image: url(assets/images/temp/specs--image-4.jpg);"></div><!-- /.card__background -->
-
-							<div class="card__content">
-								<h2>Brand new technology</h2>
-
-								<ul class="list-features list-features--alt">
-									<li>
-										<i class="ico-arrow-right">
-											<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-										</i>
-
-										High contrast LCD screen and automatic firmware updates
-									</li>
-								</ul><!-- /.list-features -->
-							</div><!-- /.card__content -->
-						</div><!-- /.card-specs -->
-
-						<div class="card-specs">
-							<div class="card__background" style="background-image: url(assets/images/temp/specs--image-5.jpg);"></div><!-- /.card__background -->
-
-							<div class="card__content">
-								<h2>Design pedigree</h2>
-
-								<ul class="list-features list-features--alt">
-									<li>
-										<i class="ico-arrow-right">
-											<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
-										</i>
-
-										Designed in collaboration with Teenage Engineering
-									</li>
-								</ul><!-- /.list-features -->
-							</div><!-- /.card__content -->
-						</div><!-- /.card-specs -->
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</div><!-- /.section-default section-default-/-white -->
-
-			<div class="section-default section-default--specs py-1">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>In Comparison</h4>
-
-						<h1>Our most powerful, professional machine</h1>
-					</div><!-- /.section__head -->
-
-					<div class="section__body">
-						<div class="specs">
-							<div class="spec spec--formbox">
-								<div class="spec__head">									
-									<img src="assets/images/svg/table--image.svg" alt="">
-
-									<img src="assets/images/svg/logo--mayku-formbox.svg" alt="">	
-								</div><!-- /.spec__head -->
-
-								<div class="spec__body">
-									<div class="spec__list">
-										<ul>
-											<li>
-												<div class="spec__description">
-													<h4>Forming bed:</h4>
-
-													<p>130mm x 200mm x  200mm</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Max sheet thickness:</h4>
-
-													<p>2mm (with Heat Shield)</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Min Sheet Thickness:</h4>
-
-													<p>0.5mm</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Detail resolution:</h4>
-
-													<p>0.01mm</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Requires external pump?</h4>
-
-													<p>Yes</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Size & weight:</h4>
-
-													<p>314mm x 273mm x 467mm - 13kg(Boxed)</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>RRP:</h4>
-
-													<p>$699 / £599</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<a href="https://www.mayku.me/pages/what-it-is" class="btn btn--yellow btn--medium" target="_blank">Find our more</a>
-											</li>
-										</ul>
-									</div><!-- /.spec__description -->
-								</div><!-- /.spec__body -->
-							</div><!-- /.spec spec-/-formbox -->
-
-							<div class="spec spec--multiplier">
-								<div class="spec__head">
-									<img src="assets/images/svg/table--image.svg" alt="">
-
-									<img src="assets/images/svg/logo--mayku-multiplier.svg" alt="">
-								</div><!-- /.spec__head -->
-
-								<div class="spec__body">
-									<div class="spec__list">
-										<ul>
-											<li>
-												<div class="spec__description">
-													<h4>Forming bed:</h4>
-
-													<p>160mm x 400mm x 400mm</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Max sheet thickness:</h4>
-
-													<p>8mm (with Reducing Plate)</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Min Sheet Thickness:</h4>
-
-													<p>0.25mm</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Detail resolution:</h4>
-
-													<p>0.0003mm</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Requires external pump?</h4>
-
-													<p>No</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>Size & weight:</h4>
-
-													<p>685mm x 600mm x 600mm - 70kg (boxed)</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<div class="spec__description">
-													<h4>RRP:</h4>
-
-													<p>$4999 / £3499</p>
-												</div><!-- /.spec__description -->
-											</li>
-
-											<li>
-												<a href="#callout" class="btn btn--yellow btn--medium" data-scroll-to>Sign up for early bird pre-orders</a>
-											</li>
-										</ul>
-									</div><!-- /.spec__description -->
-								</div><!-- /.spec__body -->
-							</div><!-- /.spec spec-/-multiplier -->
-						</div><!-- /.specs -->
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</div><!-- /.section-default -->
-
-			<section class="section-default pb-2">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>The Makers</h4>
-
-						<h1>Words from our Community</h1>
-					</div><!-- /.section__head -->
-
-					<div class="section__body">
-						<div class="grid grid--default grid--themakers">
-							<div class="grid__col grid__col--1of3">
-								<div class="card">
-									<div class="card__image">
-										<img src="assets/images/temp/makerphoto--philkhoury.png" alt="">
-									</div><!-- /.card__image -->
-
-									<h2>Philip Khoury</h2>
-
-									<p>
-										Pastry Chef and Chocolatier at Harrods, London 
-									</p>
-
-									<blockquote>
-										<i class="ico-quote">
-											<img src="assets/images/svg/icon--quote.svg" alt="">
-										</i>
-
-										The Multiplier is more affordable than the setup cost of one custom chocolate mold with most manufacturers.
-									</blockquote>
-
-									<a href="#" class="btn btn--yellow btn--medium">
-										For chocolatiers and chefs
-									</a>
-								</div><!-- /.card -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-
-							<div class="grid__col grid__col--1of3">
-								<div class="card">
-									<div class="card__image">
-										<img src="assets/images/temp/makerphoto--fionacoupe.png" alt="">
-									</div><!-- /.card__image -->
-
-									<h2>Fiona Coupe</h2>
-
-									<p>
-										Freelance Prop Maker and Homewares Designer at Nona Living
-									</p>
-
-									<blockquote>
-										<i class="ico-quote">
-											<img src="assets/images/svg/icon--quote.svg" alt="">
-										</i>
-
-										Being able to make molds even faster is a huge bonus! Flexible sheets are a bit of a game changer too.
-									</blockquote>
-
-									<a href="#" class="btn btn--yellow btn--medium">
-										For homewares designers
-									</a>
-								</div><!-- /.card -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-
-							<div class="grid__col grid__col--1of3">
-								<div class="card">
-									<div class="card__image">
-										<img src="assets/images/temp/makerphoto--betadesign.png" alt="">
-									</div><!-- /.card__image -->
-
-									<h2>Beta Design Office</h2>
-
-									<p>
-										London based design consultancy working with brands like Nike and Fussy. 
-									</p>
-
-									<blockquote>
-										<i class="ico-quote">
-											<img src="assets/images/svg/icon--quote.svg" alt="">
-										</i>
-
-										The level of detail it can replicate is amazing - as good as injection molding but quicker and more cost effective.
-									</blockquote>
-
-									<a href="#" class="btn btn--yellow btn--medium">
-										For designers & agencies
-									</a>
-								</div><!-- /.card -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-						</div><!-- /.grid grid-/-default -->
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default -->
-
-			<div class="section-default pb-2">
-				<div class="shell shell--fluid">
-					<div class="gallery" id="gallery-grid-2"> 
-				<div class="gallery__inner">
-					<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-6.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-					</div>
-
-					<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-8.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-9.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-					</div><!-- /.gallery__row -->
-
-					<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
-
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-					</div><!-- /.gallery__row -->
-
-					<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->				
-					</div><!-- /.gallery__row -->
-
-					<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-20.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-21.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->					
-					</div><!-- /.gallery__row -->
-
-					<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid-2" data-scroll-direction="horizontal">
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
-						
-						<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->				
-					</div><!-- /.gallery__row -->
-				</div><!-- /.gallery__inner -->
-			</div><!-- /.gallery -->
-				</div><!-- /.shell shell-/-fluid -->
-			</div><!-- /.section-default -->
-				
-			<div class="target-scroll" id="callout"></div><!-- /.target-scroll -->
-			<include src="callout.html"></include>
-
-			<div class="showcase">				
-				<div class="showcase__image">
-					<img src="assets/images/temp/multiplier--showcase-alt.jpg" alt="">
-				</div><!-- /.showcase__image -->
-			</div><!-- /.showcase -->
-		</div><!-- /.main -->
-		
-		<include src="footer.html"></include>
+				</div><!-- /.showcase -->
+			</div><!-- /.main -->
+			
+			<include src="footer.html"></include>
+		</div><!-- /.js-sticky-watch -->		
 	</div><!-- /.wrapper -->
 
 	<include src="scripts.html"></include>

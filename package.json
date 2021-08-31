@@ -14,6 +14,7 @@
     },
     "dependencies": {
         "core-js": "^3.4.1",
+        "imagesloaded": "^4.1.4",
         "jquery-countdown": "^2.2.0",
         "locomotive-scroll": "^4.1.1"
     },

@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	Nav Sticky
+\* ------------------------------------------------------------ */
+
+.nav-sticky {
+	position: fixed;
+	z-index: 9999;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: $c-black;
+	border-bottom: 0.1rem solid rgba($c-white, 0.4);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.7s;
+
+	&.is-intersecting {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	ul {
+		padding: 2rem;
+		text-align: center;
+
+		@include breakpoint-down(mobile) {
+			padding: 2rem 0.5rem 1rem;
+		}
+	}
+
+	li {
+		font-size: 1.6rem;
+		display: inline-block;
+
+		@include breakpoint-down(mobile) {
+			font-size: 1.2rem;
+		}
+
+		&:after {
+			content: "";
+			display: none;
+			position: absolute;
+			bottom: -1rem;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 0.2rem;
+			width: 3.2rem;
+			background-color: $c-yellow;
+
+			@include breakpoint-down(mobile-medium) {
+				bottom: -0.6rem;
+			}
+		}
+	}
+
+	li + li {
+		margin-left: 3.5rem;
+
+		@include breakpoint-down(mobile) {
+			margin-left: 1.5rem;
+		}
+	}
+
+	li.is-current:after {
+		display: block;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}

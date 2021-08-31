@@ -1,25 +1,31 @@
 import LocomotiveScroll from 'locomotive-scroll';
+ const imagesLoaded = require("imagesloaded");
 
-// if (! document.querySelector('[data-scroll-container]')) {
-// 	return;
-// }
+const scrollContainer = document.querySelector('[data-scroll-container]');
 
 const initLocomotive = () => {
-	if (document.querySelector('[data-scroll-container]') === null) {
+	if (scrollContainer === null) {
 		return;
-	} else {
-		const scroll = new LocomotiveScroll({
-			el: document.querySelector('[data-scroll-container]'),
-			smooth: true,
-			smartphone: {
-				smooth: true
-			},
-			tablet: {
-				smooth: true
-			}
-		}); 
-	}
-}
+	} 
+	const scroll = new LocomotiveScroll({
+		el: scrollContainer,
+		smooth: true,
+		smartphone: {
+			smooth: true
+		},
+		tablet: {
+			smooth: true
+		}
+	}); 
+
+	imagesLoaded(scrollContainer, { background: true }, function () {
+		scroll.update();
+	});
+
+	setTimeout(function() {
+		scroll.update();
+	}, 2000);
+};
 
 initLocomotive();
 

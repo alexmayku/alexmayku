@@ -5,8 +5,9 @@
 .spec {
 	&:first-child {
 		border-right: 0.1rem solid $c-yellow;
-	}
-	img {
+		@include breakpoint-down(mobile) {
+			border: none;
+		}
 	}
 
 	ul {
@@ -16,23 +17,32 @@
 	li {
 		border-top: 0.1rem solid rgba($c-white, 0.4);
 		padding: 3.7rem 4rem 4.5rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 4.1rem 1.2rem;
+		}
 	}
 
 	a {
 		display: block;
 	}
 
-	.spec__description {
-	}
-
 	.spec__description h4 {
 		color: $c-yellow;
 		text-transform: capitalize;
 		margin-bottom: 0;
+
+		@include breakpoint-down(mobile-small) {
+			font-size: 1.8rem;
+		}
 	}
 
 	.spec__description p {
 		font-size: 2.4rem;
+
+		@include breakpoint-down(mobile-small) {
+			font-size: 1.8rem;
+		}
 	}
 
 	.spec__head {
@@ -41,12 +51,20 @@
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 4rem;
+
+		@include breakpoint-down(mobile) {
+			align-items: center;
+		}
+
+		@include breakpoint-down(mobile-small) {
+			padding: 3.8rem 1.5rem;
+		}
 	}
 
-	.spec__body {
-	}
-
-	.spec__list {
+	.spec__head img {
+		@include breakpoint-down(mobile-medium) {
+			max-width: 26rem;
+		}
 	}
 }
 

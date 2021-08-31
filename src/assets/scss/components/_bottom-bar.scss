@@ -1,16 +1,18 @@
 .bottom-bar {
 	background-color: $c-white;
 	position: fixed;
-	bottom: 0;
-	left: 0;
-	z-index: 999;
+	z-index: 9999;
 	width: 100%;
+	top: calc(100vh - 7rem);
+	left: 0;
+	right: 0;
 	padding: 0.8rem 0;
-	transform: translateY(10vh);
-	transition: transform 0.6s;
+	border-bottom: 0.1rem solid rgba($c-white, 0.4);
+	opacity: 0; //test
+	transition: opacity 0.4s;
 
 	&.is-intersecting {
-		transform: translateY(0);
+		opacity: 1;
 	}
 
 	ul {
@@ -64,3 +66,11 @@
 }
 
 /* Bottom Bar Alt */
+
+// .bottom-bar--alt {
+// 	padding: 50vh 0 0;
+// 	position: absolute;
+// 	bottom: 100vh;
+// 	left: 0;
+// 	right: 0;
+// }
