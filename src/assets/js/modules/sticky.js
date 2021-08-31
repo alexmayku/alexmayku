@@ -10,14 +10,23 @@ const addSticky = () => {
 	const stickyBar = function(entries) {
 		const [entry] = entries;
 
-		if (! entry.isIntersecting) {
-			// stickyNav.classList.remove('is-intersecting');
-			bottomBar.classList.remove('is-intersecting');
-		} else {
-			// stickyNav.classList.add('is-intersecting');
-			bottomBar.classList.add('is-intersecting');
+		if (stickyNav !== null) {
+			if (! entry.isIntersecting) {
+				stickyNav.classList.remove('is-intersecting');
+				bottomBar.classList.remove('is-intersecting');
+			} else {
+				stickyNav.classList.add('is-intersecting');
+				bottomBar.classList.add('is-intersecting');
 
-		};
+			};
+		} else {
+			if (! entry.isIntersecting) {
+				bottomBar.classList.remove('is-intersecting');
+			} else {
+				bottomBar.classList.add('is-intersecting');
+
+			};
+		}	
 	};
 
 	const stickyObserver = new IntersectionObserver(stickyBar, {

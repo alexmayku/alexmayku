@@ -10,6 +10,7 @@ const initLocomotive = () => {
 	const scroll = new LocomotiveScroll({
 		el: scrollContainer,
 		smooth: true,
+		touchMultiplier: 2,
 		smartphone: {
 			smooth: true
 		},
