@@ -146,6 +146,10 @@
 		@include breakpoint-down(tablet) {
 			min-width: 30rem;
 		}
+
+		@include breakpoint-down(mobile) {
+			min-width: 0;
+		}
 	}
 
 	.hs-error-msg,

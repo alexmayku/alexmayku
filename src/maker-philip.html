@@ -4,8 +4,57 @@
 <body>
 	<div class="wrapper" data-scroll-container>
 		<include src="header.html"></include>	
+
+		<div class="bottom-bar js-bottom-bar" data-scroll data-scroll-sticky data-scroll-target="#main">
+			<div class="bar__inner">
+				<ul class="countdown countdown--alt" data-countdown="2021/09/22">
+					<li>
+						<span class="countdown__days"></span>
+					</li>
+					
+					<li>
+						<span class="countdown__hours"></span>
+					</li>
+					
+					<li>
+						<span class="countdown__minutes"></span>
+					</li>
+					
+					<li>
+						<span class="countdown__seconds"></span>				
+					</li>
+				</ul><!-- /.countdown -->
+
+				<span>To pre-order</span>
+
+				<div class="form-email form-email--sticky">
+					<!--[if lte IE 8]>
+				      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+				      <![endif]-->
+				      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+				      <script>
+				        hbspt.forms.create({
+				        region: "na1",
+				        portalId: "9286585",
+				        formId: "7b274279-d853-46a6-b01d-ac21a82f2a77",
+				        onFormSubmit: function($form) {
+				        window.rrSpace = (
+				           rrSettingsConversion = {
+				           debug: "false",
+				            parameters: {
+				              email: $form[0].elements.email.value
+				            }
+				        }
+				      );
+				  (function (f, r, n, d, b, y) { b = f.createElement(r), y = f.getElementsByTagName(r)[0]; b.async = 1; b.src = n; b.id = 'RR_DIVID'; y.parentNode.insertBefore(b, y); })(document, 'script', '//mayku.referralrock.com/webpixel/beta/universalv03.js');
+				   } 
+				      });
+				      </script>
+				</div><!-- /.form-email -->
+			</div><!-- /.bar__inner -->
+		</div><!-- /.bottom-bar -->
 		
-		<div class="main" id="main">
+		<div class="main" id="main" data-scroll-section-inview>
 			<div class="hero hero--makers">
 				<div class="hero__background" style="background-image: url(assets/images/temp/maker--philip.jpg"></div><!-- /.hero__background -->
 
@@ -73,378 +122,380 @@
 				</a>
 			</div><!-- /.hero -->
 
-			<div class="video video--desktop video--makers js-video-container" id="video-1">
-				<div class="shell shell--fluid">
-					<div class="video__inner has-overlay ">
-						<div class="video__banner">
-							<a href="#" class="js-init-video">
-								<img src="assets/images/svg/icon--play-makers.svg" alt="" class="hidden-xs">
+			<div class="js-sticky-watch">
+				<div class="video video--desktop video--makers js-video-container" id="video-1">
+					<div class="shell shell--fluid">
+						<div class="video__inner has-overlay ">
+							<div class="video__banner">
+								<a href="#" class="js-init-video">
+									<img src="assets/images/svg/icon--play-makers.svg" alt="" class="hidden-xs">
 
-								<img src="assets/images/svg/icon--play-m.svg" alt="" class="visible-xs-inline">
-							</a>
+									<img src="assets/images/svg/icon--play-m.svg" alt="" class="visible-xs-inline">
+								</a>
 
-							<h2>Watch how Philip uses the Mayku Multiplier</h2>
-						</div><!-- /.video__banner -->
+								<h2>Watch how Philip uses the Mayku Multiplier</h2>
+							</div><!-- /.video__banner -->
 
-						<video class="js-video" poster="assets/images/temp/image--revolution.jpg" src="assets/images/temp/TeaseVideo.mp4" preload="metaload" playsinline controls>
-							<source src="assets/images/temp/TeaseVideo.mp4" type="video/mp4">
-						</video>
-					</div><!-- /.video__inner -->
-				</div><!-- /.shell shell-/-fluid -->
-			</div><!-- /.video.video--desktop -->
+							<video class="js-video" poster="assets/images/temp/image--revolution.jpg" src="assets/images/temp/TeaseVideo.mp4" preload="none" playsinline controls>
+								<source src="assets/images/temp/TeaseVideo.mp4" type="video/mp4">
+							</video>
+						</div><!-- /.video__inner -->
+					</div><!-- /.shell shell-/-fluid -->
+				</div><!-- /.video.video--desktop -->
 
-			<section class="section-default section-default--maker py-1">
-				<div class="shell shell--fluid">
-					<div class="section__inner">					
-						<div class="section__body">							
-							<div class="article article--alt article--maker">
+				<section class="section-default section-default--maker py-1">
+					<div class="shell shell--fluid">
+						<div class="section__inner">					
+							<div class="section__body">							
+								<div class="article article--alt article--maker">
+									<div class="article__content">
+										<h4 class="article__subtitle">
+											About Philip Khoury
+										</h4><!-- /.article__subtitle -->
+
+										<h2 class="article__title">
+											Award winning, plant based confectionary
+										</h2><!-- /.article__title -->
+
+										<p>
+											Pastry Chef and Chocolatier, Philip Khoury makes up part of the culinary team at prestigious department store, Harrods in London. He’s mastered the classics and is now innovating with new technologies in the kitchen. Philip’s current mission is to create world-class plant based desserts and confectionery. 
+										</p>
+
+										<a href="#" class="article__link">
+											<i class="ico-social">
+												<img src="assets/images/svg/icon--instagram.svg" alt="">
+											</i>
+
+											<span>@evkahome</span>
+										</a>
+									</div><!-- /.article__content -->
+
+									<div class="article__image">
+										<img src="assets/images/temp/about--philip.jpg" alt="">
+									</div><!-- /.article__image -->
+								</div><!-- /.article -->
+							</div><!-- /.section__body -->
+
+							<div class="section__foot">
+								<div class="grid grid--testimonial">
+									<div class="grid__col grid__col--1of2">
+										<div class="testimonial testimonial--alt">
+											<blockquote>
+												<i class="ico-quote">
+													<img src="assets/images/svg/icon--quote.svg" alt="">
+												</i>
+
+												A custom mold might have taken a 8-12 weeks to prepare with setup fees costing in the £1000's and MOQs that are prohibitively high
+											</blockquote>										
+										</div><!-- /.testimonial -->
+									</div><!-- /.grid__col grid__col-/-1of2 -->
+
+									<div class="grid__col grid__col--1of2">
+										<div class="testimonial testimonial--alt">
+											<blockquote>
+												<i class="ico-quote">
+													<img src="assets/images/svg/icon--quote.svg" alt="">
+												</i>
+
+												You can now buy a Mayku Multiplier that is cheaper than the setup cost of 1 custom mould with most manufacturers
+											</blockquote>
+
+											<div class="testimonial__author">
+												<div class="testimonial__image">
+													<img src="assets/images/temp/makerphoto--philkhoury.png" alt="">
+												</div><!-- /.testimial__image -->
+
+												<cite>Philip Khoury<br>Pastry Chef and Chocolatier @ Harrods</cite>
+											</div><!-- /.testimonial__author -->
+										</div><!-- /.testimonial -->
+									</div><!-- /.grid__col grid__col-/-1of2 -->
+								</div><!-- /.grid grid-/-testimonial -->
+							</div><!-- /.section__foot -->
+						</div><!-- /.section__inner -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default -->
+
+				<include src="callout.html"></include>
+
+				<section class="section-default py-1">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>Process</h4>
+
+							<h1>How Philip Khoury uses the Mayku Multiplier</h1>
+						</div><!-- /.section__head -->
+
+						<div class="section__body">
+							<div class="grid grid--default">
+								<div class="grid__col grid__col--1of3">
+									<div class="card-alt">
+										<div class="card__image">
+											<img src="assets/images/temp/philip--card-1.png" alt="">
+										</div><!-- /.card__image -->
+
+										<p>
+											Philip collaborated with Mayku’s Lead Creator, Agustín Arroyo, to design a 3D model of a mechanical magnolia flower in Fusion 360. The concept was to create a multi-layered chocolate sculpture that would mechanically open. 
+										</p>
+
+										<a href="#" class="btn btn--yellow btn--medium">More about pressure forming</a>
+									</div><!-- /.card-alt -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<div class="card-alt">
+										<div class="card__image">
+											<img src="assets/images/temp/philip--card-2.png" alt="">
+										</div><!-- /.card__image -->
+
+										<p>
+											The template shape was 3D printed, ready to form with the Multiplier. A wooden box frame was produced to replicate the mold box of a traditional chocolate mold and to make for easy use.  
+										</p>
+									</div><!-- /.card-alt -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<div class="card-alt">
+										<div class="card__image">
+											<img src="assets/images/temp/philip--card-3.png" alt="">
+										</div><!-- /.card__image -->
+
+										<p>
+											Each mold takes less than 5 minutes to make and are immediately ready to work with. Once cast in chocolate and assembled, a truly unique edible sculpture is born.
+										</p>
+									</div><!-- /.card-alt -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+							</div><!-- /.grid grid-/-default -->
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default -->
+
+				<section class="section-default"  > 
+					<div class="shell shell--fluid">
+						<div class="section__body">
+							<div class="gallery" id="gallery-grid"> 
+								<div class="gallery__inner">
+									<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-6.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+									</div>
+
+									<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-8.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-9.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+									</div><!-- /.gallery__row -->
+
+									<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
+
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+									</div><!-- /.gallery__row -->
+
+									<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->				
+									</div><!-- /.gallery__row -->
+
+									<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-20.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-21.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->					
+									</div><!-- /.gallery__row -->
+
+									<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
+										
+										<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->				
+									</div><!-- /.gallery__row -->
+								</div><!-- /.gallery__inner -->
+							</div><!-- /.gallery -->
+						</div><!-- /.section__body -->			
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default -->	
+
+				<div class="section-default  py-1">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>Benefits</h4>
+
+							<h1>What Philip Loves about the Mayku Multiplier</h1>
+						</div><!-- /.section__head -->
+
+						<div class="section__body">
+							<div class="article article--alt">
 								<div class="article__content">
-									<h4 class="article__subtitle">
-										About Philip Khoury
-									</h4><!-- /.article__subtitle -->
+									<h4 class="article__subtitle">Speed</h4>
 
-									<h2 class="article__title">
-										Award winning, plant based confectionary
-									</h2><!-- /.article__title -->
+									<h2 class="article__title">A pro workflow for rapid production</h2>
 
 									<p>
-										Pastry Chef and Chocolatier, Philip Khoury makes up part of the culinary team at prestigious department store, Harrods in London. He’s mastered the classics and is now innovating with new technologies in the kitchen. Philip’s current mission is to create world-class plant based desserts and confectionery. 
+										Custom chocolate molds can be a costly option for creating personalised and truly unique designs. A Multiplier machine costs the same as a single outsourced custom polycarbonate mold. That cost saving can now be passed onto the customer, unlocking new opportunities. 
 									</p>
 
-									<a href="#" class="article__link">
-										<i class="ico-social">
-											<img src="assets/images/svg/icon--instagram.svg" alt="">
-										</i>
-
-										<span>@evkahome</span>
+									<a href="#" class="article__btn btn btn--yellow btn--medium">
+										About the machine
 									</a>
 								</div><!-- /.article__content -->
 
 								<div class="article__image">
-									<img src="assets/images/temp/about--philip.jpg" alt="">
+									<img src="assets/images/temp/article--img--philip-1.jpg" alt="">
+								</div><!-- /.article__image -->
+							</div><!-- /.article -->
+
+							<div class="article article--alt article--inverted">
+								<div class="article__content">
+									<h4 class="article__subtitle">Creativity</h4>
+
+									<h2 class="article__title">Greater creative flexibility</h2>
+
+									<p>
+										Test ideas rapidly and without outsourcing. Work with a variety of sheet materials to keep costs low and creativity flowing. Quick, affordable 2mm molds can be tested immediately before committing to making your very own Polycarbonate or Flexible mold on the same machine. 
+									</p>
+
+									<a href="#" class="article__btn btn btn--yellow btn--medium">
+										About the machine
+									</a>
+								</div><!-- /.article__content -->
+
+								<div class="article__image">
+									<img src="assets/images/temp/article--img--philip-2.jpg" alt="">
+								</div><!-- /.article__image -->
+							</div><!-- /.article -->
+
+							<div class="article article--alt">
+								<div class="article__content">
+									<h4 class="article__subtitle">Speed</h4>
+
+									<h2 class="article__title">Shorter lead times</h2>
+
+									<p>
+										Outsourcing custom mold designs can be a lengthy process. Back and forth on design drafts and then up to 12 weeks before a mold is ready to work with. With the Mayku Multiplier you can go from idea to finished mold in 48 hours. Shorter lead times means greater sales potential for your business. 
+									</p>
+
+									<a href="#" class="article__btn btn btn--medium btn--yellow">
+										About the machine
+									</a>
+								</div><!-- /.article__content -->
+
+								<div class="article__image">
+									<img src="assets/images/temp/article--img--philip-3.jpg" alt="">
 								</div><!-- /.article__image -->
 							</div><!-- /.article -->
 						</div><!-- /.section__body -->
-
-						<div class="section__foot">
-							<div class="grid grid--testimonial">
-								<div class="grid__col grid__col--1of2">
-									<div class="testimonial testimonial--alt">
-										<blockquote>
-											<i class="ico-quote">
-												<img src="assets/images/svg/icon--quote.svg" alt="">
-											</i>
-
-											A custom mold might have taken a 8-12 weeks to prepare with setup fees costing in the £1000's and MOQs that are prohibitively high
-										</blockquote>										
-									</div><!-- /.testimonial -->
-								</div><!-- /.grid__col grid__col-/-1of2 -->
-
-								<div class="grid__col grid__col--1of2">
-									<div class="testimonial testimonial--alt">
-										<blockquote>
-											<i class="ico-quote">
-												<img src="assets/images/svg/icon--quote.svg" alt="">
-											</i>
-
-											You can now buy a Mayku Multiplier that is cheaper than the setup cost of 1 custom mould with most manufacturers
-										</blockquote>
-
-										<div class="testimonial__author">
-											<div class="testimonial__image">
-												<img src="assets/images/temp/makerphoto--philkhoury.png" alt="">
-											</div><!-- /.testimial__image -->
-
-											<cite>Philip Khoury<br>Pastry Chef and Chocolatier @ Harrods</cite>
-										</div><!-- /.testimonial__author -->
-									</div><!-- /.testimonial -->
-								</div><!-- /.grid__col grid__col-/-1of2 -->
-							</div><!-- /.grid grid-/-testimonial -->
-						</div><!-- /.section__foot -->
-					</div><!-- /.section__inner -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default -->
-
-			<include src="callout.html"></include>
-
-			<section class="section-default py-1">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>Process</h4>
-
-						<h1>How Philip Khoury uses the Mayku Multiplier</h1>
-					</div><!-- /.section__head -->
-
-					<div class="section__body">
-						<div class="grid grid--default">
-							<div class="grid__col grid__col--1of3">
-								<div class="card-alt">
-									<div class="card__image">
-										<img src="assets/images/temp/philip--card-1.png" alt="">
-									</div><!-- /.card__image -->
-
-									<p>
-										Philip collaborated with Mayku’s Lead Creator, Agustín Arroyo, to design a 3D model of a mechanical magnolia flower in Fusion 360. The concept was to create a multi-layered chocolate sculpture that would mechanically open. 
-									</p>
-
-									<a href="#" class="btn btn--yellow btn--medium">More about pressure forming</a>
-								</div><!-- /.card-alt -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-
-							<div class="grid__col grid__col--1of3">
-								<div class="card-alt">
-									<div class="card__image">
-										<img src="assets/images/temp/philip--card-2.png" alt="">
-									</div><!-- /.card__image -->
-
-									<p>
-										The template shape was 3D printed, ready to form with the Multiplier. A wooden box frame was produced to replicate the mold box of a traditional chocolate mold and to make for easy use.  
-									</p>
-								</div><!-- /.card-alt -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-
-							<div class="grid__col grid__col--1of3">
-								<div class="card-alt">
-									<div class="card__image">
-										<img src="assets/images/temp/philip--card-3.png" alt="">
-									</div><!-- /.card__image -->
-
-									<p>
-										Each mold takes less than 5 minutes to make and are immediately ready to work with. Once cast in chocolate and assembled, a truly unique edible sculpture is born.
-									</p>
-								</div><!-- /.card-alt -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-						</div><!-- /.grid grid-/-default -->
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default -->
-
-			<section class="section-default"  > 
-				<div class="shell shell--fluid">
-					<div class="section__body">
-						<div class="gallery" id="gallery-grid"> 
-							<div class="gallery__inner">
-								<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-6.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-								</div>
-
-								<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-8.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-9.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-								</div><!-- /.gallery__row -->
-
-								<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
-
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-17.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-								</div><!-- /.gallery__row -->
-
-								<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-7.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-11.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->				
-								</div><!-- /.gallery__row -->
-
-								<div class="gallery__row" data-scroll data-scroll-speed="1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-20.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-21.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-22.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-10.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-1.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-2.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-3.jpg)"></div><!-- /.gallery__image -->					
-								</div><!-- /.gallery__row -->
-
-								<div class="gallery__row" data-scroll data-scroll-speed="-1" data-scroll-target="#gallery-grid" data-scroll-direction="horizontal">
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-12.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-13.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-14.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-15.jpg)"></div><!-- /.gallery__image -->
-									
-									<div class="gallery__image" style="background-image:url(assets/images/temp/unindustrial-16.jpg)"></div><!-- /.gallery__image -->				
-								</div><!-- /.gallery__row -->
-							</div><!-- /.gallery__inner -->
-						</div><!-- /.gallery -->
-					</div><!-- /.section__body -->			
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default -->	
-
-			<div class="section-default  py-1">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>Benefits</h4>
-
-						<h1>What Philip Loves about the Mayku Multiplier</h1>
-					</div><!-- /.section__head -->
-
-					<div class="section__body">
-						<div class="article article--alt">
-							<div class="article__content">
-								<h4 class="article__subtitle">Speed</h4>
-
-								<h2 class="article__title">A pro workflow for rapid production</h2>
-
-								<p>
-									Custom chocolate molds can be a costly option for creating personalised and truly unique designs. A Multiplier machine costs the same as a single outsourced custom polycarbonate mold. That cost saving can now be passed onto the customer, unlocking new opportunities. 
-								</p>
-
-								<a href="#" class="article__btn btn btn--yellow btn--medium">
-									About the machine
-								</a>
-							</div><!-- /.article__content -->
-
-							<div class="article__image">
-								<img src="assets/images/temp/article--img--philip-1.jpg" alt="">
-							</div><!-- /.article__image -->
-						</div><!-- /.article -->
-
-						<div class="article article--alt article--inverted">
-							<div class="article__content">
-								<h4 class="article__subtitle">Creativity</h4>
-
-								<h2 class="article__title">Greater creative flexibility</h2>
-
-								<p>
-									Test ideas rapidly and without outsourcing. Work with a variety of sheet materials to keep costs low and creativity flowing. Quick, affordable 2mm molds can be tested immediately before committing to making your very own Polycarbonate or Flexible mold on the same machine. 
-								</p>
-
-								<a href="#" class="article__btn btn btn--yellow btn--medium">
-									About the machine
-								</a>
-							</div><!-- /.article__content -->
-
-							<div class="article__image">
-								<img src="assets/images/temp/article--img--philip-2.jpg" alt="">
-							</div><!-- /.article__image -->
-						</div><!-- /.article -->
-
-						<div class="article article--alt">
-							<div class="article__content">
-								<h4 class="article__subtitle">Speed</h4>
-
-								<h2 class="article__title">Shorter lead times</h2>
-
-								<p>
-									Outsourcing custom mold designs can be a lengthy process. Back and forth on design drafts and then up to 12 weeks before a mold is ready to work with. With the Mayku Multiplier you can go from idea to finished mold in 48 hours. Shorter lead times means greater sales potential for your business. 
-								</p>
-
-								<a href="#" class="article__btn btn btn--medium btn--yellow">
-									About the machine
-								</a>
-							</div><!-- /.article__content -->
-
-							<div class="article__image">
-								<img src="assets/images/temp/article--img--philip-3.jpg" alt="">
-							</div><!-- /.article__image -->
-						</div><!-- /.article -->
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</div><!-- /.section-default -->
-
-			<include src="callout.html"></include>			
-
-			<div class="showcase">				
-				<div class="showcase__image">
-					<img src="assets/images/temp/multiplier--showcase-alt.jpg" alt="">
-				</div><!-- /.showcase__image -->
-			</div><!-- /.showcase -->
-		</div><!-- /.main -->
-		
-		<include src="footer.html"></include>
+					</div><!-- /.shell shell-/-fluid -->
+				</div><!-- /.section-default -->
+
+				<include src="callout.html"></include>			
+
+				<div class="showcase">				
+					<div class="showcase__image">
+						<img src="assets/images/temp/multiplier--showcase-alt.jpg" alt="">
+					</div><!-- /.showcase__image -->
+				</div><!-- /.showcase -->
+			</div><!-- /.main -->
+			
+			<include src="footer.html"></include>
+		</div><!-- /.js-sticky-watch -->	
 	</div><!-- /.wrapper -->
 
 	<include src="scripts.html"></include>

@@ -8,10 +8,16 @@
 	right: 0;
 	padding: 0.8rem 0;
 	border-bottom: 0.1rem solid rgba($c-white, 0.4);
-	opacity: 0; //test
+	opacity: 0;
+	visibility: hidden;
 	transition: opacity 0.4s;
 
+	@include breakpoint-down(mobile) {
+		top: calc(100vh - 13.2rem);
+	}
+
 	&.is-intersecting {
+		visibility: visible;
 		opacity: 1;
 	}
 
@@ -64,13 +70,3 @@
 		}
 	}
 }
-
-/* Bottom Bar Alt */
-
-// .bottom-bar--alt {
-// 	padding: 50vh 0 0;
-// 	position: absolute;
-// 	bottom: 100vh;
-// 	left: 0;
-// 	right: 0;
-// }
