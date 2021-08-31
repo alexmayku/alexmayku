@@ -64,7 +64,6 @@
 	}
 
 	.video video {
-		//test
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -78,8 +77,14 @@
 		bottom: 6.5rem;
 		left: 0;
 
+		@include breakpoint-down(tablet) {
+			position: relative;
+			bottom: auto;
+			left: auto;
+			padding: 22rem 0 6rem;
+		}
+
 		@include breakpoint-down(mobile-medium) {
-			bottom: 6.4rem;
 		}
 	}
 
@@ -167,6 +172,12 @@
 		left: 0;
 		bottom: auto;
 		transform: translateY(-50%);
+
+		@include breakpoint-down(tablet) {
+			top: auto;
+			left: auto;
+			transform: translateY(0);
+		}
 	}
 }
 
@@ -194,14 +205,9 @@
 			height: 100%;
 		}
 	}
-	.hero__content {
-		@include breakpoint-down(mobile) {
+	.hero__inner {
+		@include breakpoint-down(tablet) {
 			position: relative;
-			top: auto;
-			left: auto;
-			right: auto;
-			bottom: auto;
-			padding-top: 50rem;
 		}
 	}
 
