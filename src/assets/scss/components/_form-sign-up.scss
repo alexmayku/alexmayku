@@ -31,11 +31,6 @@
 		}
 	}
 
-	.hs-form .form-columns-2 .input,
-	.hs-form .form-columns-1 .input {
-		margin: 0;
-	}
-
 	input,
 	select {
 		width: 100%;
@@ -55,6 +50,11 @@
 	fieldset {
 		max-width: 100%;
 		width: 100%;
+	}
+
+	.hs-form .form-columns-2 .input,
+	.hs-form .form-columns-1 .input {
+		margin: 0;
 	}
 
 	.hs-form fieldset {
