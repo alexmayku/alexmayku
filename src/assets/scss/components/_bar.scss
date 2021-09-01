@@ -5,19 +5,25 @@
 .bar {
 	background-color: $c-yellow;
 	padding: 1.4rem 0 1.2rem;
-	min-width: 100%;
-	width: 100%;
+	min-width: 500%;
 	overflow: hidden;
+
+	@include breakpoint-down(mobile) {
+		min-width: 0;
+		max-width: 100%;
+	}
 
 	@include breakpoint-down(mobile-medium) {
 		padding: 0.7rem 0 0.8rem;
 	}
 
-	&:hover .bar__list li {
+	&:hover .bar__list li,
+	&:hover .bar__list--2 li {
 		animation-play-state: paused;
 	}
 
-	.bar__list {
+	.bar__list,
+	.bar__list--2 {
 		@include breakpoint-down(mobile) {
 			display: none;
 		}
@@ -25,7 +31,13 @@
 
 	.bar__list li {
 		display: inline-block;
-		animation: scrolling-left 15s linear infinite;
+		animation: scrolling-left 10s linear infinite;
+		animation-delay: 1s;
+	}
+
+	.bar__list--2 li {
+		display: inline-block;
+		animation: scrolling-left-2 10s linear infinite;
 		animation-delay: 1s;
 	}
 
@@ -64,7 +76,17 @@
 		transform: translateX(0%);
 	}
 
-	50% {
+	100% {
+		transform: translateX(-200%);
+	}
+}
+
+@keyframes scrolling-left-2 {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
 		transform: translateX(-200%);
 	}
 }

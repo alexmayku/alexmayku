@@ -3,6 +3,9 @@
 \* ------------------------------------------------------------ */
 
 .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	border: 0.1rem solid $c-yellow;
 	padding: 2.3rem 2.3rem 2.2rem;
 	height: 100%;
@@ -32,6 +35,7 @@
 
 	a {
 		display: block;
+		margin-top: auto;
 	}
 
 	.card__image {

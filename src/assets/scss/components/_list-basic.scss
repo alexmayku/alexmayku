@@ -3,15 +3,16 @@
 \* ------------------------------------------------------------ */
 
 .list-basic {
+	margin-bottom: 0;
 	list-style: none;
-	display: flex;
+	display: inline-flex;
 	justify-content: space-between;
 
 	li {
 		font-size: 1.2rem;
 		color: $c-black;
 		letter-spacing: 0.192em;
-		min-width: 30rem;
+		min-width: 28rem;
 
 		&:before {
 			content: "";
@@ -26,6 +27,6 @@
 
 	a {
 		text-decoration: none;
-		padding-left: 0.8rem;
+		padding-left: 0.5rem;
 	}
 }

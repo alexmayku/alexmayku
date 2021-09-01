@@ -49,6 +49,18 @@
 	}
 }
 
+.grid--testimonial-alt {
+	@include breakpoint-down(mobile) {
+		margin: -2rem 0;
+	}
+
+	.grid__col {
+		@include breakpoint-down(mobile) {
+			padding: 2rem 0;
+		}
+	}
+}
+
 /*  Grid Default */
 
 .grid--default {
@@ -92,7 +104,7 @@
 	}
 
 	@include breakpoint-down(mobile-medium) {
-		margin: -3rem 0;
+		margin: -2.2rem 0;
 	}
 
 	.grid__col {
@@ -103,7 +115,7 @@
 		}
 
 		@include breakpoint-down(mobile-medium) {
-			padding: 3rem 0;
+			padding: 2.2rem 0;
 		}
 	}
 

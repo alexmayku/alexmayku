@@ -170,14 +170,54 @@
 	}
 }
 
+.article--maker-alt {
+	& + & {
+		margin-top: 7.9rem;
+	}
+
+	.article__title {
+		@include breakpoint-down(mobile) {
+			font-size: 4rem;
+		}
+	}
+}
+
 /* Article Maker  */
 
 .article--maker {
+	@include breakpoint-down(mobile) {
+		row-gap: 0.5rem;
+	}
+
 	p {
 		margin-bottom: 2.9rem;
+
+		@include breakpoint-down(mobile) {
+			line-height: 1.25;
+			margin-bottom: 2.2rem;
+		}
 	}
 
 	.article__subtitle {
 		margin-bottom: 2.2rem;
+	}
+
+	.article__title {
+		@include breakpoint-down(mobile) {
+			font-size: 4rem;
+			margin-bottom: 2.1rem;
+		}
+	}
+
+	.article__content {
+		@include breakpoint-down(mobile) {
+			grid-row: 1 / 2;
+		}
+	}
+
+	.article__image {
+		@include breakpoint-down(mobile) {
+			grid-row: 2 / 3;
+		}
 	}
 }

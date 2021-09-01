@@ -13,11 +13,15 @@
 	}
 
 	@include breakpoint-down(mobile) {
-		padding: 4rem 3rem;
+		padding: 4rem 2.1rem 2.3rem;
 	}
 
 	& + & {
 		margin-top: 4.7rem;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 4rem;
+		}
 	}
 
 	&:after {
@@ -30,6 +34,13 @@
 		background-color: $c-black-2;
 		border-left: 0.1rem solid $c-yellow;
 		transform: rotateZ(322deg);
+
+		@include breakpoint-down(mobile) {
+			top: -3rem;
+			right: -2.3rem;
+			width: 6rem;
+			height: 10rem;
+		}
 	}
 
 	.card__head h4 {
@@ -58,6 +69,13 @@
 
 		@include breakpoint-down(mobile-medium) {
 			font-size: 3rem;
+			margin-bottom: 2.6rem;
+		}
+	}
+
+	.card__content p {
+		@include breakpoint-down(mobile) {
+			margin-bottom: 0.8rem;
 		}
 	}
 
@@ -81,8 +99,8 @@
 		padding-bottom: 0.7rem;
 		margin-top: 3.3rem;
 
-		@include breakpoint-down(mobile-medium) {
-			padding: 0;
+		@include breakpoint-down(mobile) {
+			margin-top: 3.8rem;
 		}
 	}
 

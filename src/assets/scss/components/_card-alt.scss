@@ -4,7 +4,7 @@
 
 .card-alt {
 	p {
-		margin-bottom: 4.7rem;
+		// margin-bottom: 4.7rem;
 	}
 	.card__image {
 		position: relative;
@@ -12,6 +12,12 @@
 		height: 20rem;
 		border-radius: 50%;
 		margin-bottom: 3.8rem;
+
+		@include breakpoint-down(mobile) {
+			width: 16rem;
+			height: 16rem;
+			margin-bottom: 2.1rem;
+		}
 	}
 
 	.card__image img {

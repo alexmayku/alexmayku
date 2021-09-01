@@ -5,6 +5,10 @@
 .price {
 	color: $c-yellow;
 	display: block;
+
+	@include breakpoint-down(mobile) {
+		font-size: 4.8rem;
+	}
 }
 
 .price-old {
@@ -32,6 +36,9 @@
 
 	@include breakpoint-down(small-desktop) {
 		padding: 1.1rem 1rem;
-		font-size: 2rem;
+	}
+
+	@include breakpoint-down(mobile) {
+		padding: 0.9rem 1.4rem;
 	}
 }
