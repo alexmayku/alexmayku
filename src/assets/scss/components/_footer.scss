@@ -112,11 +112,11 @@
 		align-items: center;
 	}
 
-	.footer__actions a {
+	.footer__actions span {
 		display: inline-block;
 	}
 
-	.footer__actions a:hover > i {
+	.footer__actions span:hover > i {
 		transform: rotate(360deg);
 	}
 

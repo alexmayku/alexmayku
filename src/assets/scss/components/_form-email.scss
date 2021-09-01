@@ -130,6 +130,7 @@
 		font-size: 2rem;
 		max-width: 27.7rem;
 		position: relative;
+		padding: 1.3rem 2rem;
 		z-index: 100;
 
 		@include breakpoint-down(mobile) {

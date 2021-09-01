@@ -14,6 +14,12 @@
 	z-index: 101;
 	transition: opacity 0.5s;
 
+	&.is-visible {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+	}
+
 	@include breakpoint-down(tablet) {
 		padding-top: 1.6rem;
 	}

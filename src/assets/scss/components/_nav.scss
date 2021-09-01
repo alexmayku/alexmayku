@@ -85,10 +85,4 @@
 		margin-left: 0.4rem;
 		transition: transform 0.4s;
 	}
-
-	&:hover .dropdown {
-		opacity: 1;
-		visibility: visible;
-		pointer-events: auto;
-	}
 }
