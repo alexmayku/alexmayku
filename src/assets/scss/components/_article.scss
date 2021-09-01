@@ -100,16 +100,12 @@
 	}
 
 	.article__image {
-		min-height: 62rem;
-		padding-bottom: 52%;
+		padding-bottom: 113%;
 		position: relative;
 
 		@include breakpoint-down(mobile) {
 			grid-row: 1 / 2;
 			min-height: 0;
-		}
-
-		@include breakpoint-down(mobile-medium) {
 			padding-bottom: 99.735%;
 		}
 	}
@@ -144,6 +140,14 @@
 			grid-row: 2 / 3;
 			grid-column: 1 / 2;
 		}
+	}
+}
+
+/* Article Tabs */
+
+.article--tabs {
+	.article__image {
+		padding-bottom: 100%;
 	}
 }
 

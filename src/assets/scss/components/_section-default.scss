@@ -60,6 +60,12 @@
 /* Section-default--about  */
 
 .section-default--about {
+	padding-top: 16.3rem;
+
+	@include breakpoint-down(mobile-medium) {
+		padding-top: 11.6rem;
+	}
+
 	.section__head {
 		max-width: 85rem;
 		margin-bottom: 8.3rem;
@@ -95,6 +101,11 @@
 /* Section Default about -2  */
 
 .section-default--about-2 {
+	padding-top: 15.1rem;
+
+	@include breakpoint-down(mobile-medium) {
+		padding-top: 11.9rem;
+	}
 	.section__head h1 {
 		margin-bottom: 0;
 		max-width: 85rem;
@@ -119,7 +130,7 @@
 
 .section-default--multiplier {
 	.section__head h1 {
-		max-width: 85rem;
+		max-width: 105rem;
 	}
 }
 

@@ -132,11 +132,7 @@
 /*  Hero Alt */
 
 .hero--machine {
-	margin-bottom: 16.3rem;
-
-	@include breakpoint-down(mobile-medium) {
-		margin-bottom: 11.6rem;
-	}
+	margin-bottom: 0;
 
 	h1 {
 		@include breakpoint-down(mobile-medium) {

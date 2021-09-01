@@ -17,12 +17,16 @@
 		border: 0.1rem solid #daddde;
 		color: $c-black;
 		width: 100%;
-		padding: 1.3rem 2rem;
+		padding: 1.3rem 13.4rem 1.3rem 2rem;
 		border-radius: 10rem;
 		background-color: $c-white;
 		font-size: 2rem;
 		line-height: 1;
 		transition: border-color 0.2s ease;
+
+		@include breakpoint-down(mobile) {
+			padding-right: 2rem;
+		}
 	}
 
 	input[type="email"]:active,
@@ -50,7 +54,7 @@
 		box-shadow: none;
 		appearance: none;
 		background: #fdd32f;
-		padding: 1.3rem 2rem 1.4rem;
+		padding: 1.3rem 2rem 1.5rem;
 		min-width: 13.4rem;
 		font-size: 2rem;
 		font-weight: 500;
@@ -60,6 +64,10 @@
 		border-radius: 10rem;
 		border: none;
 		transition-duration: 0.2s;
+
+		&:hover {
+			background-color: $c-yellow-3;
+		}
 
 		@include breakpoint-down(mobile) {
 			position: static;
@@ -96,6 +104,11 @@
 	input[type="submit"] {
 		color: $c-yellow;
 		background-color: $c-black;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: rgba($c-black, 0.8);
+		}
 	}
 
 	form {
@@ -157,9 +170,19 @@
 		}
 	}
 
+	.no-list {
+		margin: 0;
+		opacity: 0;
+		position: absolute;
+	}
+
+	.hs_error_rollup {
+		position: absolute;
+	}
+
 	.hs-error-msg,
 	.hs-main-font-element {
-		color: $c-black;
+		position: absolute;
 	}
 }
 

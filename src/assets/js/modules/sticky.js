@@ -40,12 +40,5 @@ const addSticky = () => {
 
 addSticky();
 
-	// if(('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
-	// bottomBar.classList.add('is-touch-device')
- //     console.log('touch device')
-	// }else {
- //    console.log('not touch')
-	// }
-
 
 

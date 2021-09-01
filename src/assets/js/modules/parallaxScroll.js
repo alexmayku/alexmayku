@@ -30,8 +30,7 @@ const initLocomotive = () => {
 };
 
 if(! ('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
-	initLocomotive(); // DEV PURPOSE ONLY
+	initLocomotive(); 
 };
-
 
 
