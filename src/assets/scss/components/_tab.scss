@@ -11,10 +11,15 @@
 	h2 {
 		max-width: 57rem;
 		width: 100%;
+		margin-bottom: 2.3rem;
 
 		@include breakpoint-down(mobile-medium) {
 			font-size: 4rem;
 		}
+	}
+
+	p {
+		margin-bottom: 3.7rem;
 	}
 
 	ul {

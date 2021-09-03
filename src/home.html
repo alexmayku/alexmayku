@@ -56,9 +56,15 @@
 				
 		<div class="main js-main" id="main" data-scroll-section-inview>				
 			<div class="hero js-hero">
-				<div class="hero__background hidden-xs" style="background-image: url(assets/images/temp/Home_Poster.jpg"></div><!-- /.hero__background -->
+				<div class="hero__background">
+					 <video class="hidden-xs" autoplay loop muted poster="assets/images/temp/Home_Poster.jpg"  preload="none">
+				    	<source src="assets/images/temp/Home_Video.mp4" type="video/mp4" >			    		
+				    </video>
 
-				<div class="hero__background visible-xs-block" style="background-image: url(assets/images/temp/Home_Poster_Mob.jpg"></div><!-- /.hero__background -->
+				     <video class="visible-xs-block" loop muted autoplay poster="assets/images/temp/Home_Poster.jpg"  preload="none">
+				    	<source src="assets/images/temp/Home_Video_Mobile.mp4" type="video/mp4" >
+				    </video>				   
+				</div><!-- /.hero__background -->
 
 				<div class="hero__inner">
 					<div class="shell shell--fluid">
@@ -94,7 +100,7 @@
 							<h1>Meet the <span>Mayku</span> Multiplier</h1>
 
 							<p>
-								Get ready to create ultra precise, long lasting molds and production parts with our easy to use desktop pressure forming machine.
+								Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.
 							</p>	
 							
 							<div class="hero__notice">
@@ -198,7 +204,7 @@
 														</li>
 
 														<li>
-															<a href="#tabControl">Easy to use</a>
+															<a href="#tabControl">Quick and easy</a>
 														</li>
 													</ul>
 												</nav><!-- /.tabs__nav -->
@@ -208,13 +214,19 @@
 												<div class="tab is-current" id="tabSpeed">
 													<h2>Capture textures finer than a human hair</h2>
 													
+													<p>
+														4 atmospheres of pressure enable you to pick up every detail of your design. 
+													</p>
+
 													<a href="machine.html" class="btn btn--yellow btn--medium">
 														About the machine
 													</a>
 												</div><!-- /.tab -->
 
 												<div class="tab" id="tabPrecision">
-													<h2>Design within a 400mm wide circular forming area with 160mm height</h2>
+													<h2>Grow your range</h2>
+
+													<p>Design within a 400mm wide circular forming area with 160mm height so you can make bigger, faster.</p>
 											
 													<a href="#" class="btn btn--yellow btn--medium">
 														About the machine
@@ -222,7 +234,10 @@
 												</div><!-- /.tab -->
 
 												<div class="tab" id="tabControl">
-													<h2>Learn in an hour and make a form in 5 minutes</h2>												
+													<h2> Your ideas on your schedule</h2>												
+													<p>
+														Fast set up and rapid cycle time will have you making molds in minutes.
+													</p>
 													
 													<a href="#" class="btn btn--yellow btn--medium">
 														About the machine

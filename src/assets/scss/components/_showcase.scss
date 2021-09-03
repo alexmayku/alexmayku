@@ -34,4 +34,34 @@
 			padding-bottom: 74.286%;
 		}
 	}
+
+	.showcase__video {
+		position: relative;
+		padding-bottom: 46.12%;
+	}
+
+	.showcase__inner {
+		position: relative;
+		padding-bottom: 46.12%;
+	}
+
+	.showcase__gallery {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }

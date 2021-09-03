@@ -142,6 +142,16 @@
 
 	.hero__content {
 		max-width: 86rem;
+		transform: translateY(20rem);
+		opacity: 0;
+		visibility: hidden;
+		transition: transform 0.8s, opacity 0.5s;
+	}
+
+	.hero__content.is-revealed {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
 	}
 
 	.hero__background video {
@@ -164,6 +174,12 @@
 			top: auto;
 			left: auto;
 			transform: translateY(0);
+		}
+	}
+
+	.js-video-machine source {
+		@include breakpoint-down(mobile) {
+			display: none;
 		}
 	}
 }

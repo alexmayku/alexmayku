@@ -271,7 +271,7 @@
 		max-width: 44.9rem;
 		width: 100%;
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
 
 		@include breakpoint-down(mobile-medium) {

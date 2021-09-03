@@ -81,17 +81,19 @@
 		<div class="main" id="main" data-scroll-section-inview>	
 			<div class="hero hero--machine">
 				<div class="hero__background">
-					 <video playsinline autoplay muted loop poster="assets/images/temp/Home_Poster.jpg" id="bgvid"  preload="none">
-				    	<source src="assets/images/temp/Home_Video_Desktop.mp4" type="video/mp4" class="hidden-xs" >
+					 <video class="js-video-machine hidden-xs" autoplay muted poster="assets/images/temp/Home_Poster.jpg"  preload="none">
+				    	<source src="assets/images/temp/Home_Video_Desktop.mp4" type="video/mp4" >			    		
+				    </video>
 
-			    		<source src="assets/images/temp/Home_Video_Mobile.mp4" type="video/mp4" class="visible-xs-block">
+				    <video class="js-video-machine visible-xs-block" autoplay muted poster="assets/images/temp/Home_Poster.jpg"  preload="none">
+				    	<source src="assets/images/temp/Home_Video_Mobile.mp4" type="video/mp4" >
 				    </video>
 				</div><!-- /.hero__background -->
 
 				<div class="hero__inner">
 					<div class="shell shell--fluid">
 						<div class="hero__content">
-							<h1>Mayku's next generation machine</h1>
+							<h1>Your making, multiplied. </h1>
 						</div><!-- /.hero__content -->							
 					</div><!-- /.shell shell-/-fluid -->
 				</div><!-- /.hero__inner -->
@@ -103,10 +105,10 @@
 						<div class="section__head">
 							<h4>What it is</h4>
 
-							<h2 class="h1">A Desktop Pressure Forming Machine</h2>
+							<h2 class="h1">Pressure forming, on the desktop</h2>
 
 							<p>
-								Work with materials from 0.25mm - 8mm to create injection mold quality quality molds and production parts in minutes.
+								Pressure forming is an industrial grade manufacturing process, used to make molds and parts really quickly. By utilising pressure when forming heated sheet material, pressure forming can capture detail finer than a human hair and perfectly sharp edges. The process of making a mold takes just 1 minute.
 							</p>
 						</div><!-- /.section__head -->
 
@@ -301,7 +303,7 @@
 						<div class="section__head">
 							<h4>How It Works</h4>
 
-							<h2 class="h1">What is Pressure Forming?</h2>
+							<h2 class="h1">high resolution molds & parts in 1 minute</h2>
 						</div><!-- /.section__head -->
 
 						<div class="section__body">
@@ -314,7 +316,7 @@
 
 										<div class="about__entry">
 											<p>
-												Pressure forming is an industrial grade manufacturing process, used to make molds and parts.
+												The Multiplier’s tanks fill with compressed air and pressurise the dome to 4 atmospheres. 
 											</p>
 										</div><!-- /.about__entry -->
 									</div><!-- /.about -->
@@ -328,7 +330,7 @@
 
 										<div class="about__entry">
 											<p>
-												Pressure forming can capture detail finer than a human hair and perfectly sharp edges, for super precise forms and molds.
+												The pressure forces the heated sheet of material into every detail of your creation.
 											</p>
 										</div><!-- /.about__entry -->
 									</div><!-- /.about -->
@@ -342,14 +344,12 @@
 
 										<div class="about__entry">
 											<p>
-												With increased accuracy, pressure forming allows users to reach injection molding levels of detail right from their desktop.
+												Creating high-resolution molds or parts in a matter of minutes. 
 											</p>
 										</div><!-- /.about__entry -->
 									</div><!-- /.about -->
 								</div><!-- /.grid__col grid__col-/-1of3 -->
 							</div><!-- /.grid grid-/-about -->
-
-							<a href="#" class="btn btn--yellow btn--medium hidden-xs">More about pressure forming</a>
 						</div><!-- /.section__body -->
 					</div><!-- /.shell shell-/-fluid -->
 				</section><!-- /.section-default -->	
@@ -378,7 +378,7 @@
 									</div><!-- /.video__banner -->
 
 									<video class="js-video" poster="assets/images/temp/image--revolution.jpg" src="assets/images/temp/TeaseVideo.mp4" preload="none" playsinline controls>
-										<source src="assets/images/temp/TeaseVideo.mp4" type="video/mp4">
+										<source src=assets/images/temp/TeaseVideo.mp4" type="video/mp4">
 									</video>
 								</div><!-- /.video__inner -->
 							</div><!-- /.video.video--desktop -->
@@ -460,11 +460,11 @@
 					</div><!-- /.shell shell-/-fluid -->
 				</div><!-- /.section-default -->
 
-				<div class="showcase showcase--alt pb-2">
+				<div class="showcase showcase--alt pb-2 js-showcase" data-scroll>
 					<div class="shell shell--fluid">
-						<div class="showcase__image">
-							<img src="assets/images/temp/rotating-image--placeholder.jpg" alt="">
-						</div><!-- /.showcase__image -->
+						<div class="showcase__inner">
+							<div class="showcase__gallery js-showcase-gallery" style="background-image: url(assets/images/showcase/multiplier-image-1.jpg);"></div><!-- /.showcase__gallery -->
+						</div><!-- /.showcase__inner -->
 					</div><!-- /.shell shell-/-fluid -->
 				</div><!-- /.showcase-alt -->
 
@@ -515,7 +515,7 @@
 												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
 											</i>
 
-											Polycarbonate, PETG, Flex sheets and more
+											PETG, Flex sheets and more
 										</li>
 										
 										<li>
@@ -523,7 +523,7 @@
 												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
 											</i>
 
-											Works with sheets from 0.1mm - 10mm
+											Works with sheets from 0.5mm - 8mm
 										</li>
 									</ul><!-- /.list-features -->
 								</div><!-- /.card__content -->
@@ -551,7 +551,7 @@
 								<div class="card__background" style="background-image: url(assets/images/temp/specs--image-4.jpg);"></div><!-- /.card__background -->
 
 								<div class="card__content">
-									<h2>Brand new technology</h2>
+									<h2>Made for the future</h2>
 
 									<ul class="list-features list-features--alt">
 										<li>
@@ -559,7 +559,7 @@
 												<img src="assets/images/svg/icon--arrow--yellow.svg" alt="">
 											</i>
 
-											High contrast LCD screen and automatic firmware updates
+											High contrast LED screen, satisfying mechanical switches, updateable firmware
 										</li>
 									</ul><!-- /.list-features -->
 								</div><!-- /.card__content -->
@@ -614,9 +614,11 @@
 									<div class="tab-alt" id="specFormbox">
 										<div class="spec spec--formbox">
 											<div class="spec__head">									
-												<img src="assets/images/svg/table--image.svg" alt="">
+												<img src="assets/images/temp/mayku--formbox.png" alt="">
 
 												<img src="assets/images/svg/logo--mayku-formbox.svg" alt="">	
+
+												<h4>Vacuum Former</h4>
 											</div><!-- /.spec__head -->
 
 											<div class="spec__body">
@@ -693,6 +695,8 @@
 												<img src="assets/images/svg/table--image.svg" alt="">
 
 												<img src="assets/images/svg/logo--mayku-multiplier.svg" alt="">
+
+												<h4>Pressure Former</h4>
 											</div><!-- /.spec__head -->
 
 											<div class="spec__body">
@@ -718,7 +722,7 @@
 															<div class="spec__description">
 																<h4>Min Sheet Thickness:</h4>
 
-																<p>0.25mm</p>
+																<p>0.5mm</p>
 															</div><!-- /.spec__description -->
 														</li>
 
@@ -726,7 +730,7 @@
 															<div class="spec__description">
 																<h4>Detail resolution:</h4>
 
-																<p>0.0003mm</p>
+																<p>0.0004mm</p>
 															</div><!-- /.spec__description -->
 														</li>
 
@@ -742,7 +746,7 @@
 															<div class="spec__description">
 																<h4>Size & weight:</h4>
 
-																<p>685mm x 600mm x 600mm - 70kg (boxed)</p>
+																<p>710mm x 685mm x 625mm - 70kg (boxed)</p>
 															</div><!-- /.spec__description -->
 														</li>
 

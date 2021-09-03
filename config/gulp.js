@@ -351,7 +351,7 @@ gulp.task(
 
 gulp.task(
 	'build',
-	gulp.series(clean, svgs, styles, scripts, pages, copy, validate, vendor, images, optimize)
+	gulp.series(svgs, styles, scripts, pages, copy, validate, vendor, images, optimize)
 );
 
 /**

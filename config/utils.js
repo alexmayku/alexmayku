@@ -11,7 +11,7 @@ module.exports.srcPath = (basePath = '', destPath = '') => slash(
 
 // Base `build` path
 module.exports.buildPath = (basePath = '', destPath = '') => slash(
-	path.resolve(__dirname, '../build', basePath, destPath)
+	path.resolve(__dirname, '..', basePath, destPath)
 );
 
 // Base `src` path for scripts
