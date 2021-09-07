@@ -501,10 +501,20 @@ blockquote:last-child {
 .visible-md-block,
 .visible-md-inline,
 .visible-md-inline-block,
+.visible-tb-block,
 .visible-lg-block,
 .visible-lg-inline,
 .visible-lg-inline-block {
   display: none !important;
+}
+@media (max-width: 1023px) {
+  .visible-tb-block {
+    display: block !important;
+  }
+
+  .hidden-tb {
+    display: none !important;
+  }
 }
 @media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
   .hidden-xs {
@@ -2511,7 +2521,8 @@ blockquote:last-child {
     margin-bottom: 2.4rem;
   }
 }
-.hero video {
+.hero video,
+.hero iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -3476,6 +3487,11 @@ blockquote:last-child {
   position: relative;
   padding-bottom: 46.12%;
 }
+@media (max-width: 1023px) {
+  .showcase--alt .showcase__inner {
+    padding: 0;
+  }
+}
 .showcase--alt .showcase__gallery {
   position: absolute;
   top: 0;
@@ -3892,3 +3908,4 @@ blockquote:last-child {
 /* ------------------------------------------------------------ *\
 	Overwrites
 \* ------------------------------------------------------------ */
+/*# sourceMappingURL=bundle.css.map */

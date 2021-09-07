@@ -334,7 +334,6 @@ const clean = () => {
 gulp.task(
 	'dev',
 	gulp.series(
-		clean,
 		svgs,
 		gulp.parallel(
 			styles,

@@ -43,6 +43,10 @@
 	.showcase__inner {
 		position: relative;
 		padding-bottom: 46.12%;
+
+		@include breakpoint-down(tablet) {
+			padding: 0;
+		}
 	}
 
 	.showcase__gallery {
