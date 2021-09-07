@@ -7,7 +7,6 @@
 		const $this = $(this);
 		const $link = $this.find('a').not('.option');		
 		const $target = $link.attr('href') ? $link.attr('href') : null;  	
-		console.log(pageUrl, $target)
 
 		if ($target === null) {
 			return;

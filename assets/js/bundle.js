@@ -4635,7 +4635,6 @@ initBgSwitch();
     var $this = $(this);
     var $link = $this.find('a').not('.option');
     var $target = $link.attr('href') ? $link.attr('href') : null;
-    console.log(pageUrl, $target);
 
     if ($target === null) {
       return;
