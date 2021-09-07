@@ -6,7 +6,11 @@
 	$(".js-nav li").each(function(){
 		const $this = $(this);
 		const $link = $this.find('a').not('.option');		
-		const $target = $link.attr('href') ? $link.attr('href').slice(0, -5) : null;  		
+		const $target = $link.attr('href') ? $link.attr('href') : null;  	
+
+		if ($target === null) {
+			return;
+		}	
 
 		if($target == pageUrl){    
 			$(this).addClass("is-current");

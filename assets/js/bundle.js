@@ -4634,7 +4634,11 @@ initBgSwitch();
   $(".js-nav li").each(function () {
     var $this = $(this);
     var $link = $this.find('a').not('.option');
-    var $target = $link.attr('href') ? $link.attr('href').slice(0, -5) : null;
+    var $target = $link.attr('href') ? $link.attr('href') : null;
+
+    if ($target === null) {
+      return;
+    }
 
     if ($target == pageUrl) {
       $(this).addClass("is-current");
