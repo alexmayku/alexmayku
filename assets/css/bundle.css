@@ -3621,6 +3621,105 @@ blockquote:last-child {
   padding-bottom: 3.4rem;
 }
 /* ------------------------------------------------------------ *\
+	Success
+\* ------------------------------------------------------------ */
+.success .success__inner {
+  padding: 0 2.5rem;
+}
+@media (max-width: 1399px) {
+  .success .success__inner {
+    padding: 0 1rem;
+  }
+}
+.success .success__head {
+  margin-bottom: 2rem;
+}
+.success .success__body {
+  margin-bottom: 3.4rem;
+}
+.success .success__body p + p {
+  margin-top: 2.6rem;
+}
+.success .success__foot ul {
+  list-style: none;
+  margin-bottom: 3rem;
+}
+.success .success__foot li {
+  display: inline-block;
+  color: #fdd32f;
+  font-size: 1.6rem;
+  border: 0.1rem solid #fdd32f;
+  border-radius: 10rem;
+  padding: 1.2rem 2rem 1.2rem 1.2rem;
+  line-height: 1;
+  font-weight: 300;
+}
+@media (max-width: 1399px) {
+  .success .success__foot li {
+    padding: 1rem 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+}
+@media (max-width: 1199px) {
+  .success .success__foot li {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 575px) {
+  .success .success__foot li {
+    min-width: 45%;
+    margin-bottom: 0.7rem;
+  }
+}
+.success .success__foot li + li {
+  margin-left: 0.9rem;
+}
+@media (max-width: 1399px) {
+  .success .success__foot li + li {
+    margin-left: 0.4rem;
+  }
+}
+@media (max-width: 575px) {
+  .success .success__foot li + li {
+    margin-left: 0;
+  }
+}
+.success .success__foot a {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.success .success__foot img {
+  display: inline-block;
+  margin-right: 1.2rem;
+}
+.success .success__foot p {
+  font-size: 1.2rem;
+}
+.success .success__foot span {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  color: #666666;
+  font-size: 1.2rem;
+  padding: 1.7rem 2.4rem;
+  margin-top: 1.5rem;
+  font-family: "B612 Mono", monospace;
+}
+.success .success__foot span:before {
+  content: "";
+  background-color: #fdd32f;
+  width: 0.4rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+/* ------------------------------------------------------------ *\
 	Tab
 \* ------------------------------------------------------------ */
 .tab {

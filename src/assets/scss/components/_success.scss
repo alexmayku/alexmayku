@@ -1,0 +1,103 @@
+/* ------------------------------------------------------------ *\
+	Success
+\* ------------------------------------------------------------ */
+
+.success {
+	.success__inner {
+		padding: 0 2.5rem;
+
+		@include breakpoint-down(large-desktop) {
+			padding: 0 1rem;
+		}
+	}
+
+	.success__head {
+		margin-bottom: 2rem;
+	}
+
+	.success__body {
+		margin-bottom: 3.4rem;
+	}
+
+	.success__body p + p {
+		margin-top: 2.6rem;
+	}
+
+	.success__foot ul {
+		list-style: none;
+		margin-bottom: 3rem;
+	}
+
+	.success__foot li {
+		display: inline-block;
+		color: $c-yellow;
+		font-size: 1.6rem;
+		border: 0.1rem solid $c-yellow;
+		border-radius: 10rem;
+		padding: 1.2rem 2rem 1.2rem 1.2rem;
+		line-height: 1;
+		font-weight: 300;
+
+		@include breakpoint-down(large-desktop) {
+			padding: 1rem 1.3rem;
+			margin-bottom: 0.4rem;
+		}
+
+		@include breakpoint-down(small-desktop) {
+			font-size: 1.4rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			min-width: 45%;
+			margin-bottom: 0.7rem;
+		}
+	}
+
+	.success__foot li + li {
+		margin-left: 0.9rem;
+
+		@include breakpoint-down(large-desktop) {
+			margin-left: 0.4rem;
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin-left: 0;
+		}
+	}
+
+	.success__foot a {
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
+
+	.success__foot img {
+		display: inline-block;
+		margin-right: 1.2rem;
+	}
+
+	.success__foot p {
+		font-size: 1.2rem;
+	}
+
+	.success__foot span {
+		display: block;
+		position: relative;
+		background-color: $c-white;
+		color: $c-gray-2;
+		font-size: 1.2rem;
+		padding: 1.7rem 2.4rem;
+		margin-top: 1.5rem;
+		font-family: $ff-mono;
+
+		&:before {
+			content: "";
+			background-color: $c-yellow;
+			width: 0.4rem;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
