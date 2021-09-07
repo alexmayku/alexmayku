@@ -1321,9 +1321,9 @@ blockquote:last-child {
   right: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, right top, left top, from(black), to(rgba(0, 0, 0, 0)));
-  background: -o-linear-gradient(right, black 0%, rgba(0, 0, 0, 0) 100%);
-  background: linear-gradient(270deg, black 0%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-gradient(linear, right top, left top, from(black), color-stop(35%, black), to(rgba(0, 0, 0, 0)));
+  background: -o-linear-gradient(right, black 0%, black 35%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(270deg, black 0%, black 35%, rgba(0, 0, 0, 0) 100%);
 }
 @media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
   .card-specs .card__background:before {
@@ -2544,7 +2544,7 @@ blockquote:last-child {
   bottom: 6.5rem;
   left: 0;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .hero .hero__inner {
     position: relative;
     bottom: auto;
@@ -2647,7 +2647,7 @@ blockquote:last-child {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .hero--machine .hero__inner {
     padding-top: 33.5rem;
     top: auto;
@@ -3840,9 +3840,9 @@ blockquote:last-child {
   display: block;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/temp/image--revolution.jpg);
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/image--revolution.jpg);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/image--revolution.jpg);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/temp/video--poster.jpg);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/video--poster.jpg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/video--poster.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
