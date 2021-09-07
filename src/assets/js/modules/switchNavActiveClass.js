@@ -1,5 +1,5 @@
  $(function() {
-	const pageUrl = (window.location.href.substr(window.location.href.lastIndexOf("/")+1).slice(0, -5));
+	const pageUrl = (window.location.href.substr(window.location.href.lastIndexOf("/")+1));
 	const $bar = $('.js-bar');
 	const $barMobile = $('.js-bar-mobile');
 

@@ -4628,7 +4628,7 @@ initBgSwitch();
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function($) {$(function () {
-  var pageUrl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1).slice(0, -5);
+  var pageUrl = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
   var $bar = $('.js-bar');
   var $barMobile = $('.js-bar-mobile');
   $(".js-nav li").each(function () {
