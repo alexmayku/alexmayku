@@ -101,3 +101,29 @@
 		}
 	}
 }
+
+/* Viodeo Philip*/
+
+.video--philip {
+	.video__inner.has-overlay:after {
+		background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0.6),
+				rgba(0, 0, 0, 0.6)
+			),
+			url(../images/temp/philip-overlay.jpg);
+	}
+}
+
+/* Video Beta DEsign */
+
+.video--beta {
+	.video__inner.has-overlay:after {
+		background: linear-gradient(
+				0deg,
+				rgba(0, 0, 0, 0.6),
+				rgba(0, 0, 0, 0.6)
+			),
+			url(../images/temp/betadesign-overlay.jpg);
+	}
+}

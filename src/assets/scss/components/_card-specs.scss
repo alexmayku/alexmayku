@@ -7,18 +7,19 @@
 	min-height: 72rem;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-	@include breakpoint-down(mobile) {
-		min-height: 43rem;
-	}
-
-	&:nth-child(even) .card__content {
-		left: 0;
-	}
-
-	&:nth-child(even) .card__background:before {
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		z-index: 2;
+		height: 100%;
 		background: linear-gradient(
-			90deg,
+			270deg,
 			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 1) 35%,
+			rgba(0, 0, 0, 0.2) 40%,
 			rgba(0, 0, 0, 0) 100%
 		);
 
@@ -27,16 +28,45 @@
 		}
 	}
 
+	&:nth-child(even):before {
+		left: 0;
+		background: linear-gradient(
+			90deg,
+			rgba(0, 0, 0, 1) 0%,
+			rgba(0, 0, 0, 1) 35%,
+			rgba(0, 0, 0, 0.2) 40%,
+			rgba(0, 0, 0, 0) 100%
+		);
+
+		@include breakpoint-down(mobile) {
+			display: none;
+		}
+	}
+
+	@include breakpoint-down(mobile) {
+		min-height: 43rem;
+	}
+
+	&:nth-child(even) .card__content {
+		left: 0;
+	}
+
 	& + & {
 		margin-top: 4rem;
+	}
+
+	&:nth-child(even) .card__background {
+		right: 0;
+		left: auto;
 	}
 
 	.card__background {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
+		width: 65%;
 		height: 100%;
+		z-index: 1;
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -44,25 +74,7 @@
 		@include breakpoint-down(mobile) {
 			min-height: 24rem;
 			position: relative;
-		}
-
-		&:before {
-			content: "";
-			position: absolute;
-			top: 0;
-			right: 0;
 			width: 100%;
-			height: 100%;
-			background: linear-gradient(
-				270deg,
-				rgba(0, 0, 0, 1) 0%,
-				rgba(0, 0, 0, 1) 35%,
-				rgba(0, 0, 0, 0) 100%
-			);
-
-			@include breakpoint-down(mobile) {
-				display: none;
-			}
 		}
 	}
 
@@ -74,6 +86,7 @@
 		padding: 0 8rem;
 		max-width: 72rem;
 		width: 100%;
+		z-index: 3;
 
 		@include breakpoint-down(small-desktop) {
 			max-width: 59rem;

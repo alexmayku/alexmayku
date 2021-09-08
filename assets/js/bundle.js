@@ -4120,6 +4120,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_scrollIntoViewTouchDevice_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_modules_scrollIntoViewTouchDevice_js__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _modules_showDropdown_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/showDropdown.js */ "../src/assets/js/modules/showDropdown.js");
 /* harmony import */ var _modules_showDropdown_js__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_showDropdown_js__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modules_firefoxFontChange_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/firefoxFontChange.js */ "../src/assets/js/modules/firefoxFontChange.js");
+/* harmony import */ var _modules_firefoxFontChange_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_firefoxFontChange_js__WEBPACK_IMPORTED_MODULE_10__);
+
 
 
 
@@ -4163,6 +4166,20 @@ $('.countdown').each(function () {
 
 /***/ }),
 
+/***/ "../src/assets/js/modules/firefoxFontChange.js":
+/*!*****************************************************!*\
+  !*** ../src/assets/js/modules/firefoxFontChange.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function($) {if (navigator.userAgent.indexOf("Firefox") != -1) {
+  $('.bottom-bar span:not([class])').css('font-family', "B612 Mono");
+}
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
+
+/***/ }),
+
 /***/ "../src/assets/js/modules/parallaxScroll.js":
 /*!**************************************************!*\
   !*** ../src/assets/js/modules/parallaxScroll.js ***!
@@ -4173,263 +4190,204 @@ $('.countdown').each(function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! locomotive-scroll */ "../node_modules/locomotive-scroll/dist/locomotive-scroll.esm.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 var imagesLoaded = __webpack_require__(/*! imagesloaded */ "../node_modules/imagesloaded/imagesloaded.js");
 
 var scrollContainer = document.querySelector('[data-scroll-container]');
+var machineImages = {
+  1: 'assets/images/showcase/multiplier-image-1.jpg',
+  2: 'assets/images/showcase/multiplier-image-2.jpg',
+  3: 'assets/images/showcase/multiplier-image-3.jpg',
+  4: 'assets/images/showcase/multiplier-image-4.jpg',
+  5: 'assets/images/showcase/multiplier-image-5.jpg',
+  6: 'assets/images/showcase/multiplier-image-6.jpg',
+  7: 'assets/images/showcase/multiplier-image-7.jpg',
+  8: 'assets/images/showcase/multiplier-image-8.jpg',
+  9: 'assets/images/showcase/multiplier-image-9.jpg',
+  10: 'assets/images/showcase/multiplier-image-10.jpg',
+  11: 'assets/images/showcase/multiplier-image-11.jpg',
+  12: 'assets/images/showcase/multiplier-image-12.jpg',
+  13: 'assets/images/showcase/multiplier-image-13.jpg',
+  14: 'assets/images/showcase/multiplier-image-14.jpg',
+  15: 'assets/images/showcase/multiplier-image-15.jpg',
+  16: 'assets/images/showcase/multiplier-image-16.jpg',
+  17: 'assets/images/showcase/multiplier-image-17.jpg',
+  18: 'assets/images/showcase/multiplier-image-18.jpg',
+  19: 'assets/images/showcase/multiplier-image-19.jpg',
+  20: 'assets/images/showcase/multiplier-image-20.jpg',
+  21: 'assets/images/showcase/multiplier-image-21.jpg',
+  22: 'assets/images/showcase/multiplier-image-22.jpg',
+  23: 'assets/images/showcase/multiplier-image-23.jpg',
+  24: 'assets/images/showcase/multiplier-image-24.jpg',
+  25: 'assets/images/showcase/multiplier-image-25.jpg',
+  26: 'assets/images/showcase/multiplier-image-26.jpg',
+  27: 'assets/images/showcase/multiplier-image-27.jpg',
+  28: 'assets/images/showcase/multiplier-image-28.jpg',
+  29: 'assets/images/showcase/multiplier-image-29.jpg',
+  30: 'assets/images/showcase/multiplier-image-30.jpg',
+  31: 'assets/images/showcase/multiplier-image-31.jpg',
+  32: 'assets/images/showcase/multiplier-image-32.jpg',
+  33: 'assets/images/showcase/multiplier-image-33.jpg',
+  34: 'assets/images/showcase/multiplier-image-34.jpg',
+  35: 'assets/images/showcase/multiplier-image-35.jpg',
+  36: 'assets/images/showcase/multiplier-image-36.jpg',
+  37: 'assets/images/showcase/multiplier-image-37.jpg',
+  38: 'assets/images/showcase/multiplier-image-38.jpg',
+  39: 'assets/images/showcase/multiplier-image-39.jpg',
+  40: 'assets/images/showcase/multiplier-image-40.jpg',
+  41: 'assets/images/showcase/multiplier-image-41.jpg',
+  42: 'assets/images/showcase/multiplier-image-42.jpg',
+  43: 'assets/images/showcase/multiplier-image-43.jpg',
+  44: 'assets/images/showcase/multiplier-image-44.jpg',
+  45: 'assets/images/showcase/multiplier-image-45.jpg',
+  46: 'assets/images/showcase/multiplier-image-46.jpg',
+  47: 'assets/images/showcase/multiplier-image-47.jpg',
+  48: 'assets/images/showcase/multiplier-image-48.jpg',
+  49: 'assets/images/showcase/multiplier-image-49.jpg',
+  50: 'assets/images/showcase/multiplier-image-50.jpg',
+  51: 'assets/images/showcase/multiplier-image-51.jpg',
+  52: 'assets/images/showcase/multiplier-image-52.jpg',
+  53: 'assets/images/showcase/multiplier-image-53.jpg',
+  54: 'assets/images/showcase/multiplier-image-54.jpg',
+  55: 'assets/images/showcase/multiplier-image-55.jpg',
+  56: 'assets/images/showcase/multiplier-image-56.jpg',
+  57: 'assets/images/showcase/multiplier-image-57.jpg',
+  58: 'assets/images/showcase/multiplier-image-58.jpg',
+  59: 'assets/images/showcase/multiplier-image-59.jpg',
+  60: 'assets/images/showcase/multiplier-image-60.jpg',
+  61: 'assets/images/showcase/multiplier-image-61.jpg',
+  62: 'assets/images/showcase/multiplier-image-62.jpg',
+  63: 'assets/images/showcase/multiplier-image-63.jpg',
+  64: 'assets/images/showcase/multiplier-image-64.jpg',
+  65: 'assets/images/showcase/multiplier-image-65.jpg',
+  66: 'assets/images/showcase/multiplier-image-66.jpg',
+  67: 'assets/images/showcase/multiplier-image-67.jpg',
+  68: 'assets/images/showcase/multiplier-image-68.jpg',
+  69: 'assets/images/showcase/multiplier-image-69.jpg',
+  70: 'assets/images/showcase/multiplier-image-70.jpg',
+  71: 'assets/images/showcase/multiplier-image-71.jpg',
+  72: 'assets/images/showcase/multiplier-image-72.jpg',
+  73: 'assets/images/showcase/multiplier-image-73.jpg',
+  74: 'assets/images/showcase/multiplier-image-74.jpg',
+  75: 'assets/images/showcase/multiplier-image-75.jpg',
+  76: 'assets/images/showcase/multiplier-image-76.jpg',
+  77: 'assets/images/showcase/multiplier-image-77.jpg',
+  78: 'assets/images/showcase/multiplier-image-78.jpg',
+  79: 'assets/images/showcase/multiplier-image-79.jpg',
+  80: 'assets/images/showcase/multiplier-image-80.jpg',
+  81: 'assets/images/showcase/multiplier-image-81.jpg',
+  82: 'assets/images/showcase/multiplier-image-82.jpg',
+  83: 'assets/images/showcase/multiplier-image-83.jpg',
+  84: 'assets/images/showcase/multiplier-image-84.jpg',
+  85: 'assets/images/showcase/multiplier-image-85.jpg',
+  86: 'assets/images/showcase/multiplier-image-86.jpg',
+  87: 'assets/images/showcase/multiplier-image-87.jpg',
+  88: 'assets/images/showcase/multiplier-image-88.jpg',
+  89: 'assets/images/showcase/multiplier-image-89.jpg',
+  90: 'assets/images/showcase/multiplier-image-90.jpg',
+  91: 'assets/images/showcase/multiplier-image-91.jpg',
+  92: 'assets/images/showcase/multiplier-image-92.jpg',
+  93: 'assets/images/showcase/multiplier-image-93.jpg',
+  94: 'assets/images/showcase/multiplier-image-94.jpg',
+  95: 'assets/images/showcase/multiplier-image-95.jpg',
+  96: 'assets/images/showcase/multiplier-image-96.jpg',
+  97: 'assets/images/showcase/multiplier-image-97.jpg',
+  98: 'assets/images/showcase/multiplier-image-98.jpg',
+  99: 'assets/images/showcase/multiplier-image-99.jpg'
+};
 
-var initLocomotive = function initLocomotive() {
-  if (scrollContainer === null) {
-    return;
+function loadImages(images, index, callback) {
+  if (index < images.length) {
+    img.src = new Image();
+    images[index] = img;
+
+    images[index].onload = function () {
+      loadImages(images, ++index, callback);
+    };
+  } else {
+    callback(images);
   }
+}
 
-  var scroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__["default"]({
-    el: scrollContainer,
-    smooth: true,
-    touchMultiplier: 2,
-    smartphone: {
-      smooth: true
-    },
-    tablet: {
-      smooth: true
-    },
-    scrollFromAnywhere: true,
-    getDirection: true,
-    resetNativeScroll: false
-  });
-  imagesLoaded(scrollContainer, {
-    background: true
-  }, function () {
-    scroll.update();
-  });
-  setTimeout(function () {
-    scroll.update();
-  }, 2000);
-  var machineImages = {
-    1: 'background-image: url(assets/images/showcase/multiplier-image-1.jpg);',
-    2: 'background-image: url(assets/images/showcase/multiplier-image-2.jpg);',
-    3: 'background-image: url(assets/images/showcase/multiplier-image-3.jpg);',
-    4: 'background-image: url(assets/images/showcase/multiplier-image-4.jpg);',
-    5: 'background-image: url(assets/images/showcase/multiplier-image-5.jpg);',
-    6: 'background-image: url(assets/images/showcase/multiplier-image-6.jpg);',
-    7: 'background-image: url(assets/images/showcase/multiplier-image-7.jpg);',
-    8: 'background-image: url(assets/images/showcase/multiplier-image-8.jpg);',
-    9: 'background-image: url(assets/images/showcase/multiplier-image-9.jpg);',
-    10: 'background-image: url(assets/images/showcase/multiplier-image-10.jpg);',
-    11: 'background-image: url(assets/images/showcase/multiplier-image-11.jpg);',
-    12: 'background-image: url(assets/images/showcase/multiplier-image-12.jpg);',
-    13: 'background-image: url(assets/images/showcase/multiplier-image-13.jpg);',
-    14: 'background-image: url(assets/images/showcase/multiplier-image-14.jpg);',
-    15: 'background-image: url(assets/images/showcase/multiplier-image-15.jpg);',
-    16: 'background-image: url(assets/images/showcase/multiplier-image-16.jpg);',
-    17: 'background-image: url(assets/images/showcase/multiplier-image-17.jpg);',
-    18: 'background-image: url(assets/images/showcase/multiplier-image-18.jpg);',
-    19: 'background-image: url(assets/images/showcase/multiplier-image-19.jpg);',
-    20: 'background-image: url(assets/images/showcase/multiplier-image-20.jpg);',
-    21: 'background-image: url(assets/images/showcase/multiplier-image-21.jpg);',
-    22: 'background-image: url(assets/images/showcase/multiplier-image-22.jpg);',
-    23: 'background-image: url(assets/images/showcase/multiplier-image-23.jpg);',
-    24: 'background-image: url(assets/images/showcase/multiplier-image-24.jpg);',
-    25: 'background-image: url(assets/images/showcase/multiplier-image-25.jpg);',
-    26: 'background-image: url(assets/images/showcase/multiplier-image-26.jpg);',
-    27: 'background-image: url(assets/images/showcase/multiplier-image-27.jpg);',
-    28: 'background-image: url(assets/images/showcase/multiplier-image-28.jpg);',
-    29: 'background-image: url(assets/images/showcase/multiplier-image-29.jpg);',
-    30: 'background-image: url(assets/images/showcase/multiplier-image-30.jpg);',
-    31: 'background-image: url(assets/images/showcase/multiplier-image-31.jpg);',
-    32: 'background-image: url(assets/images/showcase/multiplier-image-32.jpg);',
-    33: 'background-image: url(assets/images/showcase/multiplier-image-33.jpg);',
-    34: 'background-image: url(assets/images/showcase/multiplier-image-34.jpg);',
-    35: 'background-image: url(assets/images/showcase/multiplier-image-35.jpg);',
-    36: 'background-image: url(assets/images/showcase/multiplier-image-36.jpg);',
-    37: 'background-image: url(assets/images/showcase/multiplier-image-37.jpg);',
-    38: 'background-image: url(assets/images/showcase/multiplier-image-38.jpg);',
-    39: 'background-image: url(assets/images/showcase/multiplier-image-39.jpg);',
-    40: 'background-image: url(assets/images/showcase/multiplier-image-40.jpg);',
-    41: 'background-image: url(assets/images/showcase/multiplier-image-41.jpg);',
-    42: 'background-image: url(assets/images/showcase/multiplier-image-42.jpg);',
-    43: 'background-image: url(assets/images/showcase/multiplier-image-43.jpg);',
-    44: 'background-image: url(assets/images/showcase/multiplier-image-44.jpg);',
-    45: 'background-image: url(assets/images/showcase/multiplier-image-45.jpg);',
-    46: 'background-image: url(assets/images/showcase/multiplier-image-46.jpg);',
-    47: 'background-image: url(assets/images/showcase/multiplier-image-47.jpg);',
-    48: 'background-image: url(assets/images/showcase/multiplier-image-48.jpg);',
-    49: 'background-image: url(assets/images/showcase/multiplier-image-49.jpg);',
-    50: 'background-image: url(assets/images/showcase/multiplier-image-50.jpg);',
-    51: 'background-image: url(assets/images/showcase/multiplier-image-51.jpg);',
-    52: 'background-image: url(assets/images/showcase/multiplier-image-52.jpg);',
-    53: 'background-image: url(assets/images/showcase/multiplier-image-53.jpg);',
-    54: 'background-image: url(assets/images/showcase/multiplier-image-54.jpg);',
-    55: 'background-image: url(assets/images/showcase/multiplier-image-55.jpg);',
-    56: 'background-image: url(assets/images/showcase/multiplier-image-56.jpg);',
-    57: 'background-image: url(assets/images/showcase/multiplier-image-57.jpg);',
-    58: 'background-image: url(assets/images/showcase/multiplier-image-58.jpg);',
-    59: 'background-image: url(assets/images/showcase/multiplier-image-59.jpg);',
-    60: 'background-image: url(assets/images/showcase/multiplier-image-60.jpg);',
-    61: 'background-image: url(assets/images/showcase/multiplier-image-61.jpg);',
-    62: 'background-image: url(assets/images/showcase/multiplier-image-62.jpg);',
-    63: 'background-image: url(assets/images/showcase/multiplier-image-63.jpg);',
-    64: 'background-image: url(assets/images/showcase/multiplier-image-64.jpg);',
-    65: 'background-image: url(assets/images/showcase/multiplier-image-65.jpg);',
-    66: 'background-image: url(assets/images/showcase/multiplier-image-66.jpg);',
-    67: 'background-image: url(assets/images/showcase/multiplier-image-67.jpg);',
-    68: 'background-image: url(assets/images/showcase/multiplier-image-68.jpg);',
-    69: 'background-image: url(assets/images/showcase/multiplier-image-69.jpg);',
-    70: 'background-image: url(assets/images/showcase/multiplier-image-70.jpg);',
-    71: 'background-image: url(assets/images/showcase/multiplier-image-71.jpg);',
-    72: 'background-image: url(assets/images/showcase/multiplier-image-72.jpg);',
-    73: 'background-image: url(assets/images/showcase/multiplier-image-73.jpg);',
-    74: 'background-image: url(assets/images/showcase/multiplier-image-74.jpg);',
-    75: 'background-image: url(assets/images/showcase/multiplier-image-75.jpg);',
-    76: 'background-image: url(assets/images/showcase/multiplier-image-76.jpg);',
-    77: 'background-image: url(assets/images/showcase/multiplier-image-77.jpg);',
-    78: 'background-image: url(assets/images/showcase/multiplier-image-78.jpg);',
-    79: 'background-image: url(assets/images/showcase/multiplier-image-79.jpg);',
-    80: 'background-image: url(assets/images/showcase/multiplier-image-80.jpg);',
-    81: 'background-image: url(assets/images/showcase/multiplier-image-81.jpg);',
-    82: 'background-image: url(assets/images/showcase/multiplier-image-82.jpg);',
-    83: 'background-image: url(assets/images/showcase/multiplier-image-83.jpg);',
-    84: 'background-image: url(assets/images/showcase/multiplier-image-84.jpg);',
-    85: 'background-image: url(assets/images/showcase/multiplier-image-85.jpg);',
-    86: 'background-image: url(assets/images/showcase/multiplier-image-86.jpg);',
-    87: 'background-image: url(assets/images/showcase/multiplier-image-87.jpg);',
-    88: 'background-image: url(assets/images/showcase/multiplier-image-88.jpg);',
-    89: 'background-image: url(assets/images/showcase/multiplier-image-89.jpg);',
-    90: 'background-image: url(assets/images/showcase/multiplier-image-90.jpg);',
-    91: 'background-image: url(assets/images/showcase/multiplier-image-91.jpg);',
-    92: 'background-image: url(assets/images/showcase/multiplier-image-92.jpg);',
-    93: 'background-image: url(assets/images/showcase/multiplier-image-93.jpg);',
-    94: 'background-image: url(assets/images/showcase/multiplier-image-94.jpg);',
-    95: 'background-image: url(assets/images/showcase/multiplier-image-95.jpg);',
-    96: 'background-image: url(assets/images/showcase/multiplier-image-96.jpg);',
-    97: 'background-image: url(assets/images/showcase/multiplier-image-97.jpg);',
-    98: 'background-image: url(assets/images/showcase/multiplier-image-98.jpg);',
-    99: 'background-image: url(assets/images/showcase/multiplier-image-99.jpg);',
-    100: 'background-image: url(assets/images/showcase/multiplier-image-100.jpg);',
-    101: 'background-image: url(assets/images/showcase/multiplier-image-101.jpg);',
-    102: 'background-image: url(assets/images/showcase/multiplier-image-102.jpg);',
-    103: 'background-image: url(assets/images/showcase/multiplier-image-103.jpg);',
-    104: 'background-image: url(assets/images/showcase/multiplier-image-104.jpg);',
-    105: 'background-image: url(assets/images/showcase/multiplier-image-105.jpg);',
-    106: 'background-image: url(assets/images/showcase/multiplier-image-106.jpg);',
-    107: 'background-image: url(assets/images/showcase/multiplier-image-107.jpg);',
-    108: 'background-image: url(assets/images/showcase/multiplier-image-108.jpg);',
-    109: 'background-image: url(assets/images/showcase/multiplier-image-109.jpg);',
-    110: 'background-image: url(assets/images/showcase/multiplier-image-110.jpg);',
-    111: 'background-image: url(assets/images/showcase/multiplier-image-111.jpg);',
-    112: 'background-image: url(assets/images/showcase/multiplier-image-112.jpg);',
-    113: 'background-image: url(assets/images/showcase/multiplier-image-113.jpg);',
-    114: 'background-image: url(assets/images/showcase/multiplier-image-114.jpg);',
-    115: 'background-image: url(assets/images/showcase/multiplier-image-115.jpg);',
-    116: 'background-image: url(assets/images/showcase/multiplier-image-116.jpg);',
-    117: 'background-image: url(assets/images/showcase/multiplier-image-117.jpg);',
-    118: 'background-image: url(assets/images/showcase/multiplier-image-118.jpg);',
-    119: 'background-image: url(assets/images/showcase/multiplier-image-119.jpg);',
-    120: 'background-image: url(assets/images/showcase/multiplier-image-120.jpg);',
-    121: 'background-image: url(assets/images/showcase/multiplier-image-121.jpg);',
-    122: 'background-image: url(assets/images/showcase/multiplier-image-122.jpg);',
-    123: 'background-image: url(assets/images/showcase/multiplier-image-123.jpg);',
-    124: 'background-image: url(assets/images/showcase/multiplier-image-124.jpg);',
-    125: 'background-image: url(assets/images/showcase/multiplier-image-125.jpg);',
-    126: 'background-image: url(assets/images/showcase/multiplier-image-126.jpg);',
-    127: 'background-image: url(assets/images/showcase/multiplier-image-127.jpg);',
-    128: 'background-image: url(assets/images/showcase/multiplier-image-128.jpg);',
-    129: 'background-image: url(assets/images/showcase/multiplier-image-129.jpg);',
-    130: 'background-image: url(assets/images/showcase/multiplier-image-130.jpg);',
-    131: 'background-image: url(assets/images/showcase/multiplier-image-131.jpg);',
-    132: 'background-image: url(assets/images/showcase/multiplier-image-132.jpg);',
-    133: 'background-image: url(assets/images/showcase/multiplier-image-133.jpg);',
-    134: 'background-image: url(assets/images/showcase/multiplier-image-134.jpg);',
-    135: 'background-image: url(assets/images/showcase/multiplier-image-135.jpg);',
-    136: 'background-image: url(assets/images/showcase/multiplier-image-136.jpg);',
-    137: 'background-image: url(assets/images/showcase/multiplier-image-137.jpg);',
-    138: 'background-image: url(assets/images/showcase/multiplier-image-138.jpg);',
-    139: 'background-image: url(assets/images/showcase/multiplier-image-139.jpg);',
-    140: 'background-image: url(assets/images/showcase/multiplier-image-140.jpg);',
-    141: 'background-image: url(assets/images/showcase/multiplier-image-141.jpg);',
-    142: 'background-image: url(assets/images/showcase/multiplier-image-142.jpg);',
-    143: 'background-image: url(assets/images/showcase/multiplier-image-143.jpg);',
-    144: 'background-image: url(assets/images/showcase/multiplier-image-144.jpg);',
-    145: 'background-image: url(assets/images/showcase/multiplier-image-145.jpg);',
-    146: 'background-image: url(assets/images/showcase/multiplier-image-146.jpg);',
-    147: 'background-image: url(assets/images/showcase/multiplier-image-147.jpg);',
-    148: 'background-image: url(assets/images/showcase/multiplier-image-148.jpg);',
-    149: 'background-image: url(assets/images/showcase/multiplier-image-149.jpg);',
-    150: 'background-image: url(assets/images/showcase/multiplier-image-150.jpg);',
-    151: 'background-image: url(assets/images/showcase/multiplier-image-151.jpg);',
-    152: 'background-image: url(assets/images/showcase/multiplier-image-152.jpg);',
-    153: 'background-image: url(assets/images/showcase/multiplier-image-153.jpg);',
-    154: 'background-image: url(assets/images/showcase/multiplier-image-154.jpg);',
-    155: 'background-image: url(assets/images/showcase/multiplier-image-155.jpg);',
-    156: 'background-image: url(assets/images/showcase/multiplier-image-156.jpg);',
-    157: 'background-image: url(assets/images/showcase/multiplier-image-157.jpg);',
-    158: 'background-image: url(assets/images/showcase/multiplier-image-158.jpg);',
-    159: 'background-image: url(assets/images/showcase/multiplier-image-159.jpg);',
-    160: 'background-image: url(assets/images/showcase/multiplier-image-160.jpg);',
-    161: 'background-image: url(assets/images/showcase/multiplier-image-161.jpg);',
-    162: 'background-image: url(assets/images/showcase/multiplier-image-162.jpg);',
-    163: 'background-image: url(assets/images/showcase/multiplier-image-163.jpg);',
-    164: 'background-image: url(assets/images/showcase/multiplier-image-164.jpg);',
-    165: 'background-image: url(assets/images/showcase/multiplier-image-165.jpg);',
-    166: 'background-image: url(assets/images/showcase/multiplier-image-166.jpg);',
-    167: 'background-image: url(assets/images/showcase/multiplier-image-167.jpg);',
-    168: 'background-image: url(assets/images/showcase/multiplier-image-168.jpg);',
-    169: 'background-image: url(assets/images/showcase/multiplier-image-169.jpg);',
-    170: 'background-image: url(assets/images/showcase/multiplier-image-170.jpg);',
-    171: 'background-image: url(assets/images/showcase/multiplier-image-171.jpg);',
-    172: 'background-image: url(assets/images/showcase/multiplier-image-172.jpg);',
-    173: 'background-image: url(assets/images/showcase/multiplier-image-173.jpg);',
-    174: 'background-image: url(assets/images/showcase/multiplier-image-174.jpg);',
-    175: 'background-image: url(assets/images/showcase/multiplier-image-175.jpg);',
-    176: 'background-image: url(assets/images/showcase/multiplier-image-176.jpg);',
-    177: 'background-image: url(assets/images/showcase/multiplier-image-177.jpg);',
-    178: 'background-image: url(assets/images/showcase/multiplier-image-178.jpg);',
-    179: 'background-image: url(assets/images/showcase/multiplier-image-179.jpg);',
-    180: 'background-image: url(assets/images/showcase/multiplier-image-180.jpg);',
-    181: 'background-image: url(assets/images/showcase/multiplier-image-181.jpg);',
-    182: 'background-image: url(assets/images/showcase/multiplier-image-182.jpg);',
-    183: 'background-image: url(assets/images/showcase/multiplier-image-183.jpg);',
-    184: 'background-image: url(assets/images/showcase/multiplier-image-184.jpg);',
-    185: 'background-image: url(assets/images/showcase/multiplier-image-185.jpg);',
-    186: 'background-image: url(assets/images/showcase/multiplier-image-186.jpg);',
-    187: 'background-image: url(assets/images/showcase/multiplier-image-187.jpg);',
-    188: 'background-image: url(assets/images/showcase/multiplier-image-188.jpg);',
-    189: 'background-image: url(assets/images/showcase/multiplier-image-189.jpg);',
-    190: 'background-image: url(assets/images/showcase/multiplier-image-190.jpg);',
-    191: 'background-image: url(assets/images/showcase/multiplier-image-191.jpg);',
-    192: 'background-image: url(assets/images/showcase/multiplier-image-192.jpg);',
-    193: 'background-image: url(assets/images/showcase/multiplier-image-193.jpg);',
-    194: 'background-image: url(assets/images/showcase/multiplier-image-194.jpg);',
-    195: 'background-image: url(assets/images/showcase/multiplier-image-195.jpg);',
-    196: 'background-image: url(assets/images/showcase/multiplier-image-196.jpg);',
-    197: 'background-image: url(assets/images/showcase/multiplier-image-197.jpg);'
-  };
-  var i = 1;
-  scroll.on('scroll', function (e) {
-    if ($('.js-showcase').hasClass('is-inview')) {
-      if (e.direction === 'down' && i < 197) {
-        i++;
-      } else if (e.direction === 'up' && i > 1) {
-        i--;
+window.onload = function () {
+  var initLocomotive = function initLocomotive() {
+    if (scrollContainer === null) {
+      return;
+    }
+
+    var scroll = new locomotive_scroll__WEBPACK_IMPORTED_MODULE_0__["default"]({
+      el: scrollContainer,
+      smooth: true,
+      touchMultiplier: 2,
+      smartphone: {
+        smooth: true
+      },
+      tablet: {
+        smooth: true
+      },
+      scrollFromAnywhere: true,
+      getDirection: true,
+      resetNativeScroll: false
+    });
+    imagesLoaded(scrollContainer, {
+      background: true
+    }, function () {
+      scroll.update();
+    });
+    setTimeout(function () {
+      scroll.update();
+    }, 2000);
+    var i = 1;
+    loadImages(machineImages, 0, function (machineImages) {
+      var preloadedImages = [];
+
+      for (var _i = 0, _Object$entries = Object.entries(machineImages); _i < _Object$entries.length; _i++) {
+        var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+            value = _Object$entries$_i[1];
+
+        preloadedImages.push(value);
       }
 
       ;
-      var y = e.scroll.y;
-      var label = Math.min(Math.floor(y / 30), i);
-      var imageToUse = machineImages[label];
-      $('.js-showcase-gallery').attr('style', "".concat(imageToUse));
-    }
+      scroll.on('scroll', function (e) {
+        if ($('.js-showcase').hasClass('is-inview')) {
+          if (e.direction === 'down' && i < 98) {
+            i++;
+          } else if (e.direction === 'up' && i > 1) {
+            i--;
+          }
 
-    ;
-  });
+          ;
+          var y = e.scroll.y;
+          var label = Math.min(Math.floor(y / 30), i);
+          var imageToUse = preloadedImages[label];
+          $('.js-showcase-gallery').attr('style', "background-image: url('".concat(imageToUse, "');"));
+        }
+
+        ;
+      });
+    });
+  };
+
+  if (!('ontouchstart' in window) || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
+    initLocomotive();
+  }
+
+  ;
 };
-
-if (!('ontouchstart' in window) || navigator.MaxTouchPoints > 0 || navigator.msMaxTouchPoints > 0) {
-  initLocomotive();
-}
-
-;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 
 /***/ }),
