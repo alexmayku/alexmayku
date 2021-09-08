@@ -4278,35 +4278,7 @@ var machineImages = {
   68: 'assets/images/showcase/multiplier-image-68.jpg',
   69: 'assets/images/showcase/multiplier-image-69.jpg',
   70: 'assets/images/showcase/multiplier-image-70.jpg',
-  71: 'assets/images/showcase/multiplier-image-71.jpg',
-  72: 'assets/images/showcase/multiplier-image-72.jpg',
-  73: 'assets/images/showcase/multiplier-image-73.jpg',
-  74: 'assets/images/showcase/multiplier-image-74.jpg',
-  75: 'assets/images/showcase/multiplier-image-75.jpg',
-  76: 'assets/images/showcase/multiplier-image-76.jpg',
-  77: 'assets/images/showcase/multiplier-image-77.jpg',
-  78: 'assets/images/showcase/multiplier-image-78.jpg',
-  79: 'assets/images/showcase/multiplier-image-79.jpg',
-  80: 'assets/images/showcase/multiplier-image-80.jpg',
-  81: 'assets/images/showcase/multiplier-image-81.jpg',
-  82: 'assets/images/showcase/multiplier-image-82.jpg',
-  83: 'assets/images/showcase/multiplier-image-83.jpg',
-  84: 'assets/images/showcase/multiplier-image-84.jpg',
-  85: 'assets/images/showcase/multiplier-image-85.jpg',
-  86: 'assets/images/showcase/multiplier-image-86.jpg',
-  87: 'assets/images/showcase/multiplier-image-87.jpg',
-  88: 'assets/images/showcase/multiplier-image-88.jpg',
-  89: 'assets/images/showcase/multiplier-image-89.jpg',
-  90: 'assets/images/showcase/multiplier-image-90.jpg',
-  91: 'assets/images/showcase/multiplier-image-91.jpg',
-  92: 'assets/images/showcase/multiplier-image-92.jpg',
-  93: 'assets/images/showcase/multiplier-image-93.jpg',
-  94: 'assets/images/showcase/multiplier-image-94.jpg',
-  95: 'assets/images/showcase/multiplier-image-95.jpg',
-  96: 'assets/images/showcase/multiplier-image-96.jpg',
-  97: 'assets/images/showcase/multiplier-image-97.jpg',
-  98: 'assets/images/showcase/multiplier-image-98.jpg',
-  99: 'assets/images/showcase/multiplier-image-99.jpg'
+  71: 'assets/images/showcase/multiplier-image-71.jpg'
 };
 
 function loadImages(images, index, callback) {
@@ -4364,7 +4336,7 @@ window.onload = function () {
       ;
       scroll.on('scroll', function (e) {
         if ($('.js-showcase').hasClass('is-inview')) {
-          if (e.direction === 'down' && i < 98) {
+          if (e.direction === 'down' && i < 70) {
             i++;
           } else if (e.direction === 'up' && i > 1) {
             i--;
@@ -4689,4 +4661,3 @@ module.exports = jQuery;
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map
