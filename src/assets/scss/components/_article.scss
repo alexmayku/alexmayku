@@ -211,6 +211,10 @@
 			font-size: 4rem;
 			margin-bottom: 2.1rem;
 		}
+
+		@include breakpoint-down(mobile-small) {
+			font-size: 3.5rem;
+		}
 	}
 
 	.article__content {

@@ -808,6 +808,11 @@ blockquote:last-child {
     margin-bottom: 2.1rem;
   }
 }
+@media (max-width: 374px) {
+  .article--maker .article__title {
+    font-size: 3.5rem;
+  }
+}
 @media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
   .article--maker .article__content {
     grid-row: 1/2;
@@ -2619,6 +2624,13 @@ blockquote:last-child {
     font-size: 4.8rem;
   }
 }
+.hero--machine.is-revealed .hero__content, .hero--machine.is-revealed .hero__btn {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
 .hero--machine .hero__content {
   max-width: 86rem;
   -webkit-transform: translateY(20rem);
@@ -2631,13 +2643,6 @@ blockquote:last-child {
   -o-transition: transform 0.8s, opacity 0.5s;
   transition: transform 0.8s, opacity 0.5s;
   transition: transform 0.8s, opacity 0.5s, -webkit-transform 0.8s;
-}
-.hero--machine .hero__content.is-revealed {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
 }
 .hero--machine .hero__background video {
   position: absolute;
@@ -2665,6 +2670,15 @@ blockquote:last-child {
         -ms-transform: translateY(0);
             transform: translateY(0);
   }
+}
+.hero--machine .hero__btn {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.8s;
+  transition: opacity 0.5s, -webkit-transform 0.8s;
+  -o-transition: transform 0.8s, opacity 0.5s;
+  transition: transform 0.8s, opacity 0.5s;
+  transition: transform 0.8s, opacity 0.5s, -webkit-transform 0.8s;
 }
 @media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
   .hero--machine .js-video-machine source {
@@ -2705,6 +2719,9 @@ blockquote:last-child {
   .hero--makers .hero__content p {
     font-size: 1.8rem;
   }
+}
+.hero--fiona {
+  margin-bottom: 0;
 }
 /* Animation */
 @-webkit-keyframes bounce {
@@ -3503,11 +3520,11 @@ blockquote:last-child {
 }
 .showcase--alt .showcase__video {
   position: relative;
-  padding-bottom: 46.12%;
+  padding-bottom: 53.12%;
 }
 .showcase--alt .showcase__inner {
   position: relative;
-  padding-bottom: 46.12%;
+  padding-bottom: 53.12%;
 }
 @media (max-width: 1023px) {
   .showcase--alt .showcase__inner {
@@ -3940,11 +3957,11 @@ blockquote:last-child {
 }
 .video .video__inner {
   position: relative;
-  min-height: 64rem;
+  padding-bottom: 50%;
 }
-@media (max-width: 767px), screen and (max-width: 812px) and (orientation: landscape) {
+@media (max-width: 575px) {
   .video .video__inner {
-    min-height: 20rem;
+    padding-bottom: 63%;
   }
 }
 .video .video__inner.has-overlay {
@@ -3961,9 +3978,7 @@ blockquote:last-child {
   display: block;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/temp/video--poster.jpg);
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/video--poster.jpg);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/video--poster.jpg);
+  background: url(../images/temp/video--poster.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -4020,15 +4035,13 @@ blockquote:last-child {
 }
 /* Viodeo Philip*/
 .video--philip .video__inner.has-overlay:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/temp/philip-overlay.jpg);
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/philip-overlay.jpg);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/philip-overlay.jpg);
+  background: url(../images/temp/philip-overlay.jpg);
+  background-size: cover;
 }
 /* Video Beta DEsign */
 .video--beta .video__inner.has-overlay:after {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../images/temp/betadesign-overlay.jpg);
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/betadesign-overlay.jpg);
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../images/temp/betadesign-overlay.jpg);
+  background: url(../images/temp/betadesign-overlay.jpg);
+  background-size: cover;
 }
 /* ------------------------------------------------------------ *\
 	Wrapper

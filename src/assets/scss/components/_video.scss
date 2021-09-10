@@ -18,10 +18,10 @@
 
 	.video__inner {
 		position: relative;
-		min-height: 64rem;
+		padding-bottom: 50%;
 
-		@include breakpoint-down(mobile) {
-			min-height: 20rem;
+		@include breakpoint-down(mobile-medium) {
+			padding-bottom: 63%;
 		}
 	}
 
@@ -40,12 +40,7 @@
 		display: block;
 		width: 100%;
 		height: 100%;
-		background: linear-gradient(
-				0deg,
-				rgba(0, 0, 0, 0.6),
-				rgba(0, 0, 0, 0.6)
-			),
-			url(../images/temp/video--poster.jpg);
+		background: url(../images/temp/video--poster.jpg);
 		background-size: cover;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -106,12 +101,8 @@
 
 .video--philip {
 	.video__inner.has-overlay:after {
-		background: linear-gradient(
-				0deg,
-				rgba(0, 0, 0, 0.6),
-				rgba(0, 0, 0, 0.6)
-			),
-			url(../images/temp/philip-overlay.jpg);
+		background: url(../images/temp/philip-overlay.jpg);
+		background-size: cover;
 	}
 }
 
@@ -119,11 +110,7 @@
 
 .video--beta {
 	.video__inner.has-overlay:after {
-		background: linear-gradient(
-				0deg,
-				rgba(0, 0, 0, 0.6),
-				rgba(0, 0, 0, 0.6)
-			),
-			url(../images/temp/betadesign-overlay.jpg);
+		background: url(../images/temp/betadesign-overlay.jpg);
+		background-size: cover;
 	}
 }

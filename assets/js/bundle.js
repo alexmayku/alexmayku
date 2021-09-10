@@ -4643,7 +4643,7 @@ $(".js-video").on('ended', function () {
   $this.siblings().slideDown('slow');
 });
 $('.js-video-machine').on('ended', function () {
-  $('.hero--machine .hero__content').addClass('is-revealed');
+  $('.hero--machine').addClass('is-revealed');
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 

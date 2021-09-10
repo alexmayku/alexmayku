@@ -138,18 +138,19 @@
 		}
 	}
 
+	&.is-revealed .hero__content,
+	&.is-revealed .hero__btn {
+		transform: translateY(0);
+		opacity: 1;
+		visibility: visible;
+	}
+
 	.hero__content {
 		max-width: 86rem;
 		transform: translateY(20rem);
 		opacity: 0;
 		visibility: hidden;
 		transition: transform 0.8s, opacity 0.5s;
-	}
-
-	.hero__content.is-revealed {
-		transform: translateY(0);
-		opacity: 1;
-		visibility: visible;
 	}
 
 	.hero__background video {
@@ -173,6 +174,12 @@
 			left: auto;
 			transform: translateY(0);
 		}
+	}
+
+	.hero__btn {
+		opacity: 0;
+		visibility: hidden;
+		transition: transform 0.8s, opacity 0.5s;
 	}
 
 	.js-video-machine source {
@@ -221,6 +228,10 @@
 			font-size: 1.8rem;
 		}
 	}
+}
+
+.hero--fiona {
+	margin-bottom: 0;
 }
 
 /* Animation */
