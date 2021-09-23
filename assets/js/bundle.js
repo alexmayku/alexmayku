@@ -4152,14 +4152,23 @@ $('.countdown').each(function () {
   var $this = $(this);
   var finalDate = $(this).data('countdown');
   $this.countdown(finalDate, function (event) {
-    var $days = $this.find('.countdown__days');
-    var $minutes = $this.find('.countdown__minutes');
-    var $hours = $this.find('.countdown__hours');
-    var $seconds = $this.find('.countdown__seconds');
-    $days.html(event.strftime('%D'));
-    $hours.html(event.strftime('%H'));
-    $minutes.html(event.strftime('%M'));
-    $seconds.html(event.strftime('%S'));
+    if (event.elapsed != true) {
+      var $days = $this.find(".countdown__days");
+      var $minutes = $this.find(".countdown__minutes");
+      var $hours = $this.find(".countdown__hours");
+      var $seconds = $this.find(".countdown__seconds");
+      $days.html(event.strftime("%D"));
+      $hours.html(event.strftime("%H"));
+      $minutes.html(event.strftime("%M"));
+      $seconds.html(event.strftime("%S"));
+    }
+
+    if (event.elapsed == true) {
+      $(this).parent().hide();
+      button.show();
+    }
+  }).on("finish.countdown", function () {
+    $(this).parent().hide();
   });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
@@ -4661,3 +4670,4 @@ module.exports = jQuery;
 /***/ })
 
 /******/ });
+//# sourceMappingURL=bundle.js.map
