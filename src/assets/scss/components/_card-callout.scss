@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------ *\
+	Card Callout
+\* ------------------------------------------------------------ */
+
+.card-callout {
+	border: 0.1rem solid $c-yellow;
+	padding: 5rem 5.4rem 5.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	@include breakpoint-down(tablet) {
+		padding: 4rem 2rem 5.4rem;
+	}
+
+	h2 {
+		margin-bottom: 2.8rem;
+
+		@include breakpoint-down(mobile-medium) {
+			font-size: 4rem;
+		}
+	}
+
+	p {
+		margin-bottom: 3.7rem;
+	}
+
+	a {
+		font-size: 2rem;
+	}
+}
+
+.card-callout--alt {
+	align-items: center;
+	text-align: center;
+	padding: 5rem 5.4rem;
+
+	@include breakpoint-down(mobile) {
+		text-align: left;
+		align-items: flex-start;
+		padding: 3.5rem 2rem 5rem;
+	}
+
+	h2 {
+		@include breakpoint-down(mobile) {
+			margin-bottom: 1.9rem;
+		}
+	}
+
+	p {
+		max-width: 88.7rem;
+		width: 100%;
+		margin: 0 auto 3.3rem;
+
+		@include breakpoint-down(mobile) {
+			line-height: 1.25;
+		}
+	}
+
+	a {
+		@include breakpoint-down(mobile) {
+		}
+	}
+}

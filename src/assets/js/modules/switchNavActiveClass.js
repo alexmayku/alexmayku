@@ -16,7 +16,7 @@
 			$(this).addClass("is-current");
 		}; 		
 
-		if (pageUrl == 'reveal') {         
+		if (pageUrl == 'reveal' || pageUrl == 'pre-order') {         
 			$bar.hide();          
 		};
 	})

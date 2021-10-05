@@ -3,7 +3,7 @@
 	position: fixed;
 	z-index: 9999;
 	width: 100%;
-	top: calc(100vh - 7rem);
+	top: calc(100vh - 6.9rem);
 	left: 0;
 	right: 0;
 	padding: 0.8rem 0;
@@ -13,7 +13,15 @@
 	transition: opacity 0.4s;
 
 	@include breakpoint-down(mobile) {
-		top: calc(100vh - 13.2rem);
+		top: calc(100vh - 6.7rem);
+	}
+
+	@include breakpoint-down(mobile-medium) {
+		top: calc(100vh - 11rem);
+	}
+
+	@include breakpoint-down(mobile-small) {
+		top: calc(100vh - 10.5rem);
 	}
 
 	&.is-intersecting {
@@ -35,21 +43,34 @@
 			text-align: center;
 		}
 
-		@include breakpoint-down(mobile) {
-			display: none;
+		@include breakpoint-down(mobile-small) {
+			font-size: 1.4rem;
 		}
 	}
 
+	a {
+		@include breakpoint-down(mobile-medium) {
+			display: block;
+			width: 100%;
+			margin-top: 2rem;
+		}
+	}
+
+	.bar__quantity {
+		color: #ff4d00;
+	}
+
 	.bar__inner {
-		max-width: 93.4rem;
+		max-width: 62rem;
 		width: 100%;
 		margin: 0 auto;
 		display: flex;
+		flex-flow: row wrap;
 		align-items: center;
 		justify-content: space-between;
 
 		@include breakpoint-down(tablet) {
-			max-width: none;
+			max-width: 75rem;
 			padding: 0 1rem;
 		}
 
@@ -57,16 +78,20 @@
 			padding: 0 2rem;
 		}
 	}
+}
 
-	.bar__inner .countdown {
-		@include breakpoint-down(mobile) {
-			display: none;
-		}
+.bottom-bar--machine {
+	top: calc(100vh - 6.8rem);
+
+	@include breakpoint-down(tablet) {
+		top: calc(100vh - 5.3rem);
 	}
 
-	.bar__inner > * {
-		@include breakpoint-down(tablet) {
-			flex: 1 1;
-		}
+	@include breakpoint-down(mobile-medium) {
+		top: calc(100vh - 9.6rem);
+	}
+
+	@include breakpoint-down(mobile-small) {
+		top: calc(100vh - 9.1rem);
 	}
 }

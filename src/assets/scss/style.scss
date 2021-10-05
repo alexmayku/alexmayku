@@ -3,25 +3,27 @@
 \* ------------------------------------------------------------ */
 
 //@import '~vendor-name/vendor.scss/css';
+@import "~magnific-popup/dist/magnific-popup.css";
+@import "~swiper/swiper-bundle.css";
 
 /* ------------------------------------------------------------ *\
 	Generic
 \* ------------------------------------------------------------ */
 
-@import 'generic/variables';
-@import 'generic/functions';
-@import 'generic/mixins';
-@import 'generic/reset';
-@import 'generic/fonts';
-@import 'generic/base';
-@import 'generic/helpers';
+@import "generic/variables";
+@import "generic/functions";
+@import "generic/mixins";
+@import "generic/reset";
+@import "generic/fonts";
+@import "generic/base";
+@import "generic/helpers";
 
 /* ------------------------------------------------------------ *\
 	Components
 \* ------------------------------------------------------------ */
 
-@import '_sprite.css';
-@import 'components/*';
+@import "_sprite.css";
+@import "components/*";
 
 /* ------------------------------------------------------------ *\
 	Overwrites

@@ -4,7 +4,7 @@
 
 .footer {
 	border-top: 0.1rem solid $c-white;
-	padding-bottom: 7.5rem;
+	padding-bottom: 11.5rem;
 
 	@include breakpoint-down(mobile) {
 		padding-bottom: 10rem;
@@ -106,14 +106,17 @@
 	}
 
 	.footer__actions {
-		padding: 0 4rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
+		padding: 0 5.1rem;
+		position: relative;
 
-	.footer__actions span {
-		display: inline-block;
+		@include breakpoint-down(tablet) {
+			padding: 0 2rem;
+		}
+
+		@include breakpoint-down(mobile) {
+			padding: 0;
+			font-size: 1.6rem;
+		}
 	}
 
 	.footer__actions span:hover > i {
@@ -124,8 +127,36 @@
 		transition: transform 0.6s;
 	}
 
+	.footer__actions span {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		display: inline-block;
+	}
+
+	.footer__actions span:first-of-type {
+		left: 4rem;
+
+		@include breakpoint-down(tablet) {
+			left: 2rem;
+		}
+	}
+
+	.footer__actions span:last-of-type {
+		right: 4rem;
+
+		@include breakpoint-down(tablet) {
+			right: 2rem;
+		}
+	}
+
 	.footer__actions i,
 	.footer__actions img {
 		display: block;
+	}
+
+	.footer__actions p {
+		margin: 0;
+		justify-self: flex-start;
 	}
 }

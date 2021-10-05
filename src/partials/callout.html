@@ -1,34 +1,35 @@
 <div class="callout" >
 	<div class="shell shell--fluid">
 		<div class="callout__inner">
-			<h1>Join the waiting list for early bird discounts</h1>
+			<div class="card-offer card-offer--callout">
+				<div class="card__head">
+					<h4 data-active-variant="calloutTitles"></h4>
+				</div><!-- /.card__head -->
 
-			<p>Want to be one of the first to own a Multiplier? Sign up to be alerted when pre-orders open. The first 100 machines can be reserved at a huge 58% discount.</p>
+				<div class="card__body">
+					<div class="card__content">
+						<h2 data-active-variant="activeVariantTitle"></h2>
 
-			<div class="callout__form form-email form-email--black">
-				<!--[if lte IE 8]>
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-				<![endif]-->
-				<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-					<script>
-						hbspt.forms.create({
-						region: "na1",
-						portalId: "9286585",
-						formId: "7b274279-d853-46a6-b01d-ac21a82f2a77",
-						onFormSubmit: function($form) {
-						window.rrSpace = (
-						rrSettingsConversion = {
-						debug: "false",
-							parameters: {
-							email: $form[0].elements.email.value
-							}
-						}
-							);
-					(function (f, r, n, d, b, y) { b = f.createElement(r), y = f.getElementsByTagName(r)[0]; b.async = 1; b.src = n; b.id = 'RR_DIVID'; y.parentNode.insertBefore(b, y); })(document, 'script', '//mayku.referralrock.com/webpixel/beta/universalv03.js');
-						}
-					});
-				</script>
-			</div><!-- /.callout__form -->
+						<p data-active-variant="calloutDescriptions"></p>
+					</div><!-- /.card__content -->
+
+					<div class="card__price">
+						<span class="price-old price-old--alt" data-active-variant="compareAtPrice"></span>
+
+						<h2 class="price price--alt" data-active-variant="price"></h2>
+
+						<div class="price-stamp price-stamp--alt">
+							<span data-active-variant="availableAndMaxQuantities"></span> available - <span data-active-variant="discountPercentage"></span> off
+						</div><!-- /.price-stamp -->
+					</div><!-- /.card__price -->
+				</div><!-- /.card__body -->
+
+				<div class="card__foot">
+					<a href="pre-order" class="btn btn--black">
+						Pre-order now
+					</a>
+				</div><!-- /.card__foot -->
+			</div><!-- /.card-offer -->
 		</div><!-- /.callout__inner -->
 	</div><!-- /.shell shell-/-fluid -->
 </div><!-- /.callout -->

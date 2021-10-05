@@ -1,0 +1,82 @@
+/* ------------------------------------------------------------ *\
+	Accordion
+\* ------------------------------------------------------------ */
+
+.accordion {
+	& + & {
+		border-top: 0.2rem solid $c-black;
+	}
+
+	.accordion__section.is-active .accordion__head img {
+		transform: rotate(180deg);
+	}
+
+	.accordion__head {
+		background-color: $c-yellow;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 3.7rem 3.8rem 3.6rem 4.8rem;
+		cursor: pointer;
+
+		@include breakpoint-down(mobile) {
+			padding: 3.7rem 2.1rem 4.3rem;
+		}
+
+		&:hover {
+			background-color: $c-yellow-4;
+		}
+	}
+
+	.accordion__head h4 {
+		color: $c-black;
+		margin: 0;
+		font-family: $ff-avantgarde;
+		text-transform: capitalize;
+
+		@include breakpoint-down(mobile) {
+			font-size: 1.8rem;
+		}
+	}
+
+	.accordion__head img {
+		display: inline-block;
+		transition: transform 0.6s;
+
+		@include breakpoint-down(mobile-medium) {
+			display: none;
+		}
+	}
+
+	.accordion__body {
+		background-color: $c-white;
+		padding: 3.7rem 4.9rem 5.2rem 4.9rem;
+
+		@include breakpoint-down(mobile) {
+			padding: 3.7rem 2rem 4.5rem;
+		}
+	}
+
+	.accordion__entry {
+		color: $c-black;
+		font-size: 2.4rem;
+		line-height: 1.5;
+
+		@include breakpoint-down(mobile) {
+			font-size: 1.8rem;
+			line-height: 1.33;
+		}
+	}
+
+	.accordion__entry p {
+		margin: 0;
+	}
+
+	.accordion__entry p + p {
+		margin-top: 2.3rem;
+
+		@include breakpoint-down(mobile) {
+			margin-top: 1.5rem;
+		}
+	}
+}

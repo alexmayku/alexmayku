@@ -290,3 +290,155 @@
 		}
 	}
 }
+
+/* Section Default Buy now */
+
+.section-default--buy-now {
+	padding: 16rem 0;
+
+	@include breakpoint-down(tablet) {
+		padding: 16rem 0 12rem;
+	}
+
+	.section__head {
+		margin-bottom: 9.1rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 6.6rem;
+		}
+	}
+
+	.section__subtitle {
+		display: block;
+		font-size: 2.4rem;
+		font-family: $ff-digital;
+		color: $c-yellow;
+		margin-bottom: 2.2rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4.1rem;
+		}
+	}
+
+	.section__grid {
+		display: grid;
+		grid-template-columns: 1fr 46.95%;
+		align-items: center;
+		gap: 4rem;
+
+		@include breakpoint-down(small-desktop) {
+			gap: 1rem;
+		}
+
+		@include breakpoint-down(tablet) {
+			grid-template-columns: 100%;
+			gap: 8rem;
+		}
+	}
+
+	.section__description img {
+		display: block;
+		margin-bottom: 3.1rem;
+	}
+
+	.section__description p {
+		margin-bottom: 2.4rem;
+		font-size: 2.4rem;
+		line-height: 1.33;
+
+		@include breakpoint-down(mobile) {
+			font-size: 2rem;
+			line-height: 1.4;
+			margin-bottom: 1.8rem;
+		}
+	}
+
+	.section__prices {
+		margin-bottom: 3.7rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4.1rem;
+		}
+	}
+
+	.section__prices .price {
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.section__prices .price-old {
+		font-size: 1.6rem;
+	}
+
+	.section__prices .price-stamp {
+		margin-left: 2rem;
+
+		@include breakpoint-down(mobile-medium) {
+			margin: 0;
+		}
+	}
+
+	.section__flex {
+		display: flex;
+		align-items: center;
+
+		@include breakpoint-down(mobile-medium) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	.section__actions a {
+		@media (max-width: 418px) {
+			display: block;
+		}
+	}
+
+	.section__actions a + a {
+		margin-left: 1.9rem;
+
+		@include breakpoint-down(mobile) {
+			margin: 0;
+		}
+
+		@media (max-width: 418px) {
+			margin-top: 2rem;
+		}
+	}
+}
+
+.section-default--how-it-works {
+	.section__head {
+		margin-bottom: 4.4rem;
+	}
+
+	.section__head h2.h1 {
+		margin-bottom: 1.9rem;
+	}
+
+	.section__foot {
+		margin-top: 4.9rem;
+	}
+
+	.section__foot p {
+		opacity: 0.8;
+	}
+}
+
+/* Section Accordion*/
+
+.section-default--accordion {
+	@include breakpoint-down(mobile) {
+		padding-bottom: 4rem;
+	}
+	.section__head {
+		max-width: 60rem;
+		width: 100%;
+		margin-bottom: 5.9rem;
+
+		@include breakpoint-down(mobile) {
+			margin-bottom: 4.4rem;
+		}
+	}
+}

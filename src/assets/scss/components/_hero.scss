@@ -108,11 +108,10 @@
 
 	.hero__notice span {
 		display: inline-block;
-		margin-left: 0.7rem;
+	}
 
-		@include breakpoint-down(mobile) {
-			margin-left: 0;
-		}
+	.hero__notice .list-icons {
+		margin-right: 0.7rem;
 	}
 
 	.hero__btn {
@@ -123,6 +122,30 @@
 
 		@include breakpoint-down(small-desktop) {
 			right: 2rem;
+		}
+	}
+
+	.hero__actions a {
+		display: inline-block;
+
+		@include breakpoint-down(mobile) {
+			font-size: 1.6rem;
+		}
+
+		@media (max-width: 418px) {
+			display: block;
+		}
+	}
+
+	.hero__actions a + a {
+		margin-left: 2rem;
+
+		@include breakpoint-down(tablet) {
+			margin-left: 0.7rem;
+		}
+
+		@media (max-width: 418px) {
+			margin: 1.5rem 0 0;
 		}
 	}
 }

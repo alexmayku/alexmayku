@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	Callout Alt
+\* ------------------------------------------------------------ */
+
+.callout-alt {
+	padding: 16rem 0;
+
+	@include breakpoint-down(mobile) {
+		padding: 8rem 0;
+	}
+
+	.callout__inner {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+		gap: 7rem;
+
+		@include breakpoint-down(mobile-medium) {
+			grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+			gap: 4rem;
+		}
+	}
+}

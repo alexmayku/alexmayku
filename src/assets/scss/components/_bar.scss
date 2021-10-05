@@ -31,13 +31,13 @@
 
 	.bar__list li {
 		display: inline-block;
-		animation: scrolling-left 10s linear infinite;
+		animation: scrolling-left 5s linear infinite;
 		animation-delay: 1s;
 	}
 
 	.bar__list--2 li {
 		display: inline-block;
-		animation: scrolling-left-2 10s linear infinite;
+		animation: scrolling-left-2 5s linear infinite;
 		animation-delay: 1s;
 	}
 

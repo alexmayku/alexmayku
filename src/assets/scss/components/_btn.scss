@@ -34,9 +34,36 @@
 	}
 }
 
+.btn--outline {
+	border: 0.1rem solid $c-yellow;
+	color: $c-yellow;
+
+	@include breakpoint-down(mobile-medium) {
+		padding: 1.4rem 1.5rem;
+	}
+}
+
+.btn--yellow-2 {
+	@include breakpoint-down(mobile-medium) {
+		padding: 1.4rem 1.5rem;
+	}
+}
+
+.btn--black {
+	background-color: $c-black;
+	color: $c-yellow;
+	font-size: 2rem;
+	padding: 1.4rem 2.2rem;
+}
+
 .btn--medium {
 	font-size: 2rem;
 	padding: 1.4rem 2.4rem;
+}
+
+.btn--large {
+	font-size: 1.6rem;
+	padding: 1.6rem 4.5rem;
 }
 
 .btn--spec {

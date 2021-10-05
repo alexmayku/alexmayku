@@ -1,0 +1,48 @@
+/* ------------------------------------------------------------ *\
+	Slider Thumbs
+\* ------------------------------------------------------------ */
+
+.slider-thumbs {
+	margin-top: 1rem;
+
+	.swiper-slide {
+		// width: 25%;
+
+		@include breakpoint-down(mobile-medium) {
+			// width: 38%;
+		}
+	}
+
+	.swiper-container {
+		max-height: 100%;
+		height: 100%;
+	}
+
+	.swiper-slide.swiper-slide-thumb-active {
+		opacity: 1;
+	}
+
+	.swiper-slide {
+		opacity: 0.4;
+		transition: opacity 0.4s;
+		cursor: pointer;
+	}
+
+	.swiper-slide:hover {
+		opacity: 1;
+	}
+
+	.slider__image {
+		position: relative;
+		padding-bottom: 75%;
+	}
+
+	.slider__image img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
