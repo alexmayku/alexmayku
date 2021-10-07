@@ -211,7 +211,7 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
     }
 
     variantsHTML += `
-      <div class="card-offer ${isAvailable ? '' : 'disabled'}">
+      <div class="card-offer ${isAvailable ? '' : 'disabled'} ${index < activeVariantIndex ? 'hidden' : ''}">
         <div class="card__head">
           <h4>${batchLabel}</h4>
         </div>
