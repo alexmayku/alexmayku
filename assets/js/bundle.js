@@ -28407,7 +28407,7 @@ var productVariantsHTML = function productVariantsHTML(variants, activeVariantIn
       stockInfoHtml = 'Sold out';
     }
 
-    variantsHTML += "\n      <div class=\"card-offer ".concat(isAvailable ? '' : 'disabled', " ").concat(index < activeVariantIndex ? 'hidden' : '', "\">\n        <div class=\"card__head\">\n          <h4>").concat(batchLabel, "</h4>\n        </div>\n\n        <div class=\"card__body\">\n          <div class=\"card__content\">\n            <h2>").concat(title, "</h2>\n\n            <p>").concat(variantDescription, "</p>\n          </div>\n\n          <div class=\"card__price\">\n            <span class=\"price-old\">").concat(priceCurrency + parseFloat(compareAtPrice), "</span>\n\n            <h2 class=\"price\">").concat(priceCurrency + parseFloat(price), "</h2>\n\n            <div class=\"price-stamp\">\n            ").concat(stockInfoHtml, "\n            </div>\n          </div>\n        </div>\n\n        ").concat(cartFoot, "\n      </div>\n    ");
+    variantsHTML += "\n      <div class=\"card-offer ".concat(isAvailable ? '' : 'disabled', " \">\n        <div class=\"card__head\">\n          <h4>").concat(batchLabel, "</h4>\n        </div>\n\n        <div class=\"card__body\">\n          <div class=\"card__content\">\n            <h2>").concat(title, "</h2>\n\n            <p class=\"").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(variantDescription, "</p>\n          </div>\n\n          <div class=\"card__price\">\n            <span class=\"price-old ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(compareAtPrice), "</span>\n\n            <h2 class=\"price ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(price), "</h2>\n\n            <div class=\"price-stamp\">\n            ").concat(stockInfoHtml, "\n            </div>\n          </div>\n        </div>\n\n        ").concat(cartFoot, "\n      </div>\n    ");
   });
 
   if (variantContainer) {
@@ -29023,4 +29023,3 @@ module.exports = jQuery;
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map

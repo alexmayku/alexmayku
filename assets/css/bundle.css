@@ -1553,7 +1553,7 @@ blockquote:last-child {
 /*  Hidden  */
 [hidden],
 .hidden {
-  display: none;
+  display: none !important;
 }
 /*  Disabled  */
 [disabled],
@@ -5768,4 +5768,3 @@ blockquote:last-child {
 /* ------------------------------------------------------------ *\
 	Overwrites
 \* ------------------------------------------------------------ */
-/*# sourceMappingURL=bundle.css.map */

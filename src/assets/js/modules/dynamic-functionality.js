@@ -211,7 +211,7 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
     }
 
     variantsHTML += `
-      <div class="card-offer ${isAvailable ? '' : 'disabled'} ${index < activeVariantIndex ? 'hidden' : ''}">
+      <div class="card-offer ${isAvailable ? '' : 'disabled'} ">
         <div class="card__head">
           <h4>${batchLabel}</h4>
         </div>
@@ -220,13 +220,13 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
           <div class="card__content">
             <h2>${title}</h2>
 
-            <p>${variantDescription}</p>
+            <p class="${index < activeVariantIndex ? 'hidden' : ''}">${variantDescription}</p>
           </div>
 
           <div class="card__price">
-            <span class="price-old">${priceCurrency + parseFloat(compareAtPrice)}</span>
+            <span class="price-old ${index < activeVariantIndex ? 'hidden' : ''}">${priceCurrency + parseFloat(compareAtPrice)}</span>
 
-            <h2 class="price">${priceCurrency + parseFloat(price)}</h2>
+            <h2 class="price ${index < activeVariantIndex ? 'hidden' : ''}">${priceCurrency + parseFloat(price)}</h2>
 
             <div class="price-stamp">
             ${stockInfoHtml}
