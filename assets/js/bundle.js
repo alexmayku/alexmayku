@@ -28161,37 +28161,40 @@ $accordion.eq(2).find('.accordion__head').trigger('click');
 /*!*********************************************!*\
   !*** ../src/assets/js/modules/countdown.js ***!
   \*********************************************/
-/*! no exports provided */
+/*! exports provided: initCountdown */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function($) {/* harmony import */ var jquery_countdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-countdown */ "../node_modules/jquery-countdown/dist/jquery.countdown.js");
+/* WEBPACK VAR INJECTION */(function($) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initCountdown", function() { return initCountdown; });
+/* harmony import */ var jquery_countdown__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery-countdown */ "../node_modules/jquery-countdown/dist/jquery.countdown.js");
 /* harmony import */ var jquery_countdown__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_countdown__WEBPACK_IMPORTED_MODULE_0__);
 
-$('.countdown').each(function () {
-  var $this = $(this);
-  var finalDate = $(this).data('countdown');
-  $this.countdown(finalDate, function (event) {
-    if (event.elapsed != true) {
-      var $days = $this.find(".countdown__days");
-      var $minutes = $this.find(".countdown__minutes");
-      var $hours = $this.find(".countdown__hours");
-      var $seconds = $this.find(".countdown__seconds");
-      $days.html(event.strftime("%D"));
-      $hours.html(event.strftime("%H"));
-      $minutes.html(event.strftime("%M"));
-      $seconds.html(event.strftime("%S"));
-    }
+var initCountdown = function initCountdown(date) {
+  $('.countdown').each(function () {
+    var $this = $(this);
+    var finalDateParsed = new Date(Date.parse(date));
+    var finalDateMiliseconds = finalDateParsed.getTime();
+    $this.countdown(finalDateMiliseconds, function (event) {
+      if (event.elapsed != true) {
+        var $days = $this.find('.countdown__days');
+        var $minutes = $this.find('.countdown__minutes');
+        var $hours = $this.find('.countdown__hours');
+        var $seconds = $this.find('.countdown__seconds');
+        $days.html(event.strftime('%D'));
+        $hours.html(event.strftime('%H'));
+        $minutes.html(event.strftime('%M'));
+        $seconds.html(event.strftime('%S'));
+      }
 
-    if (event.elapsed == true) {
+      if (event.elapsed == true) {
+        $(this).hide();
+      }
+    }).on('finish.countdown', function () {
       $(this).hide();
-      button.show();
-    }
-  }).on("finish.countdown", function () {
-    $(this).hide();
+    });
   });
-});
+};
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "jquery")))
 
 /***/ }),
@@ -28210,6 +28213,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js-cookie */ "../node_modules/js-cookie/dist/js.cookie.js");
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _countdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./countdown */ "../src/assets/js/modules/countdown.js");
+
 
 
 
@@ -28232,17 +28237,32 @@ var selectorsActiveVariant = {
   calloutDescriptions: '[data-active-variant="calloutDescriptions"]',
   activeVariantTitle: '[data-active-variant="activeVariantTitle"]'
 };
+var selectors = {
+  homepage: {
+    title: '[data-homepage-hero-title]',
+    subtitle_text: '[data-homepage-hero-subtitle-text]',
+    notice: '[data-homepage-hero-notice]'
+  },
+  callout: {
+    title: '[data-batch-title]',
+    subtitle: '[data-batch-subtitle]',
+    body_text: '[data-batch-body-text]'
+  },
+  preorder: {
+    title: '[data-preorder-title]'
+  }
+};
 
 var checkUserLocation = function checkUserLocation() {
   fetch("https://api.ipgeolocation.io/ipgeo?apiKey=".concat(_global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].locationApiKey)).then(function (response) {
     return response.json();
   }).then(function (data) {
-    var isUK = data.country_code2 === 'GB';
-    js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('userFromUK', isUK, {
+    var cookieData = JSON.stringify(data);
+    js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('userLocationData', cookieData, {
       expires: 7
     });
-    priceCurrency = isUK ? '£' : '$';
-    generateProduct(isUK);
+    priceCurrency = data.currency.symbol;
+    generateProduct(data);
   }).catch(function (err) {
     console.warn('Something went wrong.', err);
     generateProduct();
@@ -28250,15 +28270,22 @@ var checkUserLocation = function checkUserLocation() {
 };
 
 var generateProduct = function generateProduct() {
-  var isUK = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+  var userLocationData = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
   var client;
 
-  if (isUK) {
+  if (userLocationData && userLocationData.currency.code === 'GBP') {
     client = shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1___default.a.buildClient({
       domain: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].domainUK,
       storefrontAccessToken: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].storefrontTokenUK
     });
+  } else if (userLocationData && (userLocationData.currency.code === 'EUR' || userLocationData.continent_code === 'EU')) {
+    priceCurrency = '€';
+    client = shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1___default.a.buildClient({
+      domain: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].domainEU,
+      storefrontAccessToken: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].storefrontTokenEU
+    });
   } else {
+    priceCurrency = '$';
     client = shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1___default.a.buildClient({
       domain: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].domainUS,
       storefrontAccessToken: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].storefrontTokenUS
@@ -28313,12 +28340,12 @@ var generateProduct = function generateProduct() {
 };
 
 var checkIfUserVisited = function checkIfUserVisited() {
-  var checkLocationCookie = js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.get('userFromUK');
+  var checkLocationCookie = js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.get('userLocationData');
 
   if (checkLocationCookie) {
-    var isFromUK = checkLocationCookie !== 'false';
-    generateProduct(isFromUK);
-    priceCurrency = isFromUK ? '£' : '$';
+    var parsedData = JSON.parse(checkLocationCookie);
+    priceCurrency = parsedData.currency.symbol;
+    generateProduct(parsedData);
   } else {
     checkUserLocation();
   }
@@ -28392,22 +28419,20 @@ var productVariantsHTML = function productVariantsHTML(variants, activeVariantIn
   var variantsHTML = '';
   variants.forEach(function (variant, index) {
     var isAvailable = activeVariantIndex === index;
-    var batchLabel = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].variantsBatchLabels[index];
-    var title = variant.title,
-        price = variant.price,
+    var discountLabelShowInventory = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(index + 1)] ? _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(index + 1)].callout_preorder.discount_label_show_inventory : false;
+    var batchLabel = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(index + 1)].callout_preorder.subtitle;
+    var title = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(index + 1)].callout_preorder.title;
+    var price = variant.price,
         compareAtPrice = variant.compareAtPrice,
         quantityAvailable = variant.quantityAvailable;
     var maxQuantity = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].variantsStartingQuantities[index];
     var discountPercentage = Math.round((compareAtPrice - price) / compareAtPrice * 100) + '%';
-    var stockInfoHtml = isAvailable ? "".concat(quantityAvailable, "/").concat(maxQuantity, " available - ").concat(discountPercentage, " off") : "".concat(maxQuantity, " available - ").concat(discountPercentage, " off");
-    var variantDescription = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].variantsDescriptions[index].replaceAll('[percentage]', discountPercentage);
+    var stockInfoHtml = discountLabelShowInventory ? "".concat(quantityAvailable, " available - ").concat(discountPercentage, " off") : "".concat(discountPercentage, " off");
+    var variantDescription = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(index + 1)].callout_preorder.body_text;
     var cartFoot = isAvailable ? "<div class=\"card__foot\">\n          <a href=\"".concat(checkoutLink, "\" class=\"btn btn--yellow btn--large\">Buy now</a>\n        </div>") : '';
-
-    if (index < activeVariantIndex) {
-      stockInfoHtml = 'Sold out';
-    }
-
-    variantsHTML += "\n      <div class=\"card-offer ".concat(isAvailable ? '' : 'disabled', " \">\n        <div class=\"card__head\">\n          <h4>").concat(batchLabel, "</h4>\n        </div>\n\n        <div class=\"card__body\">\n          <div class=\"card__content\">\n            <h2>").concat(title, "</h2>\n\n            <p class=\"").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(variantDescription, "</p>\n          </div>\n\n          <div class=\"card__price\">\n            <span class=\"price-old ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(compareAtPrice), "</span>\n\n            <h2 class=\"price ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(price), "</h2>\n\n            <div class=\"price-stamp\">\n            ").concat(stockInfoHtml, "\n            </div>\n          </div>\n        </div>\n\n        ").concat(cartFoot, "\n      </div>\n    ");
+    var countdownHTML = "\n      <div class=\"card__countdown\">\n        <ul class=\"countdown countdown--background-red\">\n          <li>\n            <span class=\"countdown__days countdown__digit\"></span>\n\n            <span class=\"countdown__text\">days</span>\n          </li>\n\n          <li>\n            <span class=\"countdown__hours countdown__digit\"></span>\n\n            <span class=\"countdown__text\">hours</span>\n          </li>\n\n          <li>\n            <span class=\"countdown__minutes countdown__digit\"></span>\n\n            <span class=\"countdown__text\">mins</span>\n          </li>\n\n          <li>\n            <span class=\"countdown__seconds countdown__digit\"></span>\n\n            <span class=\"countdown__text\">secs</span>\n          </li>\n        </ul>\n      </div>\n    ";
+    var soldOutHTML = "\n      <div class=\"price-stamp\">\n        Sold out\n      </div>\n    ";
+    variantsHTML += "\n      <div class=\"card-offer ".concat(isAvailable ? '' : 'disabled', "\">\n        <div class=\"card__head\">\n          <h4>").concat(batchLabel, "</h4>\n        </div>\n\n        <div class=\"card__body\">\n          <div class=\"card__content\">\n            <h2>").concat(title, "</h2>\n\n            <p class=\"").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(variantDescription, "</p>\n          </div>\n\n          <div class=\"card__price\">\n            <span class=\"price-old ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(compareAtPrice), "</span>\n\n            <h2 class=\"price ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(price), "</h2>\n\n            \n            ").concat(index < activeVariantIndex ? soldOutHTML : isAvailable ? countdownHTML : '<div class="price-stamp">' + stockInfoHtml + '</div>', "\n          </div>\n        </div>\n\n        ").concat(cartFoot, "\n      </div>\n    ");
   });
 
   if (variantContainer) {
@@ -28415,9 +28440,70 @@ var productVariantsHTML = function productVariantsHTML(variants, activeVariantIn
   }
 };
 
+var initCountdownTimers = function initCountdownTimers(variantIndex) {
+  var finalDate = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(variantIndex)].final_date;
+  Object(_countdown__WEBPACK_IMPORTED_MODULE_3__["initCountdown"])(finalDate);
+};
+
+var updateHomepageHeroTexts = function updateHomepageHeroTexts(variantIndex) {
+  var _GLOBAL_SETTINGS$$hom = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(variantIndex)].homepage.hero,
+      title = _GLOBAL_SETTINGS$$hom.title,
+      subtitle_text = _GLOBAL_SETTINGS$$hom.subtitle_text,
+      notice = _GLOBAL_SETTINGS$$hom.notice;
+
+  if (document.querySelector(selectors.homepage.title)) {
+    document.querySelector(selectors.homepage.title).textContent = title;
+  }
+
+  if (document.querySelector(selectors.homepage.subtitle_text)) {
+    document.querySelector(selectors.homepage.subtitle_text).textContent = subtitle_text;
+  }
+
+  if (document.querySelector(selectors.homepage.notice)) {
+    document.querySelector(selectors.homepage.notice).textContent = notice;
+  }
+};
+
+var updateCallout = function updateCallout(variantIndex) {
+  var _GLOBAL_SETTINGS$$cal = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(variantIndex)].callout,
+      title = _GLOBAL_SETTINGS$$cal.title,
+      subtitle = _GLOBAL_SETTINGS$$cal.subtitle,
+      bodyText = _GLOBAL_SETTINGS$$cal.body_text;
+
+  if (document.querySelectorAll(selectors.callout.title)) {
+    document.querySelectorAll(selectors.callout.title).forEach(function (el) {
+      el.textContent = title;
+    });
+  }
+
+  if (document.querySelectorAll(selectors.callout.subtitle)) {
+    document.querySelectorAll(selectors.callout.subtitle).forEach(function (el) {
+      el.textContent = subtitle;
+    });
+  }
+
+  if (document.querySelectorAll(selectors.callout.body_text)) {
+    document.querySelectorAll(selectors.callout.body_text).forEach(function (el) {
+      el.textContent = bodyText;
+    });
+  }
+};
+
+var updatePreorderTexts = function updatePreorderTexts(variantIndex) {
+  var title = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(variantIndex)].preorder.title;
+
+  if (document.querySelector(selectors.preorder.title)) {
+    document.querySelector(selectors.preorder.title).textContent = title;
+  }
+};
+
 var updateFrontEndData = function updateFrontEndData(activeVariant, activeVariantIndex, allVariants) {
   globalActiveVariantHTML(activeVariant, activeVariantIndex, allVariants);
   productVariantsHTML(allVariants, activeVariantIndex);
+  updateHomepageHeroTexts(activeVariantIndex + 1);
+  updateCallout(activeVariantIndex + 1);
+  updatePreorderTexts(activeVariantIndex + 1);
+  initCountdownTimers(activeVariantIndex + 1);
 
   if (loadingOverlay) {
     loadingOverlay.classList.add('loaded');
@@ -28457,13 +28543,111 @@ var GLOBAL_SETTINGS = {
   productHandle: 'multiplier-early-buy',
   domainUK: 'mayku-uk.myshopify.com',
   domainUS: 'mayku.myshopify.com',
+  domainEU: 'mayku-eu.myshopify.com',
   storefrontTokenUK: '215d200423ee52f2e022314568f89555',
+  storefrontTokenEU: 'a3902b7604d572c74dc98d0fded4ef00',
   storefrontTokenUS: '324be01462eb5c2e2c27f27eb2945640',
   variantsStartingQuantities: [100, 300, 400],
   variantsBatchLabels: ['First Batch - Open From 5th October 2021', 'Second Batch', 'Third Batch'],
   variantsDescriptions: ['Our first pre-order batch launches with a whopping [percentage] off the retail price. Be one of the first 100 makers to own a Multiplier.', 'Once the first 100 machines are reserved, pre-orders move to [percentage] off for the next 300 units ordered.', 'Join the queue with our final batch of pre-orders available for 400 units at [percentage] off retail price.'],
   calloutTitles: ['First Batch Now Live!', 'Second Batch Now Live!', 'Third Batch Now Live!'],
-  calloutDescriptions: ['Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.']
+  calloutDescriptions: ['Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.'],
+  batch_1: {
+    final_date: '2021/10/05 00:00:00 pm GMT',
+    homepage: {
+      hero: {
+        title: 'Get 50% off the Mayku Multiplier',
+        subtitle_text: 'Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.',
+        notice: '50% discount ends Tuesday November 16th, 8am PT / 11am ET / 4pm UK / 5pm CET'
+      }
+    },
+    preorder: {
+      title: '50% off early bird price ends November 16th'
+    },
+    callout: {
+      subtitle: 'Second Batch Closing Soon!',
+      title: '50% off Early bird pre-orders',
+      body_text: 'Get one of the first 400 units at a massive 50% discount. Hurry, discount ends Tuesday November 16th, 8am PT / 11am ET / 4pm UK / 5pm CET'
+    },
+    callout_preorder: {
+      subtitle: 'First Batch - Open From 5th October 2021',
+      title: 'Super early bird pre-orders',
+      body_text: '',
+      discount_label_show_inventory: false
+    }
+  },
+  batch_2: {
+    final_date: '2021/11/16 4:00:00 pm GMT',
+    homepage: {
+      hero: {
+        title: 'Get 50% off the Mayku Multiplier',
+        subtitle_text: 'Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.',
+        notice: '50% discount ends Tuesday November 16th, 8am PT / 11am ET / 4pm UK / 5pm CET'
+      }
+    },
+    preorder: {
+      title: '50% off early bird price ends November 16th'
+    },
+    callout: {
+      subtitle: 'Second Batch Closing Soon!',
+      title: '50% off Early bird pre-orders',
+      body_text: 'Get one of the first 400 units at a massive 50% discount. Hurry, discount ends Tuesday November 16th, 8am PT / 11am ET / 4pm UK / 5pm CET'
+    },
+    callout_preorder: {
+      subtitle: 'Second Batch Closing November 16th!',
+      title: '50% off Early bird pre-orders',
+      body_text: 'Get one of the first 400 units at a massive 50% discount. Hurry, discount ends Tuesday November 16th, 8am PT / 11am ET / 4pm UK / 5pm CET',
+      discount_label_show_inventory: false
+    }
+  },
+  batch_3: {
+    final_date: '2022/02/28 00:00:00 GMT',
+    homepage: {
+      hero: {
+        title: 'Advance pre-orders',
+        subtitle_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.',
+        notice: 'Third Batch'
+      }
+    },
+    preorder: {
+      title: 'Advance pre-orders'
+    },
+    callout: {
+      subtitle: 'Third Batch',
+      title: 'Advance pre-orders',
+      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.'
+    },
+    callout_preorder: {
+      subtitle: 'Third Batch',
+      title: 'Advance pre-orders',
+      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.',
+      discount_label_show_inventory: true
+    }
+  },
+  batch_4: {
+    final_date: '2022/06/01 00:00:00 GMT',
+    homepage: {
+      hero: {
+        title: 'Standard pre-orders',
+        subtitle_text: 'Join the queue with our final batch of pre-orders available for 30% off retail price.',
+        notice: 'Fourth Batch'
+      }
+    },
+    preorder: {
+      title: 'Standard pre-orders'
+    },
+    callout: {
+      subtitle: 'Fourth Batch',
+      title: 'Standard pre-orders',
+      body_text: 'Join the queue with our final batch of pre-orders available for 30% off retail price.'
+    },
+    callout_preorder: {
+      subtitle: 'Fourth Batch',
+      title: 'Standard pre-orders',
+      body_text: 'Join the queue with our final batch of pre-orders available for 30% off retail price.',
+      discount_label_show_inventory: false
+    }
+  }
 };
 
 /***/ }),
@@ -29023,3 +29207,4 @@ module.exports = jQuery;
 /***/ })
 
 /******/ });
+//# sourceMappingURL=bundle.js.map

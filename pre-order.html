@@ -47,7 +47,6 @@
 	'https://connect.facebook.net/en_US/fbevents.js');
 	fbq('init', '1280568298697568');
 	fbq('track', 'PageView');
-	  fbq('track', 'Lead');
 	</script>
 	<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1280568298697568&ev=PageView&noscript=1"></noscript>
 	<!-- End Facebook Pixel Code -->
@@ -262,15 +261,71 @@
 			<div class="lds-dual-ring"></div>
 		</div><!-- /.loading-overlay -->
 
+		<div class="bottom-bar js-bottom-bar" data-scroll="" data-scroll-sticky="" data-scroll-target="#main">
+	<div class="bar__inner">
+		<ul class="countdown bar__countdown countdown--no-digits-text countdown--orange">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
+
+		<span class="countdown__text">days</span>
+	</li>
+
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+
+		<span class="bar__text">LEFT TO GET <span data-active-variant="discountPercentage"></span> OFF</span>
+
+		<a href="pre-order" class="btn btn--yellow btn--medium">Pre-order now</a>
+	</div><!-- /.bar__inner -->
+</div><!-- /.bottom-bar -->
+
 		<div class="main js-main">
 			<section class="section-default section-default--buy-now ">
 				<div class="shell shell--fluid">
 					<div class="section__head">
-						<span class="section__subtitle" data-active-variant="availableAndMaxQuantities"></span>
+						<ul class="countdown {{ class }}">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
 
-						<h2 class="h1">
-							Only <span data-active-variant="availableQuantities"></span> left at <span data-active-variant="discountPercentage"></span> off early bird price
-						</h2><!-- /.h1 -->
+		<span class="countdown__text">days</span>
+	</li>
+
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+
+						<h2 class="h1" data-preorder-title=""></h2><!-- /.h1 -->
 					</div><!-- /.section__head -->
 
 					<div class="section__body">
@@ -289,7 +344,7 @@
 										<h2 class="price" data-active-variant="price"></h2>
 
 										<div class="price-stamp">
-											only <span data-active-variant="availableAndMaxQuantities"></span> left - <span data-active-variant="discountPercentage"></span> off
+											<span data-active-variant="discountPercentage"></span> off
 										</div><!-- /.price-stamp -->
 									</div><!-- /.section__flex -->
 								</div><!-- /.section__prices -->
@@ -379,299 +434,301 @@
 				</div><!-- /.shell -->
 			</section><!-- /.section-/-default -->
 
-			<section class="section-default section-default--how-it-works">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h4>How Pre-Orders Work</h4>
+			<div class="js-sticky-watch">
+				<section class="section-default section-default--how-it-works">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h4>How Pre-Orders Work</h4>
 
-						<h2 class="h1">Multiplier Shipping Starts February 2022*</h2>
+							<h2 class="h1">Multiplier Shipping Starts February 2022*</h2>
 
-						<h5 class="h4">We’ve ordered 1000 units for 2022, and we’ll make more in line with demand</h5>
-					</div><!-- /.section__head -->
+							<h5 class="h4">We’ve ordered 1000 units for 2022, and we’ll make more in line with demand</h5>
+						</div><!-- /.section__head -->
 
-					<div class="section__body">
-						<div class="grid grid--default">
-							<div class="grid__col grid__col--1of3">
-								<div class="card-alt">
-									<div class="card__image">
-										<img src="assets/images/temp/pre-order--1.png" alt="">
-									</div><!-- /.card__image -->
+						<div class="section__body">
+							<div class="grid grid--default">
+								<div class="grid__col grid__col--1of3">
+									<div class="card-alt">
+										<div class="card__image">
+											<img src="assets/images/temp/pre-order--1.png" alt="">
+										</div><!-- /.card__image -->
 
-									<p>
-										Pre-order your machine, if you order fast you'll save up to <span data-active-variant="discountPercentage"></span> off the retail price as a thank you for your early support. 
-									</p>
-								</div><!-- /.card-alt -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-
-							<div class="grid__col grid__col--1of3">
-								<div class="card-alt">
-									<div class="card__image">
-										<img src="assets/images/temp/pre-order--2.png" alt="">
-									</div><!-- /.card__image -->
-
-									<p>
-										We'll keep you updated from behind the scenes whilst you wait. Including exclusive content from the factory and design process. 
-									</p>
-								</div><!-- /.card-alt -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-
-							<div class="grid__col grid__col--1of3">
-								<div class="card-alt">
-									<div class="card__image">
-										<img src="assets/images/temp/pre-order--3.png" alt="">
-									</div><!-- /.card__image -->
-
-									<p>
-										Shipping starts from February 2022* on a first come, first served basis. A custom shipping quote will be provided prior to dispatch. 
-									</p>
-								</div><!-- /.card-alt -->
-							</div><!-- /.grid__col grid__col-/-1of3 -->
-						</div><!-- /.grid grid-/-default -->
-					</div><!-- /.section__body -->
-
-					<div class="section__foot">
-						<p>*Dates are estimated and subject to change. Items may ship earlier or later.</p>
-					</div><!-- /.section__foot -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default -->
-
-			<section class="section-default section-default--pre-order py-4">
-				<div class="shell shell--fluid">
-					<div class="section__body" data-containers="productVariants">
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default section-default-/-pre-order -->
-
-			<section class="section-default section-default--accordion">
-				<div class="shell shell--fluid">
-					<div class="section__head">
-						<h2 class="h1">
-							Your questions,
-							answered
-						</h2><!-- /.h1 -->
-					</div><!-- /.section__head -->
-
-					<div class="section__body">
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										How does it work? 
-									</h4>
-
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
-
-								<div class="accordion__body">
-									<div class="accordion__entry">
 										<p>
-											Pressure forming is an industrial grade manufacturing process, used to make highly detailed molds and parts really quickly. By utilising pressure when forming heated sheet material, pressure forming can capture detail finer than a human hair and perfectly sharp edges. The process of making a mold takes just 1 minute and offers greater precision and control over other manufacturing processes.
-										</p>										
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
-
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										What kind of warranty is on offer? 
-									</h4>
-
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
-
-								<div class="accordion__body">
-									<div class="accordion__entry">
-										<p>
-											We’ll be offering a standard 2 year warranty on all Multiplier orders. For any questions or problems you can find support via email, social media and our forum for all customers. 
+											Pre-order your machine, if you order fast you'll save up to <span data-active-variant="discountPercentage"></span> off the retail price as a thank you for your early support. 
 										</p>
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
+									</div><!-- /.card-alt -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
 
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										What materials can I make templates out of? 
-									</h4>
-
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
-
-								<div class="accordion__body">
-									<div class="accordion__entry">
-										<p>
-											Polymer clay, earthen clay, 3D printed materials (polymers, metals), wood, potatoes and other food stuff and any other materials or items with high melting point. We’ll be sharing more tips on designing for the Multiplier in the coming weeks.
-										</p>
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
-
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										How much detail can the Multiplier capture? 
-									</h4>
-
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
-
-								<div class="accordion__body">
-									<div class="accordion__entry">
-										<p>
-											The Multiplier can form molds with a minimum feature size of 0.0004mm, which allows it to pick up micro textures, razor sharp edges and details smaller than a human hair.
-										</p>
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
-
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										What size is the design space? How big can I make an object? 
-									</h4>
-
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
-
-								<div class="accordion__body">
-									<div class="accordion__entry">
-										<p>
-											Your templates will require a small margin around them, meaning the maximum design space is a circular base of 380mm and maximum height of 160mm. Larger shapes may be possible with a multi-part mold or build.
-										</p>
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
-
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										What kind of Mayku Sheets will be available for the Multiplier and how much will they cost?
-									</h4>
-
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
-
-								<div class="accordion__body">
-									<div class="accordion__entry">
-										<p>
-											Currently our list of confirmed sheet materials are: Clear Sheets, White Sheets, Resin Sheets and Flex Sheets. These will be available in a range of thicknesses with more planned for the future. We will be selling a range of approved, pre-cut sheets but it is possible to source and test other materials yourself if preferred.
-										</p>
+								<div class="grid__col grid__col--1of3">
+									<div class="card-alt">
+										<div class="card__image">
+											<img src="assets/images/temp/pre-order--2.png" alt="">
+										</div><!-- /.card__image -->
 
 										<p>
-											Pre-order prices for Mayku Multiplier Sheets will start from $1 per sheet for 232x302mm rectangular sheets (used with a reducing plate accessory) and $3 per sheet for large 400mm diameter circular sheets. Prices increase with different thicknesses and for more specialist materials. For example, Flex Sheets start from $3 per sheet for the 232x302mm rectangular sheets and $6 per sheet for 400mm diameter circular sheets. Clear and White sheets both start from $1 per sheet for rectangular sheets and $3 per sheet for large circular sheets.
+											We'll keep you updated from behind the scenes whilst you wait. Including exclusive content from the factory and design process. 
 										</p>
+									</div><!-- /.card-alt -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<div class="card-alt">
+										<div class="card__image">
+											<img src="assets/images/temp/pre-order--3.png" alt="">
+										</div><!-- /.card__image -->
 
 										<p>
-											We’ll be sharing confirmed prices before shipping starts so you’ll have plenty of time to confirm your sheets orders, please get in touch if you have any questions or suggestions.
+											Shipping starts from February 2022* on a first come, first served basis. A custom shipping quote will be provided prior to dispatch. 
 										</p>
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
+									</div><!-- /.card-alt -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+							</div><!-- /.grid grid-/-default -->
+						</div><!-- /.section__body -->
 
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										Why is the forming bed a circle instead of a square or rectangle?
-									</h4>
+						<div class="section__foot">
+							<p>*Dates are estimated and subject to change. Items may ship earlier or later.</p>
+						</div><!-- /.section__foot -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default -->
 
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
+				<section class="section-default section-default--pre-order py-4">
+					<div class="shell shell--fluid">
+						<div class="section__body" data-containers="productVariants">
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default section-default-/-pre-order -->
 
-								<div class="accordion__body">
-									<div class="accordion__entry">
-										<p>
-											This is because you can’t make a square pressure chamber. Pressure based technology naturally wants to work in a sphere, so this design allows us to optimise the process for greater control, precision and safety.
-										</p>
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
+				<section class="section-default section-default--accordion">
+					<div class="shell shell--fluid">
+						<div class="section__head">
+							<h2 class="h1">
+								Your questions,
+								answered
+							</h2><!-- /.h1 -->
+						</div><!-- /.section__head -->
 
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										Which casting materials are compatible with Multiplier made molds?
-									</h4>
+						<div class="section__body">
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											How does it work? 
+										</h4>
 
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
 
-								<div class="accordion__body">
-									<div class="accordion__entry">
-										<p>
-											We offer a range of sheets to suit different casting materials and project types. Compatible materials for casting into Multiplier made molds include resin, eco-resin (Jesmonite), plaster, concrete, chocolate, ice cream, ice, silicone, soap, bath bomb mix and wax.
-										</p>
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												Pressure forming is an industrial grade manufacturing process, used to make highly detailed molds and parts really quickly. By utilising pressure when forming heated sheet material, pressure forming can capture detail finer than a human hair and perfectly sharp edges. The process of making a mold takes just 1 minute and offers greater precision and control over other manufacturing processes.
+											</p>										
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
 
-						<div class="accordion js-accordion">
-							<div class="accordion__section">
-								<div class="accordion__head">
-									<h4>
-										How much is shipping and where do you ship to?
-									</h4>
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											What kind of warranty is on offer? 
+										</h4>
 
-									<img src="assets/images/svg/icon--arrow--white.svg">
-								</div><!-- /.accordion__head -->
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
 
-								<div class="accordion__body">
-									<div class="accordion__entry">
-										<p>
-											Upon launch we will be shipping direct to customers in the UK, USA, Canada, Australia and Europe only. We hope to expand to other regions soon, if you have a special request, please let us know. 
-										</p>
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												We’ll be offering a standard 2 year warranty on all Multiplier orders. For any questions or problems you can find support via email, social media and our forum for all customers. 
+											</p>
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
 
-										<p>
-											Shipping quotes will be provided closer to dispatch date to ensure best service is provided. We estimate shipping will cost between £30 - £400 + customs/import fees depending on location, if in doubt please speak to a specialist for a custom quote. 
-										</p>
-									</div><!-- /.accordion__entry -->
-								</div><!-- /.accordion__body -->
-							</div><!-- /.accordion__section -->
-						</div><!-- /.accordion js-accordion -->
-					</div><!-- /.section__body -->
-				</div><!-- /.shell shell-/-fluid -->
-			</section><!-- /.section-default section-default-/-accordion -->
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											What materials can I make templates out of? 
+										</h4>
 
-			<div class="callout-alt pb-0">
-				<div class="shell shell--fluid">
-					<div class="callout__inner">
-						<div class="card-callout card-callout--alt">
-							<h2>
-								Speak to a Mayku specialist
-							</h2>
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
 
-							<p>
-								Got a few questions before you purchase? Our talented team of Mayku product specialists are on hand to answer all your queries.
-							</p>
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												Polymer clay, earthen clay, 3D printed materials (polymers, metals), wood, potatoes and other food stuff and any other materials or items with high melting point. We’ll be sharing more tips on designing for the Multiplier in the coming weeks.
+											</p>
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
 
-							<a href="specialist" class="btn btn--yellow btn--medium">
-								Speak to a specialist
-							</a>
-						</div><!-- /.card-callout -->
-					</div><!-- /.callout__inner -->
-				</div><!-- /.shell shell-/-fluid -->
-			</div><!-- /.callout -->
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											How much detail can the Multiplier capture? 
+										</h4>
 
-			<div class="showcase m-0">
-				<div class="showcase__image">
-					<img src="assets/images/temp/multiplier--showcase-alt.jpg" alt="">
-				</div><!-- /.showcase__image -->
-			</div><!-- /.showcase -->
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												The Multiplier can form molds with a minimum feature size of 0.0004mm, which allows it to pick up micro textures, razor sharp edges and details smaller than a human hair.
+											</p>
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
+
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											What size is the design space? How big can I make an object? 
+										</h4>
+
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												Your templates will require a small margin around them, meaning the maximum design space is a circular base of 380mm and maximum height of 160mm. Larger shapes may be possible with a multi-part mold or build.
+											</p>
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
+
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											What kind of Mayku Sheets will be available for the Multiplier and how much will they cost?
+										</h4>
+
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												Currently our list of confirmed sheet materials are: Clear Sheets, White Sheets, Resin Sheets and Flex Sheets. These will be available in a range of thicknesses with more planned for the future. We will be selling a range of approved, pre-cut sheets but it is possible to source and test other materials yourself if preferred.
+											</p>
+
+											<p>
+												Pre-order prices for Mayku Multiplier Sheets will start from $1 per sheet for 232x302mm rectangular sheets (used with a reducing plate accessory) and $3 per sheet for large 400mm diameter circular sheets. Prices increase with different thicknesses and for more specialist materials. For example, Flex Sheets start from $3 per sheet for the 232x302mm rectangular sheets and $6 per sheet for 400mm diameter circular sheets. Clear and White sheets both start from $1 per sheet for rectangular sheets and $3 per sheet for large circular sheets.
+											</p>
+
+											<p>
+												We’ll be sharing confirmed prices before shipping starts so you’ll have plenty of time to confirm your sheets orders, please get in touch if you have any questions or suggestions.
+											</p>
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
+
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											Why is the forming bed a circle instead of a square or rectangle?
+										</h4>
+
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												This is because you can’t make a square pressure chamber. Pressure based technology naturally wants to work in a sphere, so this design allows us to optimise the process for greater control, precision and safety.
+											</p>
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
+
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											Which casting materials are compatible with Multiplier made molds?
+										</h4>
+
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												We offer a range of sheets to suit different casting materials and project types. Compatible materials for casting into Multiplier made molds include resin, eco-resin (Jesmonite), plaster, concrete, chocolate, ice cream, ice, silicone, soap, bath bomb mix and wax.
+											</p>
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
+
+							<div class="accordion js-accordion">
+								<div class="accordion__section">
+									<div class="accordion__head">
+										<h4>
+											How much is shipping and where do you ship to?
+										</h4>
+
+										<img src="assets/images/svg/icon--arrow--white.svg">
+									</div><!-- /.accordion__head -->
+
+									<div class="accordion__body">
+										<div class="accordion__entry">
+											<p>
+												Upon launch we will be shipping direct to customers in the UK, USA, Canada, Australia and Europe only. We hope to expand to other regions soon, if you have a special request, please let us know. 
+											</p>
+
+											<p>
+												Shipping quotes will be provided closer to dispatch date to ensure best service is provided. We estimate shipping will cost between £30 - £400 + customs/import fees depending on location, if in doubt please speak to a specialist for a custom quote. 
+											</p>
+										</div><!-- /.accordion__entry -->
+									</div><!-- /.accordion__body -->
+								</div><!-- /.accordion__section -->
+							</div><!-- /.accordion js-accordion -->
+						</div><!-- /.section__body -->
+					</div><!-- /.shell shell-/-fluid -->
+				</section><!-- /.section-default section-default-/-accordion -->
+
+				<div class="callout-alt pb-0">
+					<div class="shell shell--fluid">
+						<div class="callout__inner">
+							<div class="card-callout card-callout--alt">
+								<h2>
+									Speak to a Mayku specialist
+								</h2>
+
+								<p>
+									Got a few questions before you purchase? Our talented team of Mayku product specialists are on hand to answer all your queries.
+								</p>
+
+								<a href="specialist" class="btn btn--yellow btn--medium">
+									Speak to a specialist
+								</a>
+							</div><!-- /.card-callout -->
+						</div><!-- /.callout__inner -->
+					</div><!-- /.shell shell-/-fluid -->
+				</div><!-- /.callout -->
+
+				<div class="showcase m-0">
+					<div class="showcase__image">
+						<img src="assets/images/temp/multiplier--showcase-alt.jpg" alt="">
+					</div><!-- /.showcase__image -->
+				</div><!-- /.showcase -->
+			</div>
 		</div><!-- /.main -->
 
 		<footer class="footer js-footer" data-scroll="">

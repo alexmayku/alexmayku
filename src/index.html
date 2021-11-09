@@ -9,15 +9,7 @@
 			<div class="lds-dual-ring"></div>
 		</div><!-- /.loading-overlay -->
 
-		<div class="bottom-bar js-bottom-bar" data-scroll="" data-scroll-sticky="" data-scroll-target="#main">
-			<div class="bar__inner">
-				<span class="bar__quantity" data-active-variant="availableAndMaxQuantities"></span>
-
-				<span>LEFT AT <span data-active-variant="discountPercentage"></span> OFF</span>
-
-				<a href="pre-order" class="btn btn--yellow btn--medium">Pre-order now</a>
-			</div><!-- /.bar__inner -->
-		</div><!-- /.bottom-bar -->
+		<include src="bottom-bar.html"></include>
 
 		<div class="main js-main" id="main" data-scroll-section-inview="">
 			<div class="hero js-hero">
@@ -34,9 +26,13 @@
 				<div class="hero__inner">
 					<div class="shell shell--fluid">
 						<div class="hero__content">
-							<h1>Pre-order the Mayku Multiplier</h1>
+							<div class="hero__countdown">
+								<include src="countdown.html"></include>
+							</div><!-- /.hero__countdown -->
 
-							<p>
+							<h1 data-homepage-hero-title>Pre-order the Mayku Multiplier</h1>
+
+							<p data-homepage-hero-subtitle-text>
 								Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.
 							</p>
 
@@ -59,7 +55,7 @@
 									</li>
 								</ul><!-- /.list-icons -->
 
-								<span><span data-active-variant="availableQuantities"></span> <span data-active-variant="unitsLeft"></span> left at current <span data-active-variant="discountPercentage"></span> off price</span>
+								<span data-homepage-hero-notice></span>
 							</div><!-- /.hero__notice -->
 
 							<div class="hero__actions">

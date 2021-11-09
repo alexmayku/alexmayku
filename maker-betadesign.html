@@ -256,15 +256,43 @@
 </header><!-- /.header -->
 
 
+		<div class="loading-overlay" data-loading-overlay="">
+			<div class="lds-dual-ring"></div>
+		</div><!-- /.loading-overlay -->
+
 		<div class="bottom-bar js-bottom-bar" data-scroll="" data-scroll-sticky="" data-scroll-target="#main">
-			<div class="bar__inner">
-				<span class="bar__quantity" data-active-variant="availableAndMaxQuantities"></span>
+	<div class="bar__inner">
+		<ul class="countdown bar__countdown countdown--no-digits-text countdown--orange">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
 
-				<span>LEFT AT <span data-active-variant="discountPercentage"></span> OFF</span>
+		<span class="countdown__text">days</span>
+	</li>
 
-				<a href="pre-order" class="btn btn--yellow btn--medium">Pre-order now</a>
-			</div><!-- /.bar__inner -->
-		</div><!-- /.bottom-bar -->
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+
+		<span class="bar__text">LEFT TO GET <span data-active-variant="discountPercentage"></span> OFF</span>
+
+		<a href="pre-order" class="btn btn--yellow btn--medium">Pre-order now</a>
+	</div><!-- /.bar__inner -->
+</div><!-- /.bottom-bar -->
 
 		<div class="main" id="main" data-scroll-section-inview="">
 			<div class="hero hero--makers js-hero">
@@ -298,7 +326,7 @@
 									</li>
 								</ul><!-- /.list-icons -->
 
-								<span>Discounted pre-orders open from 5th October</span>
+								<span data-homepage-hero-notice=""></span>
 							</div><!-- /.hero__notice -->
 
 							<div class="hero__form form-email">
@@ -432,14 +460,14 @@
 		<div class="callout__inner">
 			<div class="card-offer card-offer--callout">
 				<div class="card__head">
-					<h4 data-active-variant="calloutTitles"></h4>
+					<h4 data-batch-subtitle=""></h4>
 				</div><!-- /.card__head -->
 
 				<div class="card__body">
 					<div class="card__content">
-						<h2 data-active-variant="activeVariantTitle"></h2>
+						<h2 data-batch-title=""></h2>
 
-						<p data-active-variant="calloutDescriptions"></p>
+						<p data-batch-body-text=""></p>
 					</div><!-- /.card__content -->
 
 					<div class="card__price">
@@ -447,9 +475,33 @@
 
 						<h2 class="price price--alt" data-active-variant="price"></h2>
 
-						<div class="price-stamp price-stamp--alt">
-							<span data-active-variant="availableAndMaxQuantities"></span> available - <span data-active-variant="discountPercentage"></span> off
-						</div><!-- /.price-stamp -->
+						<div class="card__countdown">
+							<ul class="countdown countdown--background-red">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
+
+		<span class="countdown__text">days</span>
+	</li>
+
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+						</div><!-- /.card__countdown -->
 					</div><!-- /.card__price -->
 				</div><!-- /.card__body -->
 
@@ -735,14 +787,14 @@
 		<div class="callout__inner">
 			<div class="card-offer card-offer--callout">
 				<div class="card__head">
-					<h4 data-active-variant="calloutTitles"></h4>
+					<h4 data-batch-subtitle=""></h4>
 				</div><!-- /.card__head -->
 
 				<div class="card__body">
 					<div class="card__content">
-						<h2 data-active-variant="activeVariantTitle"></h2>
+						<h2 data-batch-title=""></h2>
 
-						<p data-active-variant="calloutDescriptions"></p>
+						<p data-batch-body-text=""></p>
 					</div><!-- /.card__content -->
 
 					<div class="card__price">
@@ -750,9 +802,33 @@
 
 						<h2 class="price price--alt" data-active-variant="price"></h2>
 
-						<div class="price-stamp price-stamp--alt">
-							<span data-active-variant="availableAndMaxQuantities"></span> available - <span data-active-variant="discountPercentage"></span> off
-						</div><!-- /.price-stamp -->
+						<div class="card__countdown">
+							<ul class="countdown countdown--background-red">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
+
+		<span class="countdown__text">days</span>
+	</li>
+
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+						</div><!-- /.card__countdown -->
 					</div><!-- /.card__price -->
 				</div><!-- /.card__body -->
 

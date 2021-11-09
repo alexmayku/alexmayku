@@ -5,15 +5,11 @@
 	<div class="wrapper" data-scroll-container>
 		<include src="header.html"></include>
 
-		<div class="bottom-bar js-bottom-bar" data-scroll="" data-scroll-sticky="" data-scroll-target="#main">
-			<div class="bar__inner">
-				<span class="bar__quantity" data-active-variant="availableAndMaxQuantities"></span>
+		<div class="loading-overlay" data-loading-overlay>
+			<div class="lds-dual-ring"></div>
+		</div><!-- /.loading-overlay -->
 
-				<span>LEFT AT <span data-active-variant="discountPercentage"></span> OFF</span>
-
-				<a href="pre-order" class="btn btn--yellow btn--medium">Pre-order now</a>
-			</div><!-- /.bar__inner -->
-		</div><!-- /.bottom-bar -->
+		<include src="bottom-bar.html"></include>
 
 		<div class="main" id="main" data-scroll-section-inview>
 			<div class="hero hero--makers hero--fiona">
@@ -47,7 +43,7 @@
 									</li>
 								</ul><!-- /.list-icons -->
 
-								<span>Discounted pre-orders open from 5th October</span>
+								<span data-homepage-hero-notice></span>
 							</div><!-- /.hero__notice -->
 
 							<div class="hero__form form-email">

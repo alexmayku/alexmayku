@@ -4,6 +4,7 @@
 import { GLOBAL_SETTINGS } from './global-settings';
 import Client from 'shopify-buy/index.unoptimized.umd';
 import Cookies from 'js-cookie';
+import { initCountdown } from './countdown';
 
 let priceCurrency = '$';
 let checkoutLink = '';
@@ -27,19 +28,35 @@ const selectorsActiveVariant = {
   activeVariantTitle: '[data-active-variant="activeVariantTitle"]',
 };
 
+const selectors = {
+  homepage: {
+    title: '[data-homepage-hero-title]',
+    subtitle_text: '[data-homepage-hero-subtitle-text]',
+    notice: '[data-homepage-hero-notice]'
+  },
+  callout: {
+    title: '[data-batch-title]',
+    subtitle: '[data-batch-subtitle]',
+    body_text: '[data-batch-body-text]'
+  },
+  preorder: {
+    title: '[data-preorder-title]'
+  }
+}
+
 const checkUserLocation = () => {
   fetch(`https://api.ipgeolocation.io/ipgeo?apiKey=${GLOBAL_SETTINGS.locationApiKey}`)
     .then((response) => {
       return response.json();
     })
     .then((data) => {
-      const isUK = data.country_code2 === 'GB';
+      const cookieData = JSON.stringify(data);
 
-      Cookies.set('userFromUK', isUK, { expires: 7 });
+      Cookies.set('userLocationData', cookieData, { expires: 7 });
 
-      priceCurrency = isUK ? '£' : '$';
+      priceCurrency = data.currency.symbol;
 
-      generateProduct(isUK);
+      generateProduct(data);
     })
     .catch(function (err) {
       console.warn('Something went wrong.', err);
@@ -47,15 +64,27 @@ const checkUserLocation = () => {
     });
 };
 
-const generateProduct = (isUK = false) => {
+const generateProduct = (userLocationData = false) => {
   let client;
 
-  if (isUK) {
+  if (userLocationData && userLocationData.currency.code === 'GBP') {
     client = Client.buildClient({
       domain: GLOBAL_SETTINGS.domainUK,
       storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenUK,
     });
+  } else if (
+    userLocationData &&
+    (userLocationData.currency.code === 'EUR' || userLocationData.continent_code === 'EU')
+  ) {
+    priceCurrency = '€';
+
+    client = Client.buildClient({
+      domain: GLOBAL_SETTINGS.domainEU,
+      storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenEU,
+    });
   } else {
+    priceCurrency = '$';
+
     client = Client.buildClient({
       domain: GLOBAL_SETTINGS.domainUS,
       storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenUS,
@@ -111,14 +140,14 @@ const generateProduct = (isUK = false) => {
 };
 
 const checkIfUserVisited = () => {
-  const checkLocationCookie = Cookies.get('userFromUK');
+  const checkLocationCookie = Cookies.get('userLocationData');
 
   if (checkLocationCookie) {
-    const isFromUK = checkLocationCookie !== 'false';
+    const parsedData = JSON.parse(checkLocationCookie);
 
-    generateProduct(isFromUK);
+    priceCurrency = parsedData.currency.symbol;
 
-    priceCurrency = isFromUK ? '£' : '$';
+    generateProduct(parsedData);
   } else {
     checkUserLocation();
   }
@@ -189,29 +218,63 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
 
   variants.forEach((variant, index) => {
     const isAvailable = activeVariantIndex === index;
-    const batchLabel = GLOBAL_SETTINGS.variantsBatchLabels[index];
-    const { title, price, compareAtPrice, quantityAvailable } = variant;
+    const discountLabelShowInventory =
+      GLOBAL_SETTINGS[`batch_${index + 1}`]
+        ? GLOBAL_SETTINGS[`batch_${index + 1}`].callout_preorder.discount_label_show_inventory
+        : false;
+    const batchLabel = GLOBAL_SETTINGS[`batch_${index + 1}`].callout_preorder.subtitle;
+    const title = GLOBAL_SETTINGS[`batch_${index + 1}`].callout_preorder.title;
+    const { price, compareAtPrice, quantityAvailable } = variant;
     const maxQuantity = GLOBAL_SETTINGS.variantsStartingQuantities[index];
     const discountPercentage = Math.round(((compareAtPrice - price) / compareAtPrice) * 100) + '%';
-    let stockInfoHtml = isAvailable
-      ? `${quantityAvailable}/${maxQuantity} available - ${discountPercentage} off`
-      : `${maxQuantity} available - ${discountPercentage} off`;
-    const variantDescription = GLOBAL_SETTINGS.variantsDescriptions[index].replaceAll(
-      '[percentage]',
-      discountPercentage
-    );
+    let stockInfoHtml = discountLabelShowInventory
+      ? `${quantityAvailable} available - ${discountPercentage} off`
+      : `${discountPercentage} off`;
+    const variantDescription = GLOBAL_SETTINGS[`batch_${index + 1}`].callout_preorder.body_text;
     const cartFoot = isAvailable
       ? `<div class="card__foot">
           <a href="${checkoutLink}" class="btn btn--yellow btn--large">Buy now</a>
         </div>`
       : '';
 
-    if (index < activeVariantIndex) {
-      stockInfoHtml = 'Sold out';
-    }
+    const countdownHTML = `
+      <div class="card__countdown">
+        <ul class="countdown countdown--background-red">
+          <li>
+            <span class="countdown__days countdown__digit"></span>
+
+            <span class="countdown__text">days</span>
+          </li>
+
+          <li>
+            <span class="countdown__hours countdown__digit"></span>
+
+            <span class="countdown__text">hours</span>
+          </li>
+
+          <li>
+            <span class="countdown__minutes countdown__digit"></span>
+
+            <span class="countdown__text">mins</span>
+          </li>
+
+          <li>
+            <span class="countdown__seconds countdown__digit"></span>
+
+            <span class="countdown__text">secs</span>
+          </li>
+        </ul>
+      </div>
+    `;
+
+    const soldOutHTML = `
+      <div class="price-stamp">
+        Sold out
+      </div>
+    `;
 
     variantsHTML += `
-      <div class="card-offer ${isAvailable ? '' : 'disabled'} ">
+      <div class="card-offer ${isAvailable ? '' : 'disabled'}">
         <div class="card__head">
           <h4>${batchLabel}</h4>
         </div>
@@ -228,9 +291,14 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
 
             <h2 class="price ${index < activeVariantIndex ? 'hidden' : ''}">${priceCurrency + parseFloat(price)}</h2>
 
-            <div class="price-stamp">
-            ${stockInfoHtml}
-            </div>
+            
+            ${
+              index < activeVariantIndex
+                ? soldOutHTML
+                : isAvailable
+                  ? countdownHTML
+                  : '<div class="price-stamp">' + stockInfoHtml + '</div>'
+            }
           </div>
         </div>
 
@@ -244,10 +312,65 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
   }
 };
 
+const initCountdownTimers = variantIndex => {
+  const finalDate = GLOBAL_SETTINGS[`batch_${variantIndex}`].final_date;
+
+  initCountdown(finalDate);
+}
+
+const updateHomepageHeroTexts = variantIndex => {
+  const { title, subtitle_text, notice } = GLOBAL_SETTINGS[`batch_${variantIndex}`].homepage.hero;
+
+  if (document.querySelector(selectors.homepage.title)) {
+    document.querySelector(selectors.homepage.title).textContent = title;
+  }
+
+  if (document.querySelector(selectors.homepage.subtitle_text)) {
+    document.querySelector(selectors.homepage.subtitle_text).textContent = subtitle_text;
+  }
+
+  if (document.querySelector(selectors.homepage.notice)) {
+    document.querySelector(selectors.homepage.notice).textContent = notice;
+  }
+}
+
+const updateCallout = variantIndex => {
+  const { title, subtitle, body_text: bodyText } = GLOBAL_SETTINGS[`batch_${variantIndex}`].callout;
+  
+  if (document.querySelectorAll(selectors.callout.title)) {
+    document.querySelectorAll(selectors.callout.title).forEach(el => {
+      el.textContent = title;
+    })
+  }
+
+  if (document.querySelectorAll(selectors.callout.subtitle)) {
+    document.querySelectorAll(selectors.callout.subtitle).forEach(el => {
+      el.textContent = subtitle;
+    })
+  }
+
+  if (document.querySelectorAll(selectors.callout.body_text)) {
+    document.querySelectorAll(selectors.callout.body_text).forEach(el => {
+      el.textContent = bodyText;
+    })
+  }
+}
+
+const updatePreorderTexts = variantIndex => {
+  const { title } = GLOBAL_SETTINGS[`batch_${variantIndex}`].preorder;
+
+  if (document.querySelector(selectors.preorder.title)) {
+    document.querySelector(selectors.preorder.title).textContent = title;
+  }
+}
+
 const updateFrontEndData = (activeVariant, activeVariantIndex, allVariants) => {
   globalActiveVariantHTML(activeVariant, activeVariantIndex, allVariants);
-
   productVariantsHTML(allVariants, activeVariantIndex);
+  updateHomepageHeroTexts(activeVariantIndex + 1);
+  updateCallout(activeVariantIndex + 1);
+  updatePreorderTexts(activeVariantIndex + 1);
+  initCountdownTimers(activeVariantIndex + 1);
 
   if (loadingOverlay) {
     loadingOverlay.classList.add('loaded');

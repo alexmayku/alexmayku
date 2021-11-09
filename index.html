@@ -261,14 +261,38 @@
 		</div><!-- /.loading-overlay -->
 
 		<div class="bottom-bar js-bottom-bar" data-scroll="" data-scroll-sticky="" data-scroll-target="#main">
-			<div class="bar__inner">
-				<span class="bar__quantity" data-active-variant="availableAndMaxQuantities"></span>
+	<div class="bar__inner">
+		<ul class="countdown bar__countdown countdown--no-digits-text countdown--orange">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
 
-				<span>LEFT AT <span data-active-variant="discountPercentage"></span> OFF</span>
+		<span class="countdown__text">days</span>
+	</li>
 
-				<a href="pre-order" class="btn btn--yellow btn--medium">Pre-order now</a>
-			</div><!-- /.bar__inner -->
-		</div><!-- /.bottom-bar -->
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+
+		<span class="bar__text">LEFT TO GET <span data-active-variant="discountPercentage"></span> OFF</span>
+
+		<a href="pre-order" class="btn btn--yellow btn--medium">Pre-order now</a>
+	</div><!-- /.bar__inner -->
+</div><!-- /.bottom-bar -->
 
 		<div class="main js-main" id="main" data-scroll-section-inview="">
 			<div class="hero js-hero">
@@ -285,9 +309,37 @@
 				<div class="hero__inner">
 					<div class="shell shell--fluid">
 						<div class="hero__content">
-							<h1>Pre-order the Mayku Multiplier</h1>
+							<div class="hero__countdown">
+								<ul class="countdown {{ class }}">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
 
-							<p>
+		<span class="countdown__text">days</span>
+	</li>
+
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+							</div><!-- /.hero__countdown -->
+
+							<h1 data-homepage-hero-title="">Pre-order the Mayku Multiplier</h1>
+
+							<p data-homepage-hero-subtitle-text="">
 								Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.
 							</p>
 
@@ -310,7 +362,7 @@
 									</li>
 								</ul><!-- /.list-icons -->
 
-								<span><span data-active-variant="availableQuantities"></span> <span data-active-variant="unitsLeft"></span> left at current <span data-active-variant="discountPercentage"></span> off price</span>
+								<span data-homepage-hero-notice=""></span>
 							</div><!-- /.hero__notice -->
 
 							<div class="hero__actions">
@@ -478,14 +530,14 @@
 		<div class="callout__inner">
 			<div class="card-offer card-offer--callout">
 				<div class="card__head">
-					<h4 data-active-variant="calloutTitles"></h4>
+					<h4 data-batch-subtitle=""></h4>
 				</div><!-- /.card__head -->
 
 				<div class="card__body">
 					<div class="card__content">
-						<h2 data-active-variant="activeVariantTitle"></h2>
+						<h2 data-batch-title=""></h2>
 
-						<p data-active-variant="calloutDescriptions"></p>
+						<p data-batch-body-text=""></p>
 					</div><!-- /.card__content -->
 
 					<div class="card__price">
@@ -493,9 +545,33 @@
 
 						<h2 class="price price--alt" data-active-variant="price"></h2>
 
-						<div class="price-stamp price-stamp--alt">
-							<span data-active-variant="availableAndMaxQuantities"></span> available - <span data-active-variant="discountPercentage"></span> off
-						</div><!-- /.price-stamp -->
+						<div class="card__countdown">
+							<ul class="countdown countdown--background-red">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
+
+		<span class="countdown__text">days</span>
+	</li>
+
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+						</div><!-- /.card__countdown -->
 					</div><!-- /.card__price -->
 				</div><!-- /.card__body -->
 
@@ -659,14 +735,14 @@
 		<div class="callout__inner">
 			<div class="card-offer card-offer--callout">
 				<div class="card__head">
-					<h4 data-active-variant="calloutTitles"></h4>
+					<h4 data-batch-subtitle=""></h4>
 				</div><!-- /.card__head -->
 
 				<div class="card__body">
 					<div class="card__content">
-						<h2 data-active-variant="activeVariantTitle"></h2>
+						<h2 data-batch-title=""></h2>
 
-						<p data-active-variant="calloutDescriptions"></p>
+						<p data-batch-body-text=""></p>
 					</div><!-- /.card__content -->
 
 					<div class="card__price">
@@ -674,9 +750,33 @@
 
 						<h2 class="price price--alt" data-active-variant="price"></h2>
 
-						<div class="price-stamp price-stamp--alt">
-							<span data-active-variant="availableAndMaxQuantities"></span> available - <span data-active-variant="discountPercentage"></span> off
-						</div><!-- /.price-stamp -->
+						<div class="card__countdown">
+							<ul class="countdown countdown--background-red">
+	<li>
+		<span class="countdown__days countdown__digit"></span>
+
+		<span class="countdown__text">days</span>
+	</li>
+
+	<li>
+		<span class="countdown__hours countdown__digit"></span>
+
+		<span class="countdown__text">hours</span>
+	</li>
+
+	<li>
+		<span class="countdown__minutes countdown__digit"></span>
+
+		<span class="countdown__text">mins</span>
+	</li>
+
+	<li>
+		<span class="countdown__seconds countdown__digit"></span>
+
+		<span class="countdown__text">secs</span>
+	</li>
+</ul><!-- /.countdown -->
+						</div><!-- /.card__countdown -->
 					</div><!-- /.card__price -->
 				</div><!-- /.card__body -->
 

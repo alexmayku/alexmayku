@@ -16,12 +16,16 @@
 		top: calc(100vh - 6.7rem);
 	}
 
+	@include breakpoint-down(tablet) {
+		top: calc(100vh - 11.7rem);
+	}
+
 	@include breakpoint-down(mobile-medium) {
-		top: calc(100vh - 11rem);
+		top: calc(100vh - 14.8rem);
 	}
 
 	@include breakpoint-down(mobile-small) {
-		top: calc(100vh - 10.5rem);
+		top: calc(100vh - 14.3rem);
 	}
 
 	&.is-intersecting {
@@ -33,7 +37,18 @@
 		margin-bottom: 0;
 	}
 
-	span {
+	.bar__countdown {
+		@include breakpoint-down(tablet) {
+			margin-right: 1rem; 
+		}
+
+		@include breakpoint-down(mobile-medium) {
+			margin-bottom: 1rem; 
+		}
+	}
+
+	.bar__quantity,
+	.bar__text {
 		font-family: $ff-digital;
 		color: $c-black;
 		font-size: 2.4rem;
@@ -49,7 +64,7 @@
 	}
 
 	a {
-		@include breakpoint-down(mobile-medium) {
+		@include breakpoint-down(tablet) {
 			display: block;
 			width: 100%;
 			margin-top: 2rem;
@@ -61,7 +76,7 @@
 	}
 
 	.bar__inner {
-		max-width: 62rem;
+		max-width: 85rem;
 		width: 100%;
 		margin: 0 auto;
 		display: flex;
@@ -70,6 +85,7 @@
 		justify-content: space-between;
 
 		@include breakpoint-down(tablet) {
+			justify-content: center;
 			max-width: 75rem;
 			padding: 0 1rem;
 		}

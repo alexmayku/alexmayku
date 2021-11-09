@@ -3,14 +3,14 @@
 		<div class="callout__inner">
 			<div class="card-offer card-offer--callout">
 				<div class="card__head">
-					<h4 data-active-variant="calloutTitles"></h4>
+					<h4 data-batch-subtitle></h4>
 				</div><!-- /.card__head -->
 
 				<div class="card__body">
 					<div class="card__content">
-						<h2 data-active-variant="activeVariantTitle"></h2>
+						<h2 data-batch-title></h2>
 
-						<p data-active-variant="calloutDescriptions"></p>
+						<p data-batch-body-text></p>
 					</div><!-- /.card__content -->
 
 					<div class="card__price">
@@ -18,9 +18,11 @@
 
 						<h2 class="price price--alt" data-active-variant="price"></h2>
 
-						<div class="price-stamp price-stamp--alt">
-							<span data-active-variant="availableAndMaxQuantities"></span> available - <span data-active-variant="discountPercentage"></span> off
-						</div><!-- /.price-stamp -->
+						<div class="card__countdown">
+							<include src="countdown.html" locals='{
+								"class": "countdown--background-red"
+							}'></include>
+						</div><!-- /.card__countdown -->
 					</div><!-- /.card__price -->
 				</div><!-- /.card__body -->
 

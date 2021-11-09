@@ -70,6 +70,14 @@
 		max-width: 67.3rem;
 		width: 100%;
 		padding-top: 1.5rem;
+
+		@include breakpoint-down(large-desktop) {
+			max-width: 50rem; 
+		}
+
+		@include breakpoint-down(tablet) {
+			max-width: 40rem; 
+		}
 	}
 
 	.card__content h2 {
@@ -92,6 +100,12 @@
 
 		@include breakpoint-down(mobile) {
 			margin-left: auto;
+		}
+	}
+
+	.card__countdown {
+		@include breakpoint-down(mobile) {
+			margin-top: 2rem; 
 		}
 	}
 
@@ -195,7 +209,8 @@
 		text-align: right;
 
 		@include breakpoint-down(mobile) {
-			margin-left: auto;
+			text-align: left; 
+			margin-left: 0; 
 		}
 	}
 
@@ -213,6 +228,12 @@
 
 		@include breakpoint-down(mobile) {
 			margin-top: 3.8rem;
+		}
+
+		a {
+			@include breakpoint-down(mobile) {
+				display: inline-block; 
+			}
 		}
 	}
 
