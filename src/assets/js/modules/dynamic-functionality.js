@@ -28,6 +28,8 @@ const selectorsActiveVariant = {
   activeVariantTitle: '[data-active-variant="activeVariantTitle"]',
 };
 
+let globalDiscount = 0;
+
 const selectors = {
   homepage: {
     title: '[data-homepage-hero-title]',
@@ -169,6 +171,8 @@ const globalActiveVariantHTML = (activeVariant, activeVariantIndex, allVariants)
     `${selectorsActiveVariant.checkoutLink}, ${selectorsActiveVariant.compareAtPrice}, ${selectorsActiveVariant.availableAndMaxQuantities}, ${selectorsActiveVariant.availableQuantities}, ${selectorsActiveVariant.discountPercentage}, ${selectorsActiveVariant.price}, ${selectorsActiveVariant.firstVariantPercentage}, ${selectorsActiveVariant.unitsLeft}, ${selectorsActiveVariant.calloutTitles}, ${selectorsActiveVariant.calloutDescriptions}, ${selectorsActiveVariant.activeVariantTitle}`
   );
 
+  globalDiscount = discountPercentage;
+
   if (activeVariantElements.length) {
     activeVariantElements.forEach((x) => {
       switch (x.dataset.activeVariant) {
@@ -230,7 +234,7 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
     let stockInfoHtml = discountLabelShowInventory
       ? `${quantityAvailable} available - ${discountPercentage} off`
       : `${discountPercentage} off`;
-    const variantDescription = GLOBAL_SETTINGS[`batch_${index + 1}`].callout_preorder.body_text;
+    let variantDescription = GLOBAL_SETTINGS[`batch_${index + 1}`].callout_preorder.body_text.replace('[percentage]', globalDiscount);
     const cartFoot = isAvailable
       ? `<div class="card__foot">
           <a href="${checkoutLink}" class="btn btn--yellow btn--large">Buy now</a>
@@ -291,7 +295,7 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
 
             <h2 class="price ${index < activeVariantIndex ? 'hidden' : ''}">${priceCurrency + parseFloat(price)}</h2>
 
-            
+
             ${
               index < activeVariantIndex
                 ? soldOutHTML
@@ -319,7 +323,10 @@ const initCountdownTimers = variantIndex => {
 }
 
 const updateHomepageHeroTexts = variantIndex => {
-  const { title, subtitle_text, notice } = GLOBAL_SETTINGS[`batch_${variantIndex}`].homepage.hero;
+  let { title, subtitle_text, notice } = GLOBAL_SETTINGS[`batch_${variantIndex}`].homepage.hero;
+
+  title = title.replace('[percentage]', globalDiscount);
+  notice = notice.replace('[percentage]', globalDiscount);
 
   if (document.querySelector(selectors.homepage.title)) {
     document.querySelector(selectors.homepage.title).textContent = title;
@@ -335,8 +342,12 @@ const updateHomepageHeroTexts = variantIndex => {
 }
 
 const updateCallout = variantIndex => {
-  const { title, subtitle, body_text: bodyText } = GLOBAL_SETTINGS[`batch_${variantIndex}`].callout;
-  
+  let { title, subtitle, body_text: bodyText } = GLOBAL_SETTINGS[`batch_${variantIndex}`].callout;
+
+  title = title.replace('[percentage]', globalDiscount);
+  subtitle = subtitle.replace('[percentage]', globalDiscount);
+  bodyText = bodyText.replace('[percentage]', globalDiscount);
+
   if (document.querySelectorAll(selectors.callout.title)) {
     document.querySelectorAll(selectors.callout.title).forEach(el => {
       el.textContent = title;

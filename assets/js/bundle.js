@@ -28237,6 +28237,7 @@ var selectorsActiveVariant = {
   calloutDescriptions: '[data-active-variant="calloutDescriptions"]',
   activeVariantTitle: '[data-active-variant="activeVariantTitle"]'
 };
+var globalDiscount = 0;
 var selectors = {
   homepage: {
     title: '[data-homepage-hero-title]',
@@ -28359,6 +28360,7 @@ var globalActiveVariantHTML = function globalActiveVariantHTML(activeVariant, ac
   var currentQuantity = activeVariant.quantityAvailable;
   var discountPercentage = Math.round((compareAtPrice - price) / compareAtPrice * 100) + '%';
   var activeVariantElements = document.querySelectorAll("".concat(selectorsActiveVariant.checkoutLink, ", ").concat(selectorsActiveVariant.compareAtPrice, ", ").concat(selectorsActiveVariant.availableAndMaxQuantities, ", ").concat(selectorsActiveVariant.availableQuantities, ", ").concat(selectorsActiveVariant.discountPercentage, ", ").concat(selectorsActiveVariant.price, ", ").concat(selectorsActiveVariant.firstVariantPercentage, ", ").concat(selectorsActiveVariant.unitsLeft, ", ").concat(selectorsActiveVariant.calloutTitles, ", ").concat(selectorsActiveVariant.calloutDescriptions, ", ").concat(selectorsActiveVariant.activeVariantTitle));
+  globalDiscount = discountPercentage;
 
   if (activeVariantElements.length) {
     activeVariantElements.forEach(function (x) {
@@ -28428,11 +28430,11 @@ var productVariantsHTML = function productVariantsHTML(variants, activeVariantIn
     var maxQuantity = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].variantsStartingQuantities[index];
     var discountPercentage = Math.round((compareAtPrice - price) / compareAtPrice * 100) + '%';
     var stockInfoHtml = discountLabelShowInventory ? "".concat(quantityAvailable, " available - ").concat(discountPercentage, " off") : "".concat(discountPercentage, " off");
-    var variantDescription = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(index + 1)].callout_preorder.body_text;
+    var variantDescription = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"]["batch_".concat(index + 1)].callout_preorder.body_text.replace('[percentage]', globalDiscount);
     var cartFoot = isAvailable ? "<div class=\"card__foot\">\n          <a href=\"".concat(checkoutLink, "\" class=\"btn btn--yellow btn--large\">Buy now</a>\n        </div>") : '';
     var countdownHTML = "\n      <div class=\"card__countdown\">\n        <ul class=\"countdown countdown--background-red\">\n          <li>\n            <span class=\"countdown__days countdown__digit\"></span>\n\n            <span class=\"countdown__text\">days</span>\n          </li>\n\n          <li>\n            <span class=\"countdown__hours countdown__digit\"></span>\n\n            <span class=\"countdown__text\">hours</span>\n          </li>\n\n          <li>\n            <span class=\"countdown__minutes countdown__digit\"></span>\n\n            <span class=\"countdown__text\">mins</span>\n          </li>\n\n          <li>\n            <span class=\"countdown__seconds countdown__digit\"></span>\n\n            <span class=\"countdown__text\">secs</span>\n          </li>\n        </ul>\n      </div>\n    ";
     var soldOutHTML = "\n      <div class=\"price-stamp\">\n        Sold out\n      </div>\n    ";
-    variantsHTML += "\n      <div class=\"card-offer ".concat(isAvailable ? '' : 'disabled', "\">\n        <div class=\"card__head\">\n          <h4>").concat(batchLabel, "</h4>\n        </div>\n\n        <div class=\"card__body\">\n          <div class=\"card__content\">\n            <h2>").concat(title, "</h2>\n\n            <p class=\"").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(variantDescription, "</p>\n          </div>\n\n          <div class=\"card__price\">\n            <span class=\"price-old ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(compareAtPrice), "</span>\n\n            <h2 class=\"price ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(price), "</h2>\n\n            \n            ").concat(index < activeVariantIndex ? soldOutHTML : isAvailable ? countdownHTML : '<div class="price-stamp">' + stockInfoHtml + '</div>', "\n          </div>\n        </div>\n\n        ").concat(cartFoot, "\n      </div>\n    ");
+    variantsHTML += "\n      <div class=\"card-offer ".concat(isAvailable ? '' : 'disabled', "\">\n        <div class=\"card__head\">\n          <h4>").concat(batchLabel, "</h4>\n        </div>\n\n        <div class=\"card__body\">\n          <div class=\"card__content\">\n            <h2>").concat(title, "</h2>\n\n            <p class=\"").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(variantDescription, "</p>\n          </div>\n\n          <div class=\"card__price\">\n            <span class=\"price-old ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(compareAtPrice), "</span>\n\n            <h2 class=\"price ").concat(index < activeVariantIndex ? 'hidden' : '', "\">").concat(priceCurrency + parseFloat(price), "</h2>\n\n\n            ").concat(index < activeVariantIndex ? soldOutHTML : isAvailable ? countdownHTML : '<div class="price-stamp">' + stockInfoHtml + '</div>', "\n          </div>\n        </div>\n\n        ").concat(cartFoot, "\n      </div>\n    ");
   });
 
   if (variantContainer) {
@@ -28450,6 +28452,8 @@ var updateHomepageHeroTexts = function updateHomepageHeroTexts(variantIndex) {
       title = _GLOBAL_SETTINGS$$hom.title,
       subtitle_text = _GLOBAL_SETTINGS$$hom.subtitle_text,
       notice = _GLOBAL_SETTINGS$$hom.notice;
+  title = title.replace('[percentage]', globalDiscount);
+  notice = notice.replace('[percentage]', globalDiscount);
 
   if (document.querySelector(selectors.homepage.title)) {
     document.querySelector(selectors.homepage.title).textContent = title;
@@ -28469,6 +28473,9 @@ var updateCallout = function updateCallout(variantIndex) {
       title = _GLOBAL_SETTINGS$$cal.title,
       subtitle = _GLOBAL_SETTINGS$$cal.subtitle,
       bodyText = _GLOBAL_SETTINGS$$cal.body_text;
+  title = title.replace('[percentage]', globalDiscount);
+  subtitle = subtitle.replace('[percentage]', globalDiscount);
+  bodyText = bodyText.replace('[percentage]', globalDiscount);
 
   if (document.querySelectorAll(selectors.callout.title)) {
     document.querySelectorAll(selectors.callout.title).forEach(function (el) {
@@ -28601,12 +28608,12 @@ var GLOBAL_SETTINGS = {
     }
   },
   batch_3: {
-    final_date: '2022/02/28 00:00:00 GMT',
+    final_date: '2022/01/31 16:00:00 GMT',
     homepage: {
       hero: {
-        title: 'Advance pre-orders',
-        subtitle_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.',
-        notice: 'Third Batch'
+        title: 'Get [percentage] off the Mayku Multiplier',
+        subtitle_text: 'Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.',
+        notice: '[percentage] discount ends Monday 31st January, 8am PT / 11am ET / 4pm UK / 5pm CET'
       }
     },
     preorder: {
@@ -28615,17 +28622,17 @@ var GLOBAL_SETTINGS = {
     callout: {
       subtitle: 'Third Batch',
       title: 'Advance pre-orders',
-      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.'
+      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at [percentage] off retail price.'
     },
     callout_preorder: {
       subtitle: 'Third Batch',
       title: 'Advance pre-orders',
-      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.',
+      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at [percentage] off retail price.',
       discount_label_show_inventory: true
     }
   },
   batch_4: {
-    final_date: '2022/06/01 00:00:00 GMT',
+    final_date: '2022/01/01 00:00:00 GMT',
     homepage: {
       hero: {
         title: 'Standard pre-orders',
@@ -29207,4 +29214,3 @@ module.exports = jQuery;
 /***/ })
 
 /******/ });
-//# sourceMappingURL=bundle.js.map

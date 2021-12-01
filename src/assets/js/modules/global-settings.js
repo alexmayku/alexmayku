@@ -72,12 +72,12 @@ export const GLOBAL_SETTINGS = {
   },
   // Batch 3
   batch_3: {
-    final_date: '2022/02/28 00:00:00 GMT',
+    final_date: '2022/01/31 16:00:00 GMT',
     homepage: {
       hero: {
-        title: 'Advance pre-orders',
-        subtitle_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.',
-        notice: 'Third Batch'
+        title: 'Get [percentage] off the Mayku Multiplier',
+        subtitle_text: 'Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.',
+        notice: '[percentage] discount ends Monday 31st January, 8am PT / 11am ET / 4pm UK / 5pm CET'
       }
     },
     preorder: {
@@ -86,18 +86,18 @@ export const GLOBAL_SETTINGS = {
     callout: {
       subtitle: 'Third Batch',
       title: 'Advance pre-orders',
-      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.'
+      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at [percentage] off retail price.'
     },
     callout_preorder: {
       subtitle: 'Third Batch',
       title: 'Advance pre-orders',
-      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at 44% off retail price.',
+      body_text: 'Get one of only 400 remaining units from our first manufacturing run, available at [percentage] off retail price.',
       discount_label_show_inventory: true
     }
   },
   // Batch 4
   batch_4: {
-    final_date: '2022/06/01 00:00:00 GMT',
+    final_date: '2022/01/01 00:00:00 GMT',
     homepage: {
       hero: {
         title: 'Standard pre-orders',
