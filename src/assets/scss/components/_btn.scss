@@ -83,3 +83,12 @@
 	padding-left: 0;
 	padding-right: 0;
 }
+
+
+.margin-top {
+	margin-top: 1.6rem;
+}
+
+.extra-margin-top {
+	margin-top: calc(1.6rem + 1.2em);
+}
