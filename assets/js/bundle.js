@@ -28554,11 +28554,11 @@ var GLOBAL_SETTINGS = {
   storefrontTokenUK: '215d200423ee52f2e022314568f89555',
   storefrontTokenEU: 'a3902b7604d572c74dc98d0fded4ef00',
   storefrontTokenUS: '324be01462eb5c2e2c27f27eb2945640',
-  variantsStartingQuantities: [100, 300, 400],
-  variantsBatchLabels: ['First Batch - Open From 5th October 2021', 'Second Batch', 'Third Batch'],
-  variantsDescriptions: ['Our first pre-order batch launches with a whopping [percentage] off the retail price. Be one of the first 100 makers to own a Multiplier.', 'Once the first 100 machines are reserved, pre-orders move to [percentage] off for the next 300 units ordered.', 'Join the queue with our final batch of pre-orders available for 400 units at [percentage] off retail price.'],
-  calloutTitles: ['First Batch Now Live!', 'Second Batch Now Live!', 'Third Batch Now Live!'],
-  calloutDescriptions: ['Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.'],
+  variantsStartingQuantities: [100, 300, 400, 400],
+  variantsBatchLabels: ['First Batch - Open From 5th October 2021', 'Second Batch', 'Third Batch', 'Fourth Batch'],
+  variantsDescriptions: ['Our first pre-order batch launches with a whopping [percentage] off the retail price. Be one of the first 100 makers to own a Multiplier.', 'Once the first 100 machines are reserved, pre-orders move to [percentage] off for the next 300 units ordered.', 'Join the queue with our final batch of pre-orders available for 400 units at [percentage] off retail price.', 'Join the queue with our final batch of pre-orders.'],
+  calloutTitles: ['First Batch Now Live!', 'Second Batch Now Live!', 'Third Batch Now Live!', 'Final Batch Now Live!'],
+  calloutDescriptions: ['Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone, and this level of discount will never be available again.', 'Hurry, pre-orders are selling out fast. When they’re gone, they’re gone.'],
   batch_1: {
     final_date: '2021/10/05 00:00:00 pm GMT',
     homepage: {
@@ -28632,12 +28632,11 @@ var GLOBAL_SETTINGS = {
     }
   },
   batch_4: {
-    final_date: '2022/01/01 00:00:00 GMT',
+    final_date: '2022/04/01 00:00:00 GMT',
     homepage: {
       hero: {
-        title: 'Standard pre-orders',
-        subtitle_text: 'Join the queue with our final batch of pre-orders available for 30% off retail price.',
-        notice: 'Fourth Batch'
+        title: 'Pre-order the Mayku Multiplier',
+        subtitle_text: 'Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.'
       }
     },
     preorder: {
@@ -28646,12 +28645,12 @@ var GLOBAL_SETTINGS = {
     callout: {
       subtitle: 'Fourth Batch',
       title: 'Standard pre-orders',
-      body_text: 'Join the queue with our final batch of pre-orders available for 30% off retail price.'
+      body_text: 'Join the queue with our final batch of pre-orders.'
     },
     callout_preorder: {
       subtitle: 'Fourth Batch',
       title: 'Standard pre-orders',
-      body_text: 'Join the queue with our final batch of pre-orders available for 30% off retail price.',
+      body_text: 'Join the queue with our final batch of pre-orders.',
       discount_label_show_inventory: false
     }
   }
@@ -29214,3 +29213,4 @@ module.exports = jQuery;
 /***/ })
 
 /******/ });
+//# sourceMappingURL=bundle.js.map
