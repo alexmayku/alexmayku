@@ -325,8 +325,8 @@ const initCountdownTimers = variantIndex => {
 const updateHomepageHeroTexts = variantIndex => {
   let { title, subtitle_text, notice } = GLOBAL_SETTINGS[`batch_${variantIndex}`].homepage.hero;
 
-  title = title.replace('[percentage]', globalDiscount);
-  notice = notice.replace('[percentage]', globalDiscount);
+  // title = title.replace('[percentage]', globalDiscount);
+  // notice = notice.replace('[percentage]', globalDiscount);
 
   if (document.querySelector(selectors.homepage.title)) {
     document.querySelector(selectors.homepage.title).textContent = title;
@@ -344,9 +344,9 @@ const updateHomepageHeroTexts = variantIndex => {
 const updateCallout = variantIndex => {
   let { title, subtitle, body_text: bodyText } = GLOBAL_SETTINGS[`batch_${variantIndex}`].callout;
 
-  title = title.replace('[percentage]', globalDiscount);
-  subtitle = subtitle.replace('[percentage]', globalDiscount);
-  bodyText = bodyText.replace('[percentage]', globalDiscount);
+  // title = title.replace('[percentage]', globalDiscount);
+  // subtitle = subtitle.replace('[percentage]', globalDiscount);
+  // bodyText = bodyText.replace('[percentage]', globalDiscount);
 
   if (document.querySelectorAll(selectors.callout.title)) {
     document.querySelectorAll(selectors.callout.title).forEach(el => {

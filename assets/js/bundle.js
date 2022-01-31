@@ -28452,8 +28452,6 @@ var updateHomepageHeroTexts = function updateHomepageHeroTexts(variantIndex) {
       title = _GLOBAL_SETTINGS$$hom.title,
       subtitle_text = _GLOBAL_SETTINGS$$hom.subtitle_text,
       notice = _GLOBAL_SETTINGS$$hom.notice;
-  title = title.replace('[percentage]', globalDiscount);
-  notice = notice.replace('[percentage]', globalDiscount);
 
   if (document.querySelector(selectors.homepage.title)) {
     document.querySelector(selectors.homepage.title).textContent = title;
@@ -28473,9 +28471,6 @@ var updateCallout = function updateCallout(variantIndex) {
       title = _GLOBAL_SETTINGS$$cal.title,
       subtitle = _GLOBAL_SETTINGS$$cal.subtitle,
       bodyText = _GLOBAL_SETTINGS$$cal.body_text;
-  title = title.replace('[percentage]', globalDiscount);
-  subtitle = subtitle.replace('[percentage]', globalDiscount);
-  bodyText = bodyText.replace('[percentage]', globalDiscount);
 
   if (document.querySelectorAll(selectors.callout.title)) {
     document.querySelectorAll(selectors.callout.title).forEach(function (el) {
