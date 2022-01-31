@@ -291,7 +291,7 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
           </div>
 
           <div class="card__price">
-            <span class="price-old ${index < activeVariantIndex ? 'hidden' : ''}">${priceCurrency + parseFloat(compareAtPrice)}</span>
+            <span class="price-old hidden">${priceCurrency + parseFloat(compareAtPrice)}</span>
 
             <h2 class="price ${index < activeVariantIndex ? 'hidden' : ''}">${priceCurrency + parseFloat(price)}</h2>
 
@@ -300,7 +300,7 @@ const productVariantsHTML = (variants, activeVariantIndex) => {
               index < activeVariantIndex
                 ? soldOutHTML
                 : isAvailable
-                  ? countdownHTML
+                  ? ''
                   : '<div class="price-stamp">' + stockInfoHtml + '</div>'
             }
           </div>
