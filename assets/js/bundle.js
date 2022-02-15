@@ -28273,26 +28273,11 @@ var checkUserLocation = function checkUserLocation() {
 var generateProduct = function generateProduct() {
   var userLocationData = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
   var client;
-
-  if (userLocationData && userLocationData.currency.code === 'GBP') {
-    client = shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1___default.a.buildClient({
-      domain: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].domainUK,
-      storefrontAccessToken: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].storefrontTokenUK
-    });
-  } else if (userLocationData && (userLocationData.currency.code === 'EUR' || userLocationData.continent_code === 'EU')) {
-    priceCurrency = '€';
-    client = shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1___default.a.buildClient({
-      domain: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].domainEU,
-      storefrontAccessToken: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].storefrontTokenEU
-    });
-  } else {
-    priceCurrency = '$';
-    client = shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1___default.a.buildClient({
-      domain: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].domainUS,
-      storefrontAccessToken: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].storefrontTokenUS
-    });
-  }
-
+  priceCurrency = '$';
+  client = shopify_buy_index_unoptimized_umd__WEBPACK_IMPORTED_MODULE_1___default.a.buildClient({
+    domain: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].domainUS,
+    storefrontAccessToken: _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].storefrontTokenUS
+  });
   var handle = _global_settings__WEBPACK_IMPORTED_MODULE_0__["GLOBAL_SETTINGS"].productHandle;
   var productsQuery = client.graphQLClient.query(function (root) {
     root.add('productByHandle', {
@@ -28341,15 +28326,7 @@ var generateProduct = function generateProduct() {
 };
 
 var checkIfUserVisited = function checkIfUserVisited() {
-  var checkLocationCookie = js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.get('userLocationData');
-
-  if (checkLocationCookie) {
-    var parsedData = JSON.parse(checkLocationCookie);
-    priceCurrency = parsedData.currency.symbol;
-    generateProduct(parsedData);
-  } else {
-    checkUserLocation();
-  }
+  generateProduct();
 };
 
 var globalActiveVariantHTML = function globalActiveVariantHTML(activeVariant, activeVariantIndex, allVariants) {

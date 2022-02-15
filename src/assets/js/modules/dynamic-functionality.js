@@ -68,30 +68,39 @@ const checkUserLocation = () => {
 
 const generateProduct = (userLocationData = false) => {
   let client;
+  
+  // 15th Feb 22 – removed all location checking.
 
-  if (userLocationData && userLocationData.currency.code === 'GBP') {
-    client = Client.buildClient({
-      domain: GLOBAL_SETTINGS.domainUK,
-      storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenUK,
-    });
-  } else if (
-    userLocationData &&
-    (userLocationData.currency.code === 'EUR' || userLocationData.continent_code === 'EU')
-  ) {
-    priceCurrency = '€';
+//   if (userLocationData && userLocationData.currency.code === 'GBP') {
+//     client = Client.buildClient({
+//       domain: GLOBAL_SETTINGS.domainUK,
+//       storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenUK,
+//     });
+//   } else if (
+//     userLocationData &&
+//     (userLocationData.currency.code === 'EUR' || userLocationData.continent_code === 'EU')
+//   ) {
+//     priceCurrency = '€';
+// 
+//     client = Client.buildClient({
+//       domain: GLOBAL_SETTINGS.domainEU,
+//       storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenEU,
+//     });
+//   } else {
+//     priceCurrency = '$';
+// 
+//     client = Client.buildClient({
+//       domain: GLOBAL_SETTINGS.domainUS,
+//       storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenUS,
+//     });
+//   }
 
-    client = Client.buildClient({
-      domain: GLOBAL_SETTINGS.domainEU,
-      storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenEU,
-    });
-  } else {
-    priceCurrency = '$';
+  priceCurrency = '$';
 
-    client = Client.buildClient({
-      domain: GLOBAL_SETTINGS.domainUS,
-      storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenUS,
-    });
-  }
+  client = Client.buildClient({
+    domain: GLOBAL_SETTINGS.domainUS,
+    storefrontAccessToken: GLOBAL_SETTINGS.storefrontTokenUS,
+  });
 
   // Fetch a single product by Handle
   const handle = GLOBAL_SETTINGS.productHandle;
@@ -142,17 +151,18 @@ const generateProduct = (userLocationData = false) => {
 };
 
 const checkIfUserVisited = () => {
-  const checkLocationCookie = Cookies.get('userLocationData');
-
-  if (checkLocationCookie) {
-    const parsedData = JSON.parse(checkLocationCookie);
-
-    priceCurrency = parsedData.currency.symbol;
-
-    generateProduct(parsedData);
-  } else {
-    checkUserLocation();
-  }
+//   const checkLocationCookie = Cookies.get('userLocationData');
+// 
+//   if (checkLocationCookie) {
+//     const parsedData = JSON.parse(checkLocationCookie);
+// 
+//     priceCurrency = parsedData.currency.symbol;
+// 
+//     generateProduct(parsedData);
+//   } else {
+//     checkUserLocation();
+//   }
+  generateProduct();
 };
 
 const globalActiveVariantHTML = (activeVariant, activeVariantIndex, allVariants) => {
