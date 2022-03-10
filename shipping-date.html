@@ -1,0 +1,830 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:image" content="https://multiplier.mayku.me/assets/images/mayku-unindustrialrevolution.jpg">
+
+	<title>Mayku Multiplier</title>
+
+	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link href="https://fonts.googleapis.com/css2?family=B612+Mono&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/bundle.css">
+
+	<!-- Hotjar Tracking Code for http://www.mayku.me -->
+	<script>
+	    (function(h,o,t,j,a,r){
+	        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+	        h._hjSettings={hjid:596519,hjsv:6};
+	        a=o.getElementsByTagName('head')[0];
+	        r=o.createElement('script');r.async=1;
+	        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+	        a.appendChild(r);
+	    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-42695467-4"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-42695467-4');
+	</script>
+
+	<!-- Facebook Pixel Code -->
+	<script>
+	!function(f,b,e,v,n,t,s)
+	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+	n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];
+	s.parentNode.insertBefore(t,s)}(window, document,'script',
+	'https://connect.facebook.net/en_US/fbevents.js');
+	fbq('init', '1280568298697568');
+	fbq('track', 'PageView');
+	  fbq('track', 'Lead');
+	</script>
+	<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1280568298697568&ev=PageView&noscript=1"></noscript>
+	<!-- End Facebook Pixel Code -->
+</head>
+
+	<style>
+			
+			.shipping-container {
+				width: 90%;
+				margin: 20rem auto 4rem;
+				max-width: 1000px;
+	/* 			background:white; */
+				color: white;
+	/* 			padding: 2rem; */
+			}
+			
+			.status-message {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+	/* 			background: #e5f9ee; */
+				color: #FDD32F;
+	/* 			border: 1px solid #00B26E; */
+				margin-bottom: 4rem;
+				
+			}
+			
+			.status-message svg {
+				box-sizing: content-box;
+				width: 2rem;
+				fill: #FDD32F;
+	/* 			background: #e5f9ee; */
+				background: rgba(253,211,47, 0.2);
+				padding: 1rem;
+				border-radius: 0.5rem;
+				flex-shrink:0;
+			}
+			
+			h4 {
+				font-size: 2rem;
+				color: #FDD32F;
+				font-family: "ITCAvantGardeGothicW01-Md", Helvetica, Arial, sans-serif
+			}
+			
+			.timing-message {
+				display: flex;
+				align-items: center;
+				gap: 1rem;;
+				margin: 4rem 0;
+			}
+			
+			.live-indicator {
+				width: 1rem;
+				height: 1rem;
+				border-radius: 100%;
+				background: #FDD32F;
+				flex-shrink: 0;
+				animation: pulse 2.5s ease infinite;
+			}
+			
+			@keyframes pulse {
+				0%, 100% {
+					opacity: 0;
+				}
+				40%, 60% {
+					opacity: 1;
+				}
+			}
+			
+			h2 {
+				font-size: 3rem;
+				margin: 0;
+			}
+			
+			.shrink-0 {
+				flex-shrink: 0;
+			}
+			
+			.green {
+				color: #FDD32F;
+				break-inside: avoid;
+			}
+			
+			.main-message {
+				padding: 4rem 0 0;
+				border-top: 1px solid rgba(255,255,255,.15);
+				line-height: 1.8;
+				letter-spacing: 0.01rem;
+				color: #ddd;
+			}
+			
+			.three-actions {
+				width: 90%;
+				margin: 4rem auto;
+				max-width: 1000px;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2rem;
+			}
+			
+			.action {
+				border: 1px solid #FDD32F;
+				padding: 3.5rem 3rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: flex-start
+			}
+			
+			.action p {
+				line-height: 1.5;
+				font-size: 0.9em;
+			}
+			
+			.btn-primary {
+				background: #FDD32F;
+				color: black;
+				border-radius: 999px;
+				padding: 1rem 2rem;
+				font-family: "ITCAvantGardeGothicW01-Md", Helvetica, Arial, sans-serif;
+				text-decoration: none;
+				font-size: 1.6rem;
+				letter-spacing: 0.01rem;
+			}
+			
+			.btn-primary:hover {
+				background: #f0c82d;
+			}
+			
+			h3 {
+				font-size: 2.8rem;
+				font-family: "ITCAvantGardeGothicW01-Md", Helvetica, Arial, sans-serif;
+			}
+			
+			.blog-posts {
+				width: 90%;
+				margin: 4rem auto;
+				max-width: 1000px;
+			}
+			
+			.blog-post {
+				display:grid;
+				grid-template-columns: repeat(2, 1fr);
+				background: rgba(255,255,255,0.1);
+				border-radius: 1rem;
+				overflow: hidden;
+			}
+			
+			.image-container {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.image-container img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			
+			.text-container {
+				padding: 2rem;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+			
+			.blog-post time {
+				opacity: 0.8;
+				font-size: 1.4rem;
+				margin-bottom: 1rem;
+			}
+			
+			
+			ul.timeline {
+				display: flex;
+				justify-content: space-evenly;
+				position: relative;
+				font-size: 1.4rem;
+				list-style: none;
+				padding: 0;
+				margin: 6rem 0 4rem;
+			}
+			
+			.timeline li {
+				padding: 2rem 0 0;
+				margin: 0;
+				text-align: center;
+				position: relative;
+			}
+			
+			.timeline li span {
+				display: block;
+			}
+			
+			.grey {
+				color: #aaa
+			}
+			
+			.line {
+				position: absolute;
+				top: 0;
+				height: 4px;
+				border-radius: 4px;
+				background: rgba(255,255,255,0.3);
+				width: 100%;
+			}
+			
+			.line-inner {
+				width: 0;
+				transition: width 4s ease-out;
+				background: #FDD32F;
+				border-radius: 4px;
+				height: 4px;
+			}
+			
+			.loaded .line-inner {
+				width: 55%;
+			}
+			
+			.timeline li:after {
+				content:'';
+				width: 1.6rem;
+				height: 1.6rem;
+				position: absolute;
+				top: 2px;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				border-radius: 100%;
+/* 				background: #00B26E; */
+				background: #101314;
+				border: 4px solid #585a5b;
+				
+			}
+			
+			.loaded .past:after {
+				animation: ping 1s forwards ease-out;
+			}
+			
+			.past:nth-of-type(1):after {
+				animation-delay: 0.2s;
+			}
+			
+			.past:nth-of-type(2):after {
+				animation-delay: 0.8s;
+			}
+			
+			.past:nth-of-type(3):after {
+				animation-delay: 1.5s;
+			}
+			
+			.past:nth-of-type(4):after {
+				animation-delay: 2.1s;
+			}
+			
+			.past:nth-of-type(5):after {
+				animation-delay: 3.3s;
+			}
+
+			
+
+			
+			@keyframes ping {
+				0% {
+					background: #101314;
+					border: 4px solid #585a5b;
+					box-shadow: 0 0 0 0 rgba(253,211,47,0.2)
+				}
+				35% {
+					background: #FDD32F;
+					border: 8px solid #FDD32F;
+					box-shadow: 0 0 0 15px rgba(253,211,47,0.1)
+				}
+				100% {
+					background: #FDD32F;
+					border: 8px solid #FDD32F;
+					box-shadow: 0 0 0 30px rgba(253,211,47,0)
+				}
+			}
+			
+			@media(max-width:800px) {
+				h2 {
+					font-size: 2rem
+				}
+				.timing-message {
+					margin: 2rem 0;
+				}
+				.mobile-flex {
+					display:flex;
+					gap: 1.6rem;
+					padding: 2rem 0 0;
+					border-top: 1px solid rgba(255,255,255,.15);
+				}
+				.main-message {
+					padding: 0;
+					border:none;
+				}
+				.main-message p {
+					font-size: 1.4rem;
+				}
+				ul.timeline {
+					flex-direction: column;
+					font-size: 1.2rem;
+					margin-top: 1rem;
+				}
+				.line {
+					width: 4px;
+					height: 100%;
+				}
+				.timeline li {
+					text-align: left;
+					padding: 0 0 0 1.5rem;
+					min-height: 6rem;
+				}
+				.timeline li:after {
+					top: -1px;
+					left: 2px;
+					transform: translate(-50%, 0)
+				}
+				.line-inner {
+					width: 4px;
+					height: 0px;
+					transition: height 4s ease-out;
+				}
+				.loaded .line-inner {
+					width: 4px;
+					height: 55%;
+				}
+				.three-actions {
+					grid-template-columns: 1fr;
+				}
+				.blog-post {
+					grid-template-columns: 1fr;
+				}
+			}
+			
+			</style>
+<body>
+	<div class="wrapper">
+		<header class="header">
+	<div class="bar js-bar">
+		<div class="bar__mobile">
+			<div class="shell shell--fluid">
+				<div class="bar__inner">
+					<a href="reveal" class="bar__link">CLICK TO WATCH THE BIG REVEAL</a>
+
+					<ul class="socials socials--bar">
+						<li>
+							<a href="https://www.facebook.com/TeamMayku/" target="_blank">
+								<img src="assets/images/svg/icon--facebook.svg" alt="">
+							</a>
+						</li>
+
+						<li>
+							<a href="https://twitter.com/TeamMayku" target="_blank">
+								<img src="assets/images/svg/icon--twitter.svg" alt="">
+							</a>
+						</li>
+
+						<li>
+							<a href="https://www.instagram.com/teammayku/?hl=en" target="_blank">
+								<img src="assets/images/svg/icon--instagram.svg" alt="">
+							</a>
+						</li>
+					</ul><!-- /.socials -->
+				</div><!-- /.bar__inner -->
+			</div><!-- /.shell shell-/-fluid -->
+		</div><!-- /.bar__mobile -->
+
+		<ul class="list-basic bar__list">
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+		</ul><!-- /.list-basic -->
+
+		<ul class="list-basic bar__list--2">
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+
+			<li>
+				<a href="reveal">CLICK TO WATCH THE BIG REVEAL</a>
+			</li>
+		</ul><!-- /.list-basic -->
+	</div><!-- /.bar -->
+
+	<div class="header__inner">
+		<div class="shell shell--fluid header__shell">
+			<div class="header__logo">
+				<a href="/" class="logo">
+					<img src="assets/images/svg/logo-mayku.svg" alt="">
+				</a>
+			</div><!-- /.header__logo -->
+
+			<a href="pre-order" class="btn btn--yellow visible-xs-block">
+				Pre order
+			</a>
+
+			<div class="header__aside">
+				<nav class="nav js-nav">
+					<ul>
+						<li>
+							<a href="machine">The machine</a>
+						</li>
+
+						<li>
+							<a href="reveal">The reveal</a>
+						</li>
+
+						<li class="nav__dropdown js-dropdown-trigger">
+							<a>
+								The makers
+
+								<i class="ico-arrow-down">
+									<img src="assets/images/svg/icon--chevron--down.svg" alt="">
+								</i>
+							</a>
+						</li>
+					</ul>
+
+					<div class="dropdown js-dropdown">
+						<div class="dropdown__inner">
+							<h5>See how makers just like you are using the Multiplier...</h5>
+
+							<div class="grid grid--default">
+								<div class="grid__col grid__col--1of3">
+									<a href="evka-home" class="option">
+										<div class="option__image">
+											<img src="assets/images/temp/evka-icon.png" alt="">
+										</div><!-- /.option__image -->
+
+										<div class="option__content">
+											<h6>Evka Home</h6>
+
+											<p>
+												Colourful Jesmonite homewares accessories by designer Ewa Leffman
+											</p>
+										</div><!-- /.option__content -->
+									</a><!-- /.option -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<a href="maker-philip" class="option">
+										<div class="option__image">
+											<img src="assets/images/temp/dropdown-2.png" alt="">
+										</div><!-- /.option__image -->
+
+										<div class="option__content">
+											<h6>Philip Khoury</h6>
+
+											<p>
+												Award-Winning Pastry Chef and Chocolatier at Harrods
+											</p>
+										</div><!-- /.option__content -->
+									</a><!-- /.option -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+
+								<div class="grid__col grid__col--1of3">
+									<a href="maker-betadesign" class="option">
+										<div class="option__image">
+											<img src="assets/images/temp/dropdown-3.png" alt="">
+										</div><!-- /.option__image -->
+
+										<div class="option__content">
+											<h6>Beta Design Office</h6>
+
+											<p>
+												Multi-disciplinary product design studio with clients including Nike and Fussy
+											</p>
+										</div><!-- /.option__content -->
+									</a><!-- /.option -->
+								</div><!-- /.grid__col grid__col-/-1of3 -->
+							</div><!-- /.grid grid-/-dropdown -->
+						</div><!-- /.dropdown__inner -->
+					</div><!-- /.dropdown js-dropdown -->
+				</nav><!-- /.nav -->
+
+				<ul class="socials header__socials hidden-xs">
+					<li>
+						<a href="https://www.facebook.com/TeamMayku/" target="_blank">
+							<img src="assets/images/svg/icon--facebook.svg" alt="">
+						</a>
+					</li>
+
+					<li>
+						<a href="https://twitter.com/TeamMayku" target="_blank">
+							<img src="assets/images/svg/icon--twitter.svg" alt="">
+						</a>
+					</li>
+
+					<li>
+						<a href="https://www.instagram.com/teammayku/?hl=en" target="_blank">
+							<img src="assets/images/svg/icon--instagram.svg" alt="">
+						</a>
+					</li>
+				</ul><!-- /.socials -->
+
+				<a href="pre-order" class="btn btn--yellow hidden-xs">
+					Pre-order
+				</a>
+			</div><!-- /.header__aside -->
+		</div><!-- /.shell shell-/-fluid -->
+	</div><!-- /.header__inner -->
+</header><!-- /.header -->
+
+		
+		<div class="shipping-container">
+			<div class="status-message">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+				  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path>
+				</svg>
+				<h4>Page last updated 09:06 Thursday 10th March 2022</h4>
+			</div>
+		
+		
+			<div>
+				<h2 class="hidden" id="personalisedGreeting">Hi</h2>
+				<div class="timing-message">
+					<i class="live-indicator"></i>
+					<h2>Shipping for Multipliers is currently on track to start <span class="green">July 2022</span></h2>
+					
+				</div>
+				<div class="mobile-flex">
+					<div>
+						<ul class="timeline">
+							<div class="line">
+								<div class="line-inner"></div>
+							</div>
+							<li class="past">R&D</li>
+							<li class="past">Prototyping</li>
+							<li class="past">Pre-orders</li>
+							<li class="past">Tooling</li>
+							<li class="past">Pre–production</li>
+							<li class="future">
+								<span class="green">May–Jun</span>
+								<span class="grey">Batch 1</span>
+								Manufacturing
+							</li>
+							<li class="future">
+								<span class="green">Jul</span>
+								<span class="grey">Batch 1</span>
+								Shipping
+							</li>
+							<li class="future">
+								<span class="green">Aug</span>
+								<span class="grey">Batch 1</span>
+								Delivery
+							</li>
+					</ul></div>
+					<div class="main-message">
+						<p>Due to global supply chain issues we have experienced delays to our production schedule. We are working tirelessly to get your machine made, shipped, and delivered to you as fast as possible. We will email and text you every time we have an update. If the estimated shipping date changes we will let you know as soon as we do. We post updates directly from the factory floor here every two weeks.</p> 
+						<p style="margin-bottom:0">We know this is annoying and for some you may have projects that may be delayed. In order to help minimise the knock-on effects, the Mayku team is available to help you get a mold made on-demand. If you would like to get a mold, or if you have any questions at all about anything get in touch and we’ll be happy to help</p>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+		
+		<div class="three-actions">
+			<div class="action">
+				<h3>Get a custom mold made</h3>
+				<p>Want to get started already? We’re offering a bespoke Multiplier mold making service exclusively to anyone who’s pre-ordered our new machine.</p>
+				<a href="https://design.mayku.me/pricing" class="btn-primary">Get a custom mold</a>
+			</div>
+			<div class="action">
+				<h3>Book a chat</h3>
+				<p>Need to know more? Book a call with one of our Product Specialists to have your questions answered. </p>
+				<a href="https://multiplier.mayku.me/specialist" class="btn-primary">Request a call back</a>
+			</div>
+			<div class="action">
+				<h3>Email customer support</h3>
+				<p>Got a quick question or concern? You can drop Team Mayku an email or slide into our DMs on social media and we’ll help you out.</p>
+				<a href="mailto:hello@mayku.me" class="btn-primary">Submit a message</a>
+			</div>
+		</div>
+		
+		<div class="blog-posts">
+			
+			<article class="blog-post">
+				<div class="image-container">
+					<img src="https://cdn.shopify.com/s/files/1/1373/5663/files/Mayku-Multiplier-Beta-FlipFlop-2_1024x1024.jpg?v=1636644445">
+				</div>
+				<div class="text-container">
+					<time>January 19, 2022</time>
+					<h3>Making the Mayku Multiplier: Production Delays and Chip Shortages</h3>
+					<a href="https://www.mayku.me/blogs/news/making-the-mayku-multiplier-production-delays-and-chip-shortages">Read more →</a>
+				</div>
+			</article>
+		</div>
+		
+		
+
+		
+		<footer class="footer js-footer" data-scroll="">
+	<div class="footer__inner">
+		<div class="shell shell--fluid">
+			<div class="footer__content">
+				<div class="footer__links">
+					<div class="footer__head">
+						<a href="https://multiplier.mayku.me" class="logo">
+							<img src="assets/images/svg/logo1.svg" alt="">
+						</a>
+					</div><!-- /.footer__head -->
+
+					<div class="footer__body">
+						<nav class="footer__nav">
+							<ul>
+								<li>
+									<a href="https://www.mayku.me/pages/what-it-is" target="_blank">
+										Formbox
+									</a>
+								</li>
+
+								<li>
+									<a href="https://www.mayku.me/collections/materials" target="_blank">
+										Store
+									</a>
+								</li>
+
+								<li>
+									<a href="https://help.mayku.me/hc/en-us" target="_blank">
+										Help
+									</a>
+								</li>
+
+								<li>
+									<a href="https://www.mayku.me/blogs/news" target="_blank">
+										Blog
+									</a>
+								</li>
+
+								<li>
+									<a href="https://www.mayku.me/pages/become-a-reseller" target="_blank">
+										Become a reseller
+									</a>
+								</li>
+							</ul>
+						</nav><!-- /.footer__nav -->
+					</div><!-- /.footer__body -->
+				</div><!-- /.footer__links -->
+
+				<div class="footer__callout">
+					<div class="footer__head">
+						<h6>
+							Be the First to Know 
+						</h6>
+					</div><!-- /.footer__head -->
+
+					<div class="footer__body">
+						<p>Enter your email address to stay in the loop</p>
+
+						<div class="footer__form form-email form-email--white">
+							<!--[if lte IE 8]>
+							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+							<![endif]-->
+							<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+
+							<script>
+								hbspt.forms.create({
+								region: "na1",
+								portalId: "9286585",
+								formId: "7b274279-d853-46a6-b01d-ac21a82f2a77",
+								onFormSubmit: function($form) {
+								window.rrSpace = (
+								rrSettingsConversion = {
+								debug: "false",
+								parameters: {
+								email: $form[0].elements.email.value
+									}
+								}
+							);
+							(function (f, r, n, d, b, y) { b = f.createElement(r), y = f.getElementsByTagName(r)[0]; b.async = 1; b.src = n; b.id = 'RR_DIVID'; y.parentNode.insertBefore(b, y); })(document, 'script', '//mayku.referralrock.com/webpixel/beta/universalv03.js');
+							}
+							});
+							</script>
+						</div><!-- /.footer__form form-email form-email-/-white -->
+					</div><!-- /.footer__body -->
+				</div><!-- /.footer__callout -->
+
+				<div class="footer__contacts">
+					<div class="footer__head">
+						<h6>Contact Us</h6>
+					</div><!-- /.footer__head -->
+
+					<div class="footer__body">
+						<a href="mailto:hello@mayku.me" class="email">hello@mayku.me</a>
+
+						<address>
+							Unit J410, Jam Studios,<br>
+							The Biscuit Factory,<br>
+							100 Drummond Road, SE16 4DG
+						</address>
+					</div><!-- /.footer__body -->
+				</div><!-- /.footer__contacts -->
+			</div><!-- /.footer__content -->
+		</div><!-- /.shell shell-/-fluid -->
+	</div><!-- /.footer__inner -->	
+
+	<div class="footer__actions">
+		<div class="shell shell--fluid">
+			<span class="hidden-xs">
+			<i class="ico-plus">
+					<img src="assets/images/svg/icon--plusyellow.svg" alt="">
+				</i>
+			</span>
+			
+			<p>*Dates are estimated and subject to change. Items may ship earlier or later.</p>
+			
+			<span class="hidden-xs">
+				<i class="ico-plus">
+					<img src="assets/images/svg/icon--plusyellow.svg" alt="">
+				</i>
+			</span>
+		</div><!-- /.shell shell-/-fluid -->
+	</div><!-- /.footer__actions -->
+</footer><!-- /.footer -->
+
+	</div><!-- /.wrapper -->
+	
+	<script>
+	window.addEventListener('load', () => {
+		document.body.classList.add('loaded');
+	});
+	const params = new Proxy(new URLSearchParams(window.location.search), {
+	  get: (searchParams, prop) => searchParams.get(prop),
+	});
+	let customerName = params.name;
+	if(customerName.length && customerName !== '{{contact.firstname|urlencode}}' && customerName !== 'CONTACT.FIRSTNAME'){
+		let personalisedGreeting = document.getElementById('personalisedGreeting');
+		personalisedGreeting.innerHTML = 'Hi '+customerName;
+		personalisedGreeting.classList.remove('hidden');
+	}
+	</script>
+
+	<script src="assets/vendor/jquery-3.6.0.min.js"></script>
+<script src="assets/js/bundle.js"></script>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async="" defer="" src="//js.hs-scripts.com/9286585.js"></script>
+<!-- End of HubSpot Embed Code -->
+
+<script>(function (f, r, n, d, b, y) { b = f.createElement(r), y = f.getElementsByTagName(r)[0]; b.async = 1; b.src = n; b.id = 'RR_DIVID'; y.parentNode.insertBefore(b, y); })(document, 'script', '//mayku.referralrock.com/webpixel/beta/universalv03.js');</script>
+
+<script src="https://www.dwin1.com/26883.js" type="text/javascript" defer="defer"></script>
+</body>
+</html>
