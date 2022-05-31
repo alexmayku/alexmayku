@@ -429,6 +429,7 @@
 /* Section Accordion*/
 
 .section-default--accordion {
+	padding-top: 16rem;
 	@include breakpoint-down(mobile) {
 		padding-bottom: 4rem;
 	}

@@ -43,6 +43,14 @@
 	}
 }
 
+.btn--black-outline {
+	border: 0.1rem solid $c-black;
+	color: $c-black;
+	margin-left: 1rem;
+	font-size: 2rem;
+	padding: 1.4rem 2.2rem;
+}
+
 .btn--yellow-2 {
 	@include breakpoint-down(mobile-medium) {
 		padding: 1.4rem 1.5rem;

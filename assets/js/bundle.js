@@ -28607,22 +28607,23 @@ var GLOBAL_SETTINGS = {
     final_date: '2022/04/01 00:00:00 GMT',
     homepage: {
       hero: {
-        title: 'Pre-order the Mayku Multiplier',
-        subtitle_text: 'Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.'
+        title: 'Secure your Multiplier in 2022',
+        subtitle_text: 'Bringing pressure forming to the desktop for the first time. Get ready to create ultra precise, long lasting molds and production parts in minutes.',
+        notice: ''
       }
     },
     preorder: {
       title: 'Standard pre-orders'
     },
     callout: {
-      subtitle: 'Fourth Batch',
-      title: 'Standard pre-orders',
-      body_text: 'Join the queue with our final batch of pre-orders.'
+      subtitle: 'Ready to find out more?',
+      title: 'Get a quote or speak to us',
+      body_text: 'Just enter your email so we can find out more about your needs and provide an exact quote. Or if you still have questions, speak to a specialist.'
     },
     callout_preorder: {
-      subtitle: 'Fourth Batch',
-      title: 'Standard pre-orders',
-      body_text: 'Join the queue with our final batch of pre-orders.',
+      subtitle: 'Ready to find out more?',
+      title: 'Get a quote or speak to us',
+      body_text: 'Just enter your email so we can find out more about your needs and provide an exact quote. Or if you still have questions, speak to a specialist.',
       discount_label_show_inventory: false
     }
   }

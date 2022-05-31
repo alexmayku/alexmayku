@@ -27,3 +27,4 @@ package-lock.json
 
 # Sprite Icons
 src/assets/images/sprite*.*
+.nova/Configuration.json

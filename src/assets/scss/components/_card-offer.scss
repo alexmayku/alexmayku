@@ -235,6 +235,12 @@
 				display: inline-block; 
 			}
 		}
+		@include breakpoint-down(tablet) {
+			.btn {
+				font-size: 1.4rem;
+				padding: 1rem 2.4rem;
+			}
+		}
 	}
 
 	.card__form {

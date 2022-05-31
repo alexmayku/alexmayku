@@ -4,6 +4,11 @@
 
 .form-sign-up {
 	position: relative;
+	padding: 4rem;
+	
+	@include breakpoint-down(mobile-medium) {
+		padding: 1rem;
+	}
 
 	&:after {
 		content: "";
@@ -110,6 +115,10 @@
 		display: block;
 		width: 100%;
 	}
+	
+	.hs-submit {
+		margin-top: 6rem;
+	}
 
 	.hs_submit .actions input {
 		display: inline-block;
@@ -133,6 +142,10 @@
 	.hs_error_rollup {
 		margin-top: 0.5rem;
 	}
+	
+	.hs-email {
+		position: relative;
+	}
 
 	.hs-error-msgs {
 		position: absolute;
@@ -145,13 +158,6 @@
 			bottom: -3rem;
 		}
 
-		@include breakpoint-down(tablet) {
-			bottom: -2rem;
-		}
-
-		@include breakpoint-down(mobile-small) {
-			bottom: -2.5rem;
-		}
 	}
 
 	.hs-error-msg,
